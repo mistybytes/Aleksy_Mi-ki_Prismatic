@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B92E8DF8-2E1E-08CE-B503-791BF6B153DA}</ProjectGuid>
+    <ProjectGuid>{9C6936B8-0A83-1DEE-D2CF-3C0F2F474DCD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,12 +56,23 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\UI_Scripts\LevelCompletionManager.cs" />
+    <Compile Include="Assets\Scripts\PowerUpScript.cs" />
+    <Compile Include="Assets\Scripts\MyTimer.cs" />
+    <Compile Include="Assets\Scripts\UI_Scripts\TextColorChange.cs" />
+    <Compile Include="Assets\Scripts\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PowerUp.cs" />
+    <Compile Include="Assets\Scripts\UI_Scripts\TimeDisplay.cs" />
+    <Compile Include="Assets\Scripts\UI_Scripts\LevelUnlocker.cs" />
+    <Compile Include="Assets\Scripts\PrismScript.cs" />
     <Compile Include="Assets\Scripts\MainMenuCon.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\PowerUpShield.cs" />
+    <Compile Include="Assets\Scripts\UI_Scripts\SkinScript.cs" />
     <Compile Include="Assets\Scripts\SpawnerScript.cs" />
-    <Compile Include="Assets\Scripts\Enemy2Movement.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +99,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Sprites\Assets\gothicvania patreon collection\public-license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>

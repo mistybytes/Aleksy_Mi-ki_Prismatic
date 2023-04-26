@@ -5,11 +5,8 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     public Vector3 target = new Vector3(0,0,0);
-    private float radius = 20;
-    private float speed = 20;
     private bool isClockwise = true;
     private float currentAngle = 2.0f;
-
 
     // Start is called before the first frame update
     void Start()

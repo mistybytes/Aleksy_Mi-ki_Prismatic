@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public Vector3 target; 
-    public float speed = 1f; 
-
+    public Vector3 target;
 
     void Start()
     {
@@ -20,10 +18,12 @@ public class EnemyMovement : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Cube"))
         {
+            GameManager.instance.SubLives();
             Destroy(gameObject);
         }
     }
-    void Update()
+
+    void LateUpdate()
     {
         Vector3 direction = target - transform.position;
 
@@ -33,7 +33,8 @@ public class EnemyMovement : MonoBehaviour
         {
             direction.Normalize();
 
-            transform.position += direction * speed * Time.deltaTime;
+            transform.position += direction * GameManager.instance.gameSpeed * Time.deltaTime;
         }
     }
+
 }

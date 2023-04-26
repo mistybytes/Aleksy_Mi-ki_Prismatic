@@ -27,91 +27,76 @@ public class SpawnerScript : MonoBehaviour
 
         while (true)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
 
             randomSide = Random.Range(0, 15);
-            if (randomSide == 8) randomSide = 0;
 
-
-            if (randomSide == 0)
+            switch(randomSide)
             {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = leftPos.position;
-            }
-            else if (randomSide == 1)
-            {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = rightPos.position;
-            }
-            else if (randomSide == 2)
-            {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = downPos.position;
-            }
-            else if (randomSide == 3)
-            {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = upPos.position;
-            }
-            if (randomSide == 4)
-            {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = UL.position;
-            }
-            else if (randomSide == 5)
-            {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = UR.position;
-            }
-            else if (randomSide == 6)
-            {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = DL.position;
-            }
-            else if (randomSide == 7)
-            {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = DR.position;
-            }
-            if (randomSide == 8)
-            {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = S1.position;
-            }
-            else if (randomSide == 9)
-            {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = S2.position;
-            }
-            else if (randomSide == 10)
-            {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = S3.position;
-            }
-            else if (randomSide == 11)
-            {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = S4.position;
-            }
-            if (randomSide == 12)
-            {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = S5.position;
-            }
-            else if (randomSide == 13)
-            {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = S6.position;
-            }
-            else if (randomSide == 14)
-            {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = S7.position;
-            }
-            else if (randomSide == 15)
-            {
-                spawnedRay = Instantiate(enemy[0]);
-                spawnedRay.transform.position = S8.position;
+                case 0:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = leftPos.position;
+                    break;
+                case 1:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = rightPos.position;
+                    break;
+                case 2:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = downPos.position;
+                    break;
+                case 3:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = upPos.position;
+                    break;
+                case 4:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = UL.position;
+                    break;
+                case 5:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = UR.position;
+                    break;
+                case 6:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = DL.position;
+                    break;
+                case 7:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = DR.position;
+                    break;
+                case 8:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = S1.position;
+                    break;
+                case 9:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = S2.position;
+                    break;
+                case 10:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = S3.position;
+                    break;
+                case 11:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = S4.position;
+                    break;
+                case 12:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = S5.position;
+                    break;
+                case 13:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = S6.position;
+                    break;
+                case 14:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = S7.position;
+                    break;
+                case 15:
+                    spawnedRay = Instantiate(enemy[0]);
+                    spawnedRay.transform.position = S8.position;
+                    break;
             }
 
         }//while loop

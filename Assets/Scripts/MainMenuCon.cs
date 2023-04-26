@@ -8,13 +8,14 @@ public class MainMenuCon : MonoBehaviour
     // Start is called before the first frame update
     public void PlayGame()
     {
-        SceneManager.LoadScene("LEVEL1");
+        SceneManager.LoadScene("LevelSelect");
+    }
+    public void SkinSelect()
+    {
+        SceneManager.LoadScene("SkinSelect");
     }
 
 
     // Update is called once per frame
-    void Update()
-    {
 
-    }
 }

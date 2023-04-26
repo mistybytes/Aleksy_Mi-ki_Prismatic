@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
-    private float radius = 20;
-    private float speed = 20;
     private bool isClockwise = true;
-    private float currentAngle = 2.0f; 
+    private float currentAngle = 2.0f;
 
+    private void Start()
+    {
+        MyTimer.CountUpTo1Minute();
+    }
     void Update()
     {
-       
+
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             isClockwise = false;
@@ -26,18 +28,11 @@ public class PlayerMovement : MonoBehaviour
             float angleDelta = Time.deltaTime * 7 * (isClockwise ? -1f : 1f);
             currentAngle += angleDelta;
 
-            Vector3 circlePosition = new Vector3(Mathf.Sin(currentAngle), 0, Mathf.Cos(currentAngle)) * 5 ;
-           
+            Vector3 circlePosition = new Vector3(Mathf.Sin(currentAngle), 0, Mathf.Cos(currentAngle)) * 5;
+
             transform.position = circlePosition;
-
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            currentAngle += Mathf.PI; // add 180 degrees to currentAngle
-            currentAngle %= Mathf.PI * 2; // wrap currentAngle within 360 degrees
-            isClockwise = !isClockwise; // reverse the direction of movement
-        }
 
     }
 }
