@@ -7,8 +7,8 @@ This is a hyper casual game, with each level the speed of moving objects is incr
 player has to survive full minute in the previous one.
 
 Plans for this week:
--Add 20 levels (enemies are spawned randomly so its a quick job)
--Add 3 kinds of powerUps that Player can upgrade in the store for coins, the power ups are:
+- Add 20 levels (enemies are spawned randomly so its a quick job)
+- Add 3 kinds of powerUps that Player can upgrade in the store for coins, the power ups are:
   - Add Lives - give player one extra life (on default there are 3)
   - Laser - Give player a temporary laser that destroys enemies
   - Shield - shields the player from incoming enemies
