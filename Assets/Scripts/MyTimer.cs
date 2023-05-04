@@ -1,26 +1,17 @@
 using System;
+using System.Collections;
 using System.Threading;
 using UnityEngine;
 
 public class MyTimer : MonoBehaviour
 {
-   
-    public static void CountUpTo1Minute()
+
+    static public IEnumerator CountUpTo1Minute()
     {
-        int timeLimitInSeconds = 60;
-        int elapsedTimeInSeconds = 0;
-
-        //TODO do the listener in such a way that it doesnt freeze the game
-        while (elapsedTimeInSeconds < timeLimitInSeconds)
-        {
-            Thread.Sleep(1); // Wait for 1 second
-            elapsedTimeInSeconds++; // Increment elapsed time
-        }
-
-        // Raise the TimerElapsed event
+        yield return new WaitForSeconds(60);
         OnTimerElapsed();
     }
-
+   
     protected static void OnTimerElapsed()
     {
         Debug.Log(GameManager.instance.getCurrentScene());

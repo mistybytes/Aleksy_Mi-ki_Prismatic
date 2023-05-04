@@ -6,9 +6,10 @@ public class PlayerMovement : MonoBehaviour
 {
     private bool isClockwise = true;
     private float currentAngle = 2.0f;
-
+    private Transform t;
     private void Start()
     {
+        t = GetComponent<Transform>();
         MyTimer.CountUpTo1Minute();
     }
     void Update()
@@ -27,12 +28,17 @@ public class PlayerMovement : MonoBehaviour
         {
             float angleDelta = Time.deltaTime * 7 * (isClockwise ? -1f : 1f);
             currentAngle += angleDelta;
-
+            Debug.Log(currentAngle + "\n");
             Vector3 circlePosition = new Vector3(Mathf.Sin(currentAngle), 0, Mathf.Cos(currentAngle)) * 5;
 
             transform.position = circlePosition;
         }
 
 
+    }
+
+    public float getCurrentAngle()
+    {
+        return currentAngle;
     }
 }
