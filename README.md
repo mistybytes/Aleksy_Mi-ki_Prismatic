@@ -6,14 +6,16 @@ levels and thinking about the graphic side of the game, planning on adding power
 This is a hyper casual game, with each level the speed of moving objects is increasing, this has an impact on game difficulty, to unlock next level
 player has to survive full minute in the previous one.
 
+Difficulty increase:
+
+There will be as many locations as colors of the rainbow and the same with enemies.
+With each level enemies are going to get stronger and faster and so the player will have to buy upgrades in the shop.
+
 Plans for this week:
-- Add 20 levels (enemies are spawned randomly so its a quick job)
-- Add 3 kinds of powerUps that Player can upgrade in the store for coins, the power ups are:
-  - Add Lives - give player one extra life (on default there are 3)
-  - Laser - Give player a temporary laser that destroys enemies
-  - Shield - shields the player from incoming enemies
-  - ? Set free - sets the player to move freely on the field for a few seconds
+
 - Add example graphics to figma 
 - Add example ui design
-- create at least 2 different enemies (the movement on them is different, but with later locations they could stop moving 
-towards the center and instead start randomly shooting at the player)
+- Add a save to a JSON file and start testing the game for bugs
+- Game is nearly finished all it needs is 3D models and UI design
+- Test the game on a mobile device to see if there is somfing needed to be done with the layout
+
