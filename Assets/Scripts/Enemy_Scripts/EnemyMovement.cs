@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +6,10 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public Vector3 target;
-
+    private int enemyHealth;
     void Start()
     {
+        enemyHealth = GameManager.instance.getEnemyHealth();
         target = new Vector3(0f, 0f, 0f);
     }
     void OnCollisionEnter(Collision collision)
@@ -23,6 +25,14 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    public int getHealth()
+    {
+        return enemyHealth;
+    }
+    public void subHealth(int damage)
+    {
+        enemyHealth -= damage;
+    }
     void LateUpdate()
     {
         Vector3 direction = target - transform.position;

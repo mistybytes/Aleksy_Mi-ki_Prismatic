@@ -56,7 +56,9 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\MMCoinsScript.cs" />
     <Compile Include="Assets\Scripts\UI_Scripts\LevelCompletionManager.cs" />
+    <Compile Include="Assets\Scripts\Controllers\GameOverCon.cs" />
     <Compile Include="Assets\Scripts\PowerUP_Scripts\PowerUpScript.cs" />
     <Compile Include="Assets\Scripts\Controllers\MyTimer.cs" />
     <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\TextColorChange.cs" />
@@ -66,6 +68,7 @@
     <Compile Include="Assets\Scripts\PowerUP_Scripts\PowerUp.cs" />
     <Compile Include="Assets\Scripts\UI_Scripts\TimeDisplay.cs" />
     <Compile Include="Assets\Scripts\UI_Scripts\LevelUnlocker.cs" />
+    <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\CoinTextScript.cs" />
     <Compile Include="Assets\Scripts\Player_Scripts\PrismScript.cs" />
     <Compile Include="Assets\Scripts\Player_Scripts\Player_Power.cs" />
     <Compile Include="Assets\Scripts\Controllers\MainMenuCon.cs" />
@@ -77,9 +80,6 @@
     <Compile Include="Assets\Scripts\PowerUP_Scripts\BulletMovement.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Player_Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\Controllers\GameOverCon.cs" />
-    <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\CoinTextScript.cs" />
-    <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\MMCoinsScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

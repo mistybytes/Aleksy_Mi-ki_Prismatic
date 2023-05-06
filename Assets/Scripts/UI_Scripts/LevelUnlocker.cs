@@ -52,9 +52,4 @@ public class LevelUnlocker : MonoBehaviour
             level5Button.SetActive(false);
         }
     }
-
-    public void SetLevel1Completed()
-    {
-           LevelCompletionManager.instance.levelCompletionStatus[1] = true;
-    }
 }

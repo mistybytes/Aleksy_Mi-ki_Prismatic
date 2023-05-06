@@ -9,8 +9,9 @@ public class GameManager : MonoBehaviour
 
     private int coins = 1;
     private int collectedCoins = 0;
-
-    private int lives = 3;
+    private int bullet_damage = 10;
+    private int enemy_health = 10;
+    private int lives = 1;
     public float gameSpeed = 4f;
     private string currentSceneName = "";
     
@@ -52,6 +53,15 @@ public class GameManager : MonoBehaviour
         lives--;
     }
 
+    public int getBulletDamage()
+    {
+        return bullet_damage;
+    }
+
+    public int getEnemyHealth()
+    {
+        return enemy_health;
+    }
     // Start is called before the first frame update
     void Start()
     {
