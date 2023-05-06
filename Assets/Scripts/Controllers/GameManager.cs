@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    private float shotSpeed = 3; 
     private int coins = 1;
     private int collectedCoins = 0;
     private int bullet_damage = 10;
@@ -52,7 +53,10 @@ public class GameManager : MonoBehaviour
     {
         lives--;
     }
-
+    public float getShotSpeed()
+    {
+        return shotSpeed;
+    }
     public int getBulletDamage()
     {
         return bullet_damage;
@@ -73,8 +77,8 @@ public class GameManager : MonoBehaviour
     {
         if (lives == 0)
         {
-            lives = 3;
-            SceneManager.LoadScene("MainMenu");
+            lives = 1;
+            SceneManager.LoadScene("GameOver");
         }
 
     }

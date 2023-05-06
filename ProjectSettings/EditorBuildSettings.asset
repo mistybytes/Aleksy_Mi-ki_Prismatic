@@ -8,18 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UIFolder/MainMenu.unity
     guid: cc8ad07fe516d53488288672a2a38c61
-  - enabled: 1
-    path: Assets/Scenes/Type1Levels/LEVEL1.unity
-    guid: c850ee8c3b14cc8459e7e186857cf567
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/UIFolder/GameOver.unity
     guid: b9ffc8620524e2041a72f4a7781781a0
   - enabled: 1
     path: Assets/Scenes/UIFolder/LevelSelect.unity
     guid: ab5a98a0b02a7cb40a4a85132e0f9a16
-  - enabled: 1
-    path: Assets/Scenes/Type1Levels/LEVEL2.unity
-    guid: f785e0b9dda62e040a10aef12a4cc8ea
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: a33065440d555284aadc1fdac7c54505,
       type: 2}
