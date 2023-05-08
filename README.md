@@ -12,16 +12,16 @@ There will be as many locations as colors of the rainbow and the same with enemi
 With each level enemies are going to get stronger and faster and so the player will have to buy upgrades in the shop.
 
 First location:
- - enemies are simply moving towards the player
- - boss is goin to be orbiting around the player and spawning them, player has to shoot him down
+- Enemies are simply moving towards the player
+- Boss is goin to be orbiting around the player and spawning them, player has to shoot him down
 Second location:
- - enemies will be slower but will also get much tougher
- - boss same as in the first location
+- Enemies will be slower but will also get much tougher
+- Boss same as in the first location
 Third location:
- - enemies will orbit the player and shoot at him, player has to shoot him down
- - Boss is spawning enemies around him
+- Enemies will orbit the player and shoot at him, player has to shoot him down
+- Boss is spawning enemies around him
 4-th location:
-- enemies are flying in an unpredictible movement around and getting closer
+- Enemies are flying in an unpredictible movement around and getting closer
 - ...
 (All for now)
 
