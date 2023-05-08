@@ -29,9 +29,14 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    public int getLives()
+    {
+        return lives;
+    }
     public void coinPickedUp()
     {
-        coins++;
+        collectedCoins++;
     }
     public string getCurrentScene()
     {
@@ -66,6 +71,11 @@ public class GameManager : MonoBehaviour
     {
         return enemy_health;
     }
+
+    public void levelEnded()
+    {
+        coins += collectedCoins;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +87,7 @@ public class GameManager : MonoBehaviour
     {
         if (lives == 0)
         {
+            levelEnded();
             lives = 1;
             SceneManager.LoadScene("GameOver");
         }

@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public Vector3 target;
+    [SerializeField]
+    private Vector3 target;
     private int enemyHealth;
     void Start()
     {
@@ -42,8 +43,7 @@ public class EnemyMovement : MonoBehaviour
         if (distanceToTarget > 0)
         {
             direction.Normalize();
-
-            transform.position += direction * GameManager.instance.gameSpeed * Time.deltaTime;
+            transform.position += GameManager.instance.gameSpeed * direction *  Time.deltaTime;
         }
     }
 

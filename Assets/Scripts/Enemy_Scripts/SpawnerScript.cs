@@ -18,7 +18,6 @@ public class SpawnerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         StartCoroutine(SpawnEnemies());
     }
 
@@ -104,9 +103,4 @@ public class SpawnerScript : MonoBehaviour
 
 
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

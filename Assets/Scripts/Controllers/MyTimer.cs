@@ -15,7 +15,6 @@ public class MyTimer : MonoBehaviour
    
     private static void OnTimerElapsed()
     {
-        
         if (GameManager.instance.getCurrentScene() == "LEVEL1") LevelCompletionManager.instance.levelCompletionStatus[0] = true;
         if (GameManager.instance.getCurrentScene() == "LEVEL2") LevelCompletionManager.instance.levelCompletionStatus[1] = true;
         if (GameManager.instance.getCurrentScene() == "LEVEL3") LevelCompletionManager.instance.levelCompletionStatus[2] = true;
