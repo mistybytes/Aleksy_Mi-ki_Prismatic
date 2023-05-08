@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
+    private float playerSpeed = 3f;
     private bool isClockwise = true;
     private float currentAngle = 2.0f;
     private Transform t;
@@ -26,9 +27,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
-            float angleDelta = Time.deltaTime * 7 * (isClockwise ? -1f : 1f);
+            float angleDelta = Time.deltaTime * playerSpeed * (isClockwise ? -1f : 1f);
             currentAngle += angleDelta;
-            Vector3 circlePosition = new Vector3(Mathf.Sin(currentAngle), 0, Mathf.Cos(currentAngle)) * 5;
+            Vector3 circlePosition = new Vector3(Mathf.Sin(currentAngle), 0, Mathf.Cos(currentAngle)) * 3;
 
             transform.position = circlePosition;
         }

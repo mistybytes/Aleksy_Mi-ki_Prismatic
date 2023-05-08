@@ -15,7 +15,11 @@ public class MainMenuCon : MonoBehaviour
         SceneManager.LoadScene("SkinSelect");
     }
 
-
+    public void UpgradeShop()
+    {
+        SceneManager.LoadScene("PowerUpStore");
+    }
+    
     // Update is called once per frame
 
 }

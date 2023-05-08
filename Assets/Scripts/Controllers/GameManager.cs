@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    private float shotSpeed = 3; 
+    private float shotSpeed = 3f; 
     private int coins = 1;
     private int collectedCoins = 0;
     private int bullet_damage = 10;
@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     private int lives = 1;
     public float gameSpeed = 4f;
     private string currentSceneName = "";
-    
+    private float playerSpeed = 5f;
     void Awake()
     {
         if (instance == null)
@@ -30,10 +30,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public int getLives()
-    {
-        return lives;
-    }
+    //methods for coins
     public void coinPickedUp()
     {
         collectedCoins++;
@@ -50,14 +47,21 @@ public class GameManager : MonoBehaviour
     {
         return coins;
     }
+    //methods for player lives
+    public int getLives()
+    {
+        return lives;
+    }
     public void AddLives()
     {
         lives++;
     }
+    
     public void SubLives()
     {
         lives--;
     }
+    //player bullet methods
     public float getShotSpeed()
     {
         return shotSpeed;
@@ -67,11 +71,30 @@ public class GameManager : MonoBehaviour
         return bullet_damage;
     }
 
+    //enemy script
     public int getEnemyHealth()
     {
         return enemy_health;
     }
 
+    public void setEnemyHealth(int health)
+    {
+        enemy_health = health;
+    }
+
+    public void upgradeShotDamage()
+    {
+        bullet_damage += 5;
+    }
+    public void upgradeShotSpeed()
+    {
+        shotSpeed = shotSpeed - 0.5f;
+    }
+
+    public void upgradePlayerSpeed()
+    {
+        playerSpeed += 1;
+    }
     public void levelEnded()
     {
         coins += collectedCoins;
@@ -91,6 +114,5 @@ public class GameManager : MonoBehaviour
             lives = 1;
             SceneManager.LoadScene("GameOver");
         }
-
     }
 }

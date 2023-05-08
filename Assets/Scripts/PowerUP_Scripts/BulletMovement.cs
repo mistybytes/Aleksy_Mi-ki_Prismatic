@@ -14,7 +14,7 @@ public class BulletMovement : MonoBehaviour
     
     void Start()
     {
-
+        
         bulletDamage = GameManager.instance.getBulletDamage();
 
         Destroy(gameObject, delay);

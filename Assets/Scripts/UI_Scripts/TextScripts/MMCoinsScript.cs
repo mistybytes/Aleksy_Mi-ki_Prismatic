@@ -10,7 +10,6 @@ public class MMCoinsScript : MonoBehaviour
     {
         textComponent = GetComponent<Text>();
         textComponent.text = "Coins : " + GameManager.instance.getCoins();
-
     }
 
     private void Update()

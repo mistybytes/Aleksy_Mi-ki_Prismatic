@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,15 @@ public class BulletEmitter : MonoBehaviour
     public float fireInterval = 3f;
     private float lastFireTime = 0f;
 
+    private void Start()
+    {
+        
+        fireInterval = GameManager.instance.getShotSpeed();
+    }
+
     void Update()
     {
+        Debug.Log(GameManager.instance.getShotSpeed());
         if (Time.time - lastFireTime > fireInterval)
         {
             lastFireTime = Time.time;

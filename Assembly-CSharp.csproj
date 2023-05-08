@@ -69,6 +69,9 @@
      <Compile Include="Assets\Scripts\PowerUP_Scripts\CoinSpawner.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BigCoinScript.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\CoinsAndLives.cs" />
+     <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\ShopController.cs" />
+     <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\DamageDisplay.cs" />
+     <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\shotSpeeddisplay.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Sprites\Assets\gothicvania patreon collection\Gothic-hero-Files\PNG" />
      <Folder Include="Assets\Scenes" />
