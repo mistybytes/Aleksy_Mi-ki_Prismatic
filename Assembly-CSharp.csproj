@@ -65,14 +65,15 @@
      <Compile Include="Assets\Scripts\PowerUP_Scripts\PowerUpShield.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\SkinScript.cs" />
      <Compile Include="Assets\Scripts\Enemy_Scripts\SpawnerScript.cs" />
+     <Compile Include="Assets\Scripts\Enemy_Scripts\SpiralMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy_Scripts\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\ShopController.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\shotSpeeddisplay.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\CoinsAndLives.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BulletMovement.cs" />
      <Compile Include="Assets\Scripts\Controllers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Enemy_Scripts\enemyBullet.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\CameraMovement.cs" />
-     <Compile Include="Assets\Scripts\Enemy_Scripts\SpiralMovement.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -118,6 +119,7 @@
      <Folder Include="Assets\Sprites\Assets" />
      <Folder Include="Assets\Adaptive Performance\Provider" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <Folder Include="Assets\Scenes\Type4Levels" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <Folder Include="Assets\Scenes\Type3Levels" />

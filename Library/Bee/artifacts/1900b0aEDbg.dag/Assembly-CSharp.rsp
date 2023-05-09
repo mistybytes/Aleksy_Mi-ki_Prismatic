@@ -366,6 +366,7 @@
 "Assets/Scripts/Controllers/LevelSelect.cs"
 "Assets/Scripts/Controllers/MainMenuCon.cs"
 "Assets/Scripts/Controllers/MyTimer.cs"
+"Assets/Scripts/Enemy_Scripts/enemyBullet.cs"
 "Assets/Scripts/Enemy_Scripts/EnemyMovement.cs"
 "Assets/Scripts/Enemy_Scripts/SpawnerScript.cs"
 "Assets/Scripts/Enemy_Scripts/SpiralMovement.cs"

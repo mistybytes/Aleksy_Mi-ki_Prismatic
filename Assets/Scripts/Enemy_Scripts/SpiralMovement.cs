@@ -35,7 +35,7 @@ public class SpiralMovement : MonoBehaviour
         Vector3 newPosition = new Vector3(newX, transform.position.y, newZ);
         transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
     }
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {

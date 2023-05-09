@@ -13,6 +13,7 @@ public class SpawnerScript : MonoBehaviour
 
     private GameObject spawnedRay;
 
+    [SerializeField] private int delay;
     private int randomSide;
 
     // Start is called before the first frame update
@@ -26,7 +27,7 @@ public class SpawnerScript : MonoBehaviour
 
         while (true)
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(delay);
 
             randomSide = Random.Range(0, 15);
 

@@ -13,7 +13,7 @@ public class EnemyMovement : MonoBehaviour
         enemyHealth = GameManager.instance.getEnemyHealth();
         target = new Vector3(0f, 0f, 0f);
     }
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
