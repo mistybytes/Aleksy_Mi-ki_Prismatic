@@ -387,6 +387,7 @@
 "Assets/Scripts/UI_Scripts/TextScripts/CoinTextScript.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/DamageDisplay.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/MMCoinsScript.cs"
+"Assets/Scripts/UI_Scripts/TextScripts/ShopCoins.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/ShopController.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/shotSpeeddisplay.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/TextColorChange.cs"

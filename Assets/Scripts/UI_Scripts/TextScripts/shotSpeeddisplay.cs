@@ -27,9 +27,10 @@ public class shotSpeeddisplay : MonoBehaviour
     public string updateText()
     {
         string damage = "";
-        for (int i = 3; i < GameManager.instance.getShotSpeed(); i+=2 )
+        
+        for (float i = 5 ; i > GameManager.instance.getShotSpeed(); i -= 0.5f )
         {
-            damage += "||";
+            damage += "|";
         }
 
         return damage;

@@ -7,8 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    private float shotSpeed = 3f; 
-    private int coins = 1;
+    private float shotSpeed = 5f; 
+    private int coins = 0;
     private int collectedCoins = 0;
     private int bullet_damage = 10;
     private int enemy_health = 10;
@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public float gameSpeed = 4f;
     private string currentSceneName = "";
     private float playerSpeed = 5f;
+    
     void Awake()
     {
         if (instance == null)
@@ -98,6 +99,7 @@ public class GameManager : MonoBehaviour
     public void levelEnded()
     {
         coins += collectedCoins;
+        collectedCoins = 0;
     }
     // Start is called before the first frame update
     void Start()
@@ -112,6 +114,7 @@ public class GameManager : MonoBehaviour
         {
             levelEnded();
             lives = 1;
+            
             SceneManager.LoadScene("GameOver");
         }
     }
