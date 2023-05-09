@@ -11,6 +11,23 @@ Difficulty increase:
 There will be as many locations as colors of the rainbow and the same with enemies.
 With each level enemies are going to get stronger and faster and so the player will have to buy upgrades in the shop.
 
+First location:
+- Enemies are simply moving towards the player
+- Boss is goin to be orbiting around the player and spawning them, player has to shoot him down
+Second location:
+- Enemies will be slower but will also get much tougher
+- Boss same as in the first location
+Third location:
+- Enemies will orbit the player and shoot at him, player has to shoot him down
+- Boss is spawning enemies around him
+4-th location:
+- Enemies are flying in an unpredictible movement around and getting closer
+- ...
+(All for now)
+
+Locations are to be bought by the player by a specific amount, on location unlock the upgrades reset.
+
+
 Plans for this week:
 
 - Add example graphics to figma 
