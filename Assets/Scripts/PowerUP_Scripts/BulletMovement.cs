@@ -47,6 +47,20 @@ public class BulletMovement : MonoBehaviour
                 collision.gameObject.GetComponent<EnemyMovement>().subHealth(bulletDamage);
             }
         }
+
+        else if (collision.gameObject.CompareTag("SpiralingEnemy"))
+        {
+            if (collision.gameObject.GetComponent<SpiralMovement>().getHealth() - bulletDamage == 0)
+            {
+                Destroy(gameObject);
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+                collision.gameObject.GetComponent<SpiralMovement>().subHealth(bulletDamage);
+            }
+        }
        
     }
     void Update()

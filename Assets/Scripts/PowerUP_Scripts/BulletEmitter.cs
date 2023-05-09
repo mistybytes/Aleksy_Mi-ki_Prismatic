@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 
 public class BulletEmitter : MonoBehaviour
@@ -11,13 +12,11 @@ public class BulletEmitter : MonoBehaviour
 
     private void Start()
     {
-        
         fireInterval = GameManager.instance.getShotSpeed();
     }
 
     void Update()
     {
-        Debug.Log(GameManager.instance.getShotSpeed());
         if (Time.time - lastFireTime > fireInterval)
         {
             lastFireTime = Time.time;
@@ -27,7 +26,7 @@ public class BulletEmitter : MonoBehaviour
 
     void FireBullet()
     {
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        GameObject bullet = Instantiate(bulletPrefab, transform.position , transform.rotation);
         // Set any necessary properties on the bullet object
     }
 }

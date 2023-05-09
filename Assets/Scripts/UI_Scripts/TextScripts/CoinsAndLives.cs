@@ -14,6 +14,6 @@ public class CoinsAndLives : MonoBehaviour
 
     private void Update()
     {
-        textComponent.text = "<3 : " + GameManager.instance.getLives() + " $ : " + GameManager.instance.getCollectedCoins();
+        textComponent.text = "LIVES : " + GameManager.instance.getLives() + "    $ : " + GameManager.instance.getCollectedCoins();
     }
 }

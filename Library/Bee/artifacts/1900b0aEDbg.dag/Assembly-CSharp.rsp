@@ -368,6 +368,7 @@
 "Assets/Scripts/Controllers/MyTimer.cs"
 "Assets/Scripts/Enemy_Scripts/EnemyMovement.cs"
 "Assets/Scripts/Enemy_Scripts/SpawnerScript.cs"
+"Assets/Scripts/Enemy_Scripts/SpiralMovement.cs"
 "Assets/Scripts/Player_Scripts/CameraMovement.cs"
 "Assets/Scripts/Player_Scripts/PlayerMovement.cs"
 "Assets/Scripts/Player_Scripts/Player_Power.cs"
@@ -392,7 +393,6 @@
 "Assets/Scripts/UI_Scripts/TextScripts/shotSpeeddisplay.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/TextColorChange.cs"
 "Assets/Scripts/UI_Scripts/TimeDisplay.cs"
-"Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 
 /deterministic

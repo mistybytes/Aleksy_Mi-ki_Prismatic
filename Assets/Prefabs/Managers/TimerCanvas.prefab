@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 143816955}
   - component: {fileID: 143816954}
   - component: {fileID: 143816953}
+  - component: {fileID: 887227076}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Coins&Lives
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,9 +35,9 @@ RectTransform:
   m_Father: {fileID: 4170896728560543744}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 479, y: 207}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1054, y: -35}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &143816955
@@ -68,7 +69,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b04ff295c1de7b84d998d51554e9c325, type: 3}
+    m_Font: {fileID: 12800000, guid: d4f72d2c650db3c48a37a54f077a5e7d, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -80,7 +81,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' <3 : 1   $ : 12'
+  m_Text: 
 --- !u!114 &143816953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,6 +92,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee5017661fb2b0c4cad99f501d0aa9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &887227076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143816951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 773ea4008b2818949b76a97a71e28acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4170896727393864113
@@ -106,7 +119,7 @@ GameObject:
   - component: {fileID: 4170896727393864119}
   - component: {fileID: 4170896727393864122}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,9 +140,9 @@ RectTransform:
   m_Father: {fileID: 4170896728560543744}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -439.8, y: 208}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -990.8, y: -35}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4170896727393864117
@@ -174,7 +187,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b04ff295c1de7b84d998d51554e9c325, type: 3}
+    m_Font: {fileID: 12800000, guid: d4f72d2c650db3c48a37a54f077a5e7d, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0

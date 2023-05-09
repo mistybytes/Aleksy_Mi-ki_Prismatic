@@ -20,10 +20,12 @@ public class LevelCompletionManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        levelCompletionStatus = new bool[4]; 
+        levelCompletionStatus = new bool[6]; 
         levelCompletionStatus[0] = false;
         levelCompletionStatus[1] = false;
         levelCompletionStatus[2] = false;
         levelCompletionStatus[3] = false;
+        levelCompletionStatus[4] = false;
+        levelCompletionStatus[5] = false;
     }
 }
