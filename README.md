@@ -12,15 +12,15 @@ There will be as many locations as colors of the rainbow and the same with enemi
 With each level enemies are going to get stronger and faster and so the player will have to buy upgrades in the shop.
 
 The locations of the game could have specific effects asociated with them for example:
-slowing the player down
-poor lightning
-lightning in only one direction
+- slowing the player down
+- poor lightning
+- lightning in only one direction
 
-The power ups include:
-temporary shot speed increase
-shield for the player
-?double the coins spawn rate
-temporary movement speed increase
+The power ups could include:
+- Temporary shot speed increase
+- Shield for the player
+- Double the coins spawn rate
+- Temporary movement speed increase
 
 
 Locations are to be bought by the player by a specific amount, on location unlock the upgrades reset.
