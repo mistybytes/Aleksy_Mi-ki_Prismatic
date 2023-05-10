@@ -112,7 +112,6 @@ public class GameManager : MonoBehaviour
     {
         if (lives == 0)
         {
-            levelEnded();
             lives = 1;
             
             SceneManager.LoadScene("GameOver");

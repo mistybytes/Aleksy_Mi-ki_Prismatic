@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\UI_Scripts\LevelUnlocker.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\CoinTextScript.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\CoinSpawner.cs" />
+     <Compile Include="Assets\Scripts\Enemy_Scripts\BossScripts\BossMovement.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\PrismScript.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\Player_Power.cs" />
      <Compile Include="Assets\Scripts\Controllers\MainMenuCon.cs" />
@@ -74,13 +75,13 @@
      <Compile Include="Assets\Scripts\Controllers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Enemy_Scripts\enemyBullet.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\CameraMovement.cs" />
-     <Compile Include="Assets\Scripts\Enemy_Scripts\BossScripts\BossMovement.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <Folder Include="Assets\Prefabs\Managers" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets\TextMesh Pro\Sprites" />
+     <Folder Include="Assets\Scenes\Type5Levels" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\Prefabs\EnemyPrefabs" />
@@ -102,6 +103,7 @@
      <Folder Include="Assets\Scripts\UI_Scripts\TextScripts" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <Folder Include="Assets\Prefabs\EnemyPrefabs\Bosses" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <Folder Include="Assets\Scenes\UIFolder" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
