@@ -486,11 +486,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prism
       objectReference: {fileID: 0}
-    - target: {fileID: 6051738190035228731, guid: 49af44454bc8524449cb8c12affd09c1,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6158221440349744262, guid: 49af44454bc8524449cb8c12affd09c1,
         type: 3}
       propertyPath: m_RootOrder
@@ -832,11 +827,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8258266754675861128, guid: 3e29b9807f9e768418110105ed76b235,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8258266754675861130, guid: 3e29b9807f9e768418110105ed76b235,
         type: 3}

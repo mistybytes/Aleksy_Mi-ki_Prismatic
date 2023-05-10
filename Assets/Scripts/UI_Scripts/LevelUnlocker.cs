@@ -15,7 +15,7 @@ public class LevelUnlocker : MonoBehaviour
         // Check if level 1 has been completed
         if (LevelCompletionManager.instance.levelCompletionStatus[0])
         {
-            level2Button.interactable = false;
+            level2Button.interactable = true;
         }
         else
         {

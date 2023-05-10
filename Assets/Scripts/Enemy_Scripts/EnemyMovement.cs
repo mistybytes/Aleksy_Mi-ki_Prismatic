@@ -26,9 +26,9 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    public int getHealth()
+    public ref int getHealth()
     {
-        return enemyHealth;
+        return ref enemyHealth;
     }
     public void subHealth(int damage)
     {

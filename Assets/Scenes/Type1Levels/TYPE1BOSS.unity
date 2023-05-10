@@ -205,6 +205,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.029592399
       objectReference: {fileID: 0}
+    - target: {fileID: 8579228771814516189, guid: eb7a9313bd3476144901c191531dadad,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb7a9313bd3476144901c191531dadad, type: 3}
 --- !u!1001 &531448171
@@ -338,6 +343,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8258266754675861127, guid: 3e29b9807f9e768418110105ed76b235,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 24066c435c2aa9046949ff2be6a22c8b, type: 2}
     - target: {fileID: 8258266754675861130, guid: 3e29b9807f9e768418110105ed76b235,
         type: 3}
       propertyPath: m_Name
@@ -443,7 +453,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9245283, g: 0.039248828, b: 0.039248828, a: 1}
-  m_Intensity: 10
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -772,6 +782,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8315644168084887563, guid: 3307d9d84ecd4f9409dd85986e32dda5,
+        type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315644168084887566, guid: 3307d9d84ecd4f9409dd85986e32dda5,
+        type: 3}
+      propertyPath: fireInterval
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8315644168084887567, guid: 3307d9d84ecd4f9409dd85986e32dda5,
         type: 3}
       propertyPath: m_RootOrder

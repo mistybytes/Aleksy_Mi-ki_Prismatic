@@ -21,7 +21,7 @@ public class LevelSelect : MonoBehaviour
     public void SetLevel2Speed()
     {
         GameManager.instance.setEnemyHealth(20);
-        GameManager.instance.gameSpeed = 8f;
+        GameManager.instance.gameSpeed = 5f;
     }
 
     public void Level3()
@@ -31,7 +31,7 @@ public class LevelSelect : MonoBehaviour
     public void SetLevel3Speed()
     {
         GameManager.instance.setEnemyHealth(20);
-        GameManager.instance.gameSpeed = 8f;
+        GameManager.instance.gameSpeed = 6f;
     }
     public void Level4()
     {
@@ -41,7 +41,7 @@ public class LevelSelect : MonoBehaviour
     public void SetLevel4Speed()
     {
         GameManager.instance.setEnemyHealth(30);
-        GameManager.instance.gameSpeed = 12f;
+        GameManager.instance.gameSpeed = 8f;
     }
 
     public void Level5()
@@ -52,9 +52,30 @@ public class LevelSelect : MonoBehaviour
     public void SetLevel5Speed()
     {
         GameManager.instance.setEnemyHealth(50);
+        GameManager.instance.gameSpeed = 9f;
+
+    }
+
+    public void Level6()
+    {
+        SceneManager.LoadScene("LEVEL6");
+    }
+
+    public void SetLevel6Speed()
+    {
+        GameManager.instance.setEnemyHealth(50);
+        GameManager.instance.gameSpeed = 9f;
+
+    }
+
+    public void Boss1Level()
+    {
         
     }
 
-
+    public void setBoss1Level()
+    {
+        
+    }
 
 }
