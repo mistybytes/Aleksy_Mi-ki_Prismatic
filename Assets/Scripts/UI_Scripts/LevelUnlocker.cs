@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelUnlocker : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class LevelUnlocker : MonoBehaviour
     public GameObject level3Button;
     public GameObject level4Button;
     public GameObject level5Button;
+    public GameObject level6Button;
     void Update()
     {
         // Check if level 1 has been completed
@@ -50,6 +52,15 @@ public class LevelUnlocker : MonoBehaviour
         {
             // Disable access to level 2
             level5Button.SetActive(false);
+        }
+
+        if (LevelCompletionManager.instance.levelCompletionStatus[4])
+        {
+            level6Button.SetActive(true);
+        }
+        else
+        {
+            level6Button.SetActive(false);
         }
     }
 }

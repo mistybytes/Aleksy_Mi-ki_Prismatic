@@ -765,6 +765,11 @@ PrefabInstance:
       propertyPath: level5Button
       value: 
       objectReference: {fileID: 6556993917724388809}
+    - target: {fileID: 460372840930668410, guid: 777820e9f5b3b9a469d41bdede8017aa,
+        type: 3}
+      propertyPath: level6Button
+      value: 
+      objectReference: {fileID: 6556993917724388812}
     - target: {fileID: 460372840930668411, guid: 777820e9f5b3b9a469d41bdede8017aa,
         type: 3}
       propertyPath: m_RootOrder
@@ -1313,6 +1318,12 @@ GameObject:
 --- !u!1 &6556993917724388811 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6556993916622316884, guid: b22b8e60f12b67243b1567356ac6ab4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6556993917724388808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6556993917724388812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6556993916512564452, guid: b22b8e60f12b67243b1567356ac6ab4c,
     type: 3}
   m_PrefabInstance: {fileID: 6556993917724388808}
   m_PrefabAsset: {fileID: 0}
