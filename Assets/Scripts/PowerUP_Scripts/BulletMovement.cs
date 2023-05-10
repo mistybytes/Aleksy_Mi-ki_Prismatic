@@ -31,12 +31,13 @@ public class BulletMovement : MonoBehaviour
 
         }
     }
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
+        //TODO make this a switch statement
         if (collision.gameObject.CompareTag("Enemy"))
         {
 
-            if (collision.gameObject.GetComponent<EnemyMovement>().getHealth() - bulletDamage == 0)
+            if (collision.gameObject.GetComponent<EnemyMovement>().getHealth() - bulletDamage <= 0)
             {
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
@@ -50,7 +51,7 @@ public class BulletMovement : MonoBehaviour
 
         else if (collision.gameObject.CompareTag("SpiralingEnemy"))
         {
-            if (collision.gameObject.GetComponent<SpiralMovement>().getHealth() - bulletDamage == 0)
+            if (collision.gameObject.GetComponent<SpiralMovement>().getHealth() - bulletDamage <= 0)
             {
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
@@ -59,6 +60,20 @@ public class BulletMovement : MonoBehaviour
             {
                 Destroy(gameObject);
                 collision.gameObject.GetComponent<SpiralMovement>().subHealth(bulletDamage);
+            }
+        }
+        
+        else if (collision.gameObject.CompareTag("Boss"))
+        {
+            if (collision.gameObject.GetComponent<BossMovement>().getHealth() - bulletDamage <= 0)
+            {
+                Destroy(gameObject);
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+                collision.gameObject.GetComponent<BossMovement>().subHealth(bulletDamage);
             }
         }
        

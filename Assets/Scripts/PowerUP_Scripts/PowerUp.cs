@@ -12,11 +12,10 @@ public class PowerUp : MonoBehaviour
     {
         target = new Vector3(0f, 0f, 0f);
     }
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            
             GameManager.instance.AddLives();
             //TODO add this to other power ups
             Destroy(gameObject);

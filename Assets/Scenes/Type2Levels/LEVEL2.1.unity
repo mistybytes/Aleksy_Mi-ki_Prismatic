@@ -138,7 +138,7 @@ PrefabInstance:
     - target: {fileID: 6719376952352997388, guid: 6f83b5aa01e15cc41ba719f4b43d2781,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6719376952352997388, guid: 6f83b5aa01e15cc41ba719f4b43d2781,
         type: 3}
@@ -212,7 +212,7 @@ PrefabInstance:
     - target: {fileID: 4170896728560543744, guid: 6a44c15ae208d4142ae8462bd5e18bcb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4170896728560543744, guid: 6a44c15ae208d4142ae8462bd5e18bcb,
         type: 3}
@@ -321,7 +321,7 @@ PrefabInstance:
     - target: {fileID: 7893697839095894089, guid: 2074fd0abf08c414885ee72e47a3e2ac,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7893697839095894089, guid: 2074fd0abf08c414885ee72e47a3e2ac,
         type: 3}
@@ -392,10 +392,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prism
       objectReference: {fileID: 0}
+    - target: {fileID: 4862748276282756067, guid: 49af44454bc8524449cb8c12affd09c1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Cube
+      objectReference: {fileID: 0}
     - target: {fileID: 6158221440349744262, guid: 49af44454bc8524449cb8c12affd09c1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6158221440349744262, guid: 49af44454bc8524449cb8c12affd09c1,
         type: 3}
@@ -528,7 +533,7 @@ PrefabInstance:
     - target: {fileID: 6572494436448053479, guid: 6beecc503911fa548a9b4f7765895b61,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6572494436448053479, guid: 6beecc503911fa548a9b4f7765895b61,
         type: 3}
@@ -663,10 +668,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3925048436806562876, guid: 98032e95c26fd5b4399ad4a1236b88d8,
+        type: 3}
+      propertyPath: enemy.Array.data[0]
+      value: 
+      objectReference: {fileID: 7873781805819953174, guid: 5b6b72781ae8e0c48b6f5446b6a5fcfa,
+        type: 3}
     - target: {fileID: 6066971430568867561, guid: 98032e95c26fd5b4399ad4a1236b88d8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6066971430568867561, guid: 98032e95c26fd5b4399ad4a1236b88d8,
         type: 3}

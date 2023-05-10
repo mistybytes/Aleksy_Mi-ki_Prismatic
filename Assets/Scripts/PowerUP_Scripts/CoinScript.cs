@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class CoinScript : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField]
     private Vector3 target;
     [SerializeField]
@@ -14,7 +13,7 @@ public class CoinScript : MonoBehaviour
     {
         target = new Vector3(0f, 0f, 0f);
     }
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
