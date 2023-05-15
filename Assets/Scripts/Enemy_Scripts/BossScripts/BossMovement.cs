@@ -6,8 +6,7 @@ public class BossMovement : MonoBehaviour
     public float radius = 5f;           // The radius of the circle
     public float speed = 1f;            // The speed at which the object moves// The height above the ground
     private float angle = 2f;           // The current angle of the object
-
-    private int BossHealth = 100;
+    
     void Update()
     {
         // Update the angle based on the speed and time
@@ -20,15 +19,6 @@ public class BossMovement : MonoBehaviour
         // Set the position of the object
         transform.position = new Vector3(x, 0, y);
     }
-
-    public int getHealth()
-    {
-        return BossHealth;
-    }
-
-    public void subHealth(int damage)
-    {
-        BossHealth = BossHealth - damage;
-    }
+    
     
 }

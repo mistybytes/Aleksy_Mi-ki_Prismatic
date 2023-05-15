@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public float gameSpeed = 4f;
     private string currentSceneName = "";
     private float playerSpeed = 5f;
+    private GameObject blasterType;
     
     void Awake()
     {
@@ -31,6 +32,16 @@ public class GameManager : MonoBehaviour
 
     }
 
+    //blaster methods
+    public void setBlasterType(GameObject blaster)
+    {
+        blasterType = blaster;
+    }
+
+    public GameObject getBlasterType()
+    {
+        return blasterType;
+    }
     //methods for coins
     public void coinPickedUp()
     {

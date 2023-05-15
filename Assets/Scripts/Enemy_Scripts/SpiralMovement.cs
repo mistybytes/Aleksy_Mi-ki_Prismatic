@@ -9,15 +9,8 @@ public class SpiralMovement : MonoBehaviour
     public float spiralSpeed = 50f;
     public Vector3 target = Vector3.zero;
     public float minHeight = 0.1f;
-    [SerializeField]
-    private int enemyHealth;
     private float currentAngle = 0f;
-
-    private void Start()
-    {
-        enemyHealth = GameManager.instance.getEnemyHealth();
-    }
-
+    
     void LateUpdate()
     {
         // Calculate distance to target and normalize it
@@ -35,26 +28,8 @@ public class SpiralMovement : MonoBehaviour
         Vector3 newPosition = new Vector3(newX, transform.position.y, newZ);
         transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
     }
-    void OnTriggerEnter(Collider collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("Cube"))
-        {
-            GameManager.instance.SubLives();
-            Destroy(gameObject);
-        }
-    }
+  
     
-    public int getHealth()
-    {
-        return enemyHealth;
-    }
-    public void subHealth(int damage)
-    {
-        enemyHealth -= damage;
-    }
+    
     
 }

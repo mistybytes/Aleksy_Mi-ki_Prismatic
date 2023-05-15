@@ -68,13 +68,15 @@
      <Compile Include="Assets\Scripts\Enemy_Scripts\SpawnerScript.cs" />
      <Compile Include="Assets\Scripts\Enemy_Scripts\SpiralMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy_Scripts\EnemyMovement.cs" />
-     <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\ShopController.cs" />
+     <Compile Include="Assets\Scripts\UI_Scripts\ShopController.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\shotSpeeddisplay.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\CoinsAndLives.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\BulletMovement.cs" />
      <Compile Include="Assets\Scripts\Controllers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Enemy_Scripts\enemyBullet.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy_Scripts\enemyManager.cs" />
+     <Compile Include="Assets\Scripts\Enemy_Scripts\BossScripts\BossManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -99,6 +101,7 @@
      <Folder Include="Assets\Scripts\PowerUP_Scripts\CoinS" />
      <Folder Include="Assets\scifi-drone\textures" />
      <Folder Include="Assets\Scenes\Type2Levels" />
+     <Folder Include="Assets\Scenes\Type7Levels" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets\TextMesh Pro" />
      <Folder Include="Assets\Scripts\PowerUP_Scripts" />
@@ -115,6 +118,7 @@
      <Folder Include="Assets\scifi-drone\prefabs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <Folder Include="Assets\Scenes\Type6Levels" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <Folder Include="Assets\Scripts\Enemy_Scripts" />
      <Folder Include="Assets\scifi-drone\scene" />
@@ -127,6 +131,7 @@
      <Folder Include="Assets\Prefabs\Graphics" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\Sprites\Assets" />
+     <Folder Include="Assets\Prefabs\CoinPrefabs" />
      <Folder Include="Assets\Adaptive Performance\Provider" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes" />
@@ -390,11 +395,11 @@
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
-     <Reference Include="Newtonsoft.Json">
-     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-     </Reference>
      <Reference Include="ReportGeneratorMerged">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -786,6 +791,12 @@
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
+     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
+     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
@@ -810,11 +821,14 @@
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Subsystem.Registration">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.Subsystem.Registration.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.AdaptivePerformance.UI.Editor">
-     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.AdaptivePerformance.UI.Editor.dll</HintPath>
+     <Reference Include="Unity.Postprocessing.Editor">
+     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -825,11 +839,14 @@
      <Reference Include="Unity.Rider.Editor">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     <Reference Include="Unity.AdaptivePerformance.UI.Editor">
+     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.AdaptivePerformance.UI.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
@@ -840,6 +857,9 @@
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.EditorCoroutines.Editor">
+     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Services.Core">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
      </Reference>
@@ -848,6 +868,9 @@
      </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Postprocessing.Runtime">
+     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.AdaptivePerformance.Editor">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.AdaptivePerformance.Editor.dll</HintPath>
@@ -870,32 +893,14 @@
      <Reference Include="Unity.Notifications.Android">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.Notifications.Android.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.AdaptivePerformance.Profiler.Editor">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.AdaptivePerformance.Profiler.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.EditorCoroutines.Editor">
-     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Postprocessing.Editor">
-     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Postprocessing.Runtime">
-     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-     <HintPath>C:\Users\aleks\Prismatic3D\Aleksy_Mi-ki_Prismatic\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

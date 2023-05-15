@@ -6,12 +6,11 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField]
-    private Vector3 target;
     private int enemyHealth;
+    public Vector3 target = Vector3.zero;
     void Start()
     {
         enemyHealth = GameManager.instance.getEnemyHealth();
-        target = new Vector3(0f, 0f, 0f);
     }
     void OnTriggerEnter(Collider collision)
     {
@@ -26,14 +25,6 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    public ref int getHealth()
-    {
-        return ref enemyHealth;
-    }
-    public void subHealth(int damage)
-    {
-        enemyHealth -= damage;
-    }
     void LateUpdate()
     {
         Vector3 direction = target - transform.position;

@@ -7,10 +7,13 @@ public class PlayerMovement : MonoBehaviour
     private float playerSpeed = 3f;
     private bool isClockwise = true;
     private float currentAngle = 2.0f;
-    private Transform t;
+    
     private void Start()
     {
-        t = GetComponent<Transform>();
+        BulletEmitter emitter = GetComponent<BulletEmitter>();
+        
+        emitter.bulletPrefab = GameManager.instance.getBlasterType();
+        
         StartCoroutine(MyTimer.CountUpTo1Minute());
     }
     void Update()
