@@ -11,7 +11,6 @@ public class VoidBlaster : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        Destroy(gameObject);
         Destroy(collision.gameObject);
     }
 }

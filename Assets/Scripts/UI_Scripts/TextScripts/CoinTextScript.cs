@@ -15,10 +15,4 @@ public class CoinTextScript : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        float hue = Mathf.PingPong(Time.time, 1f);
-        Color color = Color.HSVToRGB(hue, 0.8f, 1f);
-        textComponent.color = color;
-    }
 }

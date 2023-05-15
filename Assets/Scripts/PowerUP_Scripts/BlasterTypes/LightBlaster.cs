@@ -17,7 +17,7 @@ public class LightBlaster : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         
-        if (collision.gameObject.CompareTag("Enemy")) 
+        if (collision.gameObject.CompareTag("Enemy") ) 
         {
             if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)
             {
@@ -28,8 +28,8 @@ public class LightBlaster : MonoBehaviour
             {
                 Destroy(gameObject);
                 collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
-                
             }
-        }
+        }  
+        
     }
 }

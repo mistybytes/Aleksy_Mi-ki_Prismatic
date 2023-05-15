@@ -11,11 +11,5 @@ public class MMCoinsScript : MonoBehaviour
         textComponent = GetComponent<Text>();
         textComponent.text = "Coins : " + GameManager.instance.getCoins();
     }
-
-    private void Update()
-    {
-        float hue = Mathf.PingPong(Time.time, 1f);
-        Color color = Color.HSVToRGB(hue, 0.8f, 1f);
-        textComponent.color = color;
-    }
+    
 }
