@@ -147,7 +147,12 @@ public class LevelSelect : MonoBehaviour
         GameManager.instance.gameSpeed = 9f;
         SceneManager.LoadScene("LEVEL1.3");
     }
-    
 
+    public void exitToMM()
+    {
+        
+        SceneManager.LoadScene("MainMenu");
+        
+    }
 
 }
