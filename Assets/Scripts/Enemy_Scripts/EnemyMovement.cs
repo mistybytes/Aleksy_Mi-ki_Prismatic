@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     public Vector3 target = Vector3.zero;
 
+    private bool freeze = false;
     private float speed;
 
     private void Start()
@@ -29,19 +30,27 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        freeze = gameObject.GetComponent<enemyManager>().getFreeze();
+    }
+
     void LateUpdate()
     {
-        Vector3 direction = target - transform.position;
-
-        float distanceToTarget = Vector3.Distance(transform.position, target);
-
-        if (distanceToTarget > 0)
+        if (!freeze)
         {
-            direction.Normalize();
-            transform.position += direction * speed  *  Time.deltaTime;
+            Vector3 direction = target - transform.position;
+
+            float distanceToTarget = Vector3.Distance(transform.position, target);
+
+            if (distanceToTarget > 0)
+            {
+                direction.Normalize();
+                transform.position += direction * speed * Time.deltaTime;
+            }
         }
     }
-    
-    
+
+
 
 }

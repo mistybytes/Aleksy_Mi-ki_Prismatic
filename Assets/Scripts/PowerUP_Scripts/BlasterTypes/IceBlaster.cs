@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IceBlaster : MonoBehaviour
 {
-    public float freezeDuration = 1f;  // freeze duration in seconds
+    public float freezeDuration = 2f;  // freeze duration in seconds
     private int bulletDamage;
     private int delay = 10;
     private void Start()
@@ -25,21 +25,16 @@ public class IceBlaster : MonoBehaviour
             }
             else
             {
-                StartCoroutine(Freeze(collision.GetComponent<Rigidbody>()));
+                collision.gameObject.GetComponent<enemyManager>().Freeze(freezeDuration);
                 collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
                 Destroy(gameObject);
             }
         }
     }
 
-    private IEnumerator Freeze(Rigidbody target)
+    public void upgradeFreeze()
     {
-        RigidbodyConstraints originalConstraints = target.constraints;
-        
-        target.constraints = RigidbodyConstraints.FreezeAll;
-
-        yield return new WaitForSeconds(freezeDuration);
-        
-        target.constraints = originalConstraints;
+        freezeDuration += 1f;
     }
+    
 }

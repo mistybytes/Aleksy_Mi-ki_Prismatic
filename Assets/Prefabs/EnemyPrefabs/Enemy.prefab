@@ -128,7 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c05e89d186aef4bb19d4bef5dc2854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 0
   target: {x: 0, y: 0, z: 0}
 --- !u!114 &-4888853582253034992
 MonoBehaviour:
