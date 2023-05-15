@@ -16,19 +16,14 @@ The locations of the game could have specific effects asociated with them for ex
 - poor lightning
 - lightning in only one direction
 
-The power ups could include:
-- Temporary shot speed increase
-- Shield for the player
-- Double the coins spawn rate
-- Temporary movement speed increase
+Player will be able to unlock 6 weapons with each new location, they are already implemented
 
-
-Locations are to be bought by the player by a specific amount, on location unlock the upgrades reset.
-
+Locations are to be bought by the player by a specific amount, on location unlock the upgrades reset and a new weapon is unlocked.
 
 Plans for this week:
 
-- Add example graphics to figma 
-- Add a save to a JSON file and start testing the game for bugs
-- Test the game on a mobile device to see if there is somfing needed to be done with the layout
+- Add a save to a JSON and PlayerPrefs(currently working on it)
+- finish the levels and gameplay so that it only needs graphics
+- create some music for the game
+
 
