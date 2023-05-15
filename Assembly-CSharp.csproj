@@ -80,6 +80,8 @@
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\IceBlaster.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\TransformingBlaster.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\VoidBlaster.cs" />
+     <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\LightBlaster.cs" />
+     <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\ForceBlaster.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

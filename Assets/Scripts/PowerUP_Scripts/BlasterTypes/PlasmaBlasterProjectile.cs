@@ -29,6 +29,7 @@ public class PlasmaBlasterProjectile : MonoBehaviour
                     else
                     {
                         Destroy(gameObject);
+                        collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
                         StartCoroutine(ApplyFireDamage(collision.gameObject.GetComponent<enemyManager>().getHealth()));
                     }
         }

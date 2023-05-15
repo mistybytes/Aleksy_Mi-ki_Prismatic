@@ -1,3 +1,4 @@
+using System;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,12 +7,15 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField]
-    private int enemyHealth;
     public Vector3 target = Vector3.zero;
-    void Start()
+
+    private float speed;
+
+    private void Start()
     {
-        enemyHealth = GameManager.instance.getEnemyHealth();
+        speed = GameManager.instance.gameSpeed;
     }
+
     void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -34,7 +38,7 @@ public class EnemyMovement : MonoBehaviour
         if (distanceToTarget > 0)
         {
             direction.Normalize();
-            transform.position += GameManager.instance.gameSpeed * direction *  Time.deltaTime;
+            transform.position += direction * speed  *  Time.deltaTime;
         }
     }
     

@@ -9,6 +9,7 @@ TagManager:
   - SpiralingEnemy
   - Boss
   - Coin
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

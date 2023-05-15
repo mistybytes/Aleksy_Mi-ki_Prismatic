@@ -7,11 +7,11 @@ public class enemyManager : MonoBehaviour
     
     [SerializeField]
     private int enemyHealth;
-    // Start is called before the first frame update
     private void Start()
     {
         enemyHealth = GameManager.instance.getEnemyHealth();
     }
+    
     
     public int getHealth()
     {
@@ -33,4 +33,6 @@ public class enemyManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
+    
 }

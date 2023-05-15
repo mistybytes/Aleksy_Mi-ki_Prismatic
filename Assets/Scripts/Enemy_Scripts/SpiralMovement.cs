@@ -11,6 +11,7 @@ public class SpiralMovement : MonoBehaviour
     public float minHeight = 0.1f;
     private float currentAngle = 0f;
     
+    
     void LateUpdate()
     {
         // Calculate distance to target and normalize it

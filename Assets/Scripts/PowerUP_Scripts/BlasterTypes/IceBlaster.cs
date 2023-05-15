@@ -26,6 +26,7 @@ public class IceBlaster : MonoBehaviour
             else
             {
                 StartCoroutine(Freeze(collision.GetComponent<Rigidbody>()));
+                collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
                 Destroy(gameObject);
             }
         }
