@@ -37,5 +37,7 @@ public class EnemyMovement : MonoBehaviour
             transform.position += GameManager.instance.gameSpeed * direction *  Time.deltaTime;
         }
     }
+    
+    
 
 }

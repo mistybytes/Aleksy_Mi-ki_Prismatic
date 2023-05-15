@@ -12,12 +12,7 @@ public class enemyManager : MonoBehaviour
     {
         enemyHealth = GameManager.instance.getEnemyHealth();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public int getHealth()
     {
         return enemyHealth;
