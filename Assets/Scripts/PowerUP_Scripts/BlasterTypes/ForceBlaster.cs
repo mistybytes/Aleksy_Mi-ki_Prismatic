@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ForceBlaster : MonoBehaviour
 {
+    public bool isUnlocked = false;
+    
     public float speed = 3f;  // speed of the bullet
     public float pushForce = 2f;  // force applied to the enemy
     private int bulletDamage;

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class IceBlaster : MonoBehaviour
 {
+    public bool isUnlocked = false;
+    
     public float freezeDuration = 2f;  // freeze duration in seconds
     private int bulletDamage;
     private int delay = 10;

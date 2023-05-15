@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_Power : MonoBehaviour
 {
-
+    
     bool isFiring = false;
 
     public void Awake()

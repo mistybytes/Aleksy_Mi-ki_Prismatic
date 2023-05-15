@@ -5,18 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    
     public static GameManager instance;
-
+    
     private float shotSpeed = 3f; 
     private int coins = 0;
     private int collectedCoins = 0;
     private int bullet_damage = 10;
-    private int enemy_health = 100;
+    private int enemy_health = 10;
     private int lives = 1;
     public float gameSpeed = 4f;
+    
     private string currentSceneName = "";
     private float playerSpeed = 5f;
-    private GameObject blasterType;
+
+    public GameObject _iceBlaster;
+    public GameObject _forceBlaser;
+    public GameObject _transformationBlaster;
+    public GameObject _lightBlaster;
+    public GameObject _forceBlaster;
+    public GameObject _voidBlaster;
+    
+    [SerializeField]
+    private GameObject selectedBlaster;
     
     void Awake()
     {
@@ -35,12 +46,12 @@ public class GameManager : MonoBehaviour
     //blaster methods
     public void setBlasterType(GameObject blaster)
     {
-        blasterType = blaster;
+        selectedBlaster = blaster;
     }
 
     public GameObject getBlasterType()
     {
-        return blasterType;
+        return selectedBlaster;
     }
     //methods for coins
     public void coinPickedUp()
@@ -55,9 +66,9 @@ public class GameManager : MonoBehaviour
     {
         return collectedCoins;
     }
-    public int getCoins()
+    public ref int getCoins()
     {
-        return coins;
+        return ref coins;
     }
     //methods for player lives
     public int getLives()
@@ -73,6 +84,11 @@ public class GameManager : MonoBehaviour
     {
         lives--;
     }
+
+    public void setLives(int l)
+    {
+        lives = l;
+    }
     //player bullet methods
     public float getShotSpeed()
     {
@@ -83,6 +99,10 @@ public class GameManager : MonoBehaviour
         return bullet_damage;
     }
 
+    public void setBulletDamage(int damage)
+    {
+        bullet_damage = damage;
+    }
     //enemy script
     public int getEnemyHealth()
     {
@@ -100,25 +120,31 @@ public class GameManager : MonoBehaviour
     }
     public void upgradeShotSpeed()
     {
-        shotSpeed = shotSpeed - 0.5f;
+        if (shotSpeed - 0.5f != 0)
+        {
+            shotSpeed = shotSpeed - 0.5f;
+        }
+    }
+
+    public void setShotSpeed(int speed)
+    {
+        shotSpeed = speed;
     }
 
     public void upgradePlayerSpeed()
     {
         playerSpeed += 1;
     }
+
+    public void setPlayerSpeed(float speed)
+    {
+        playerSpeed = speed;
+    }
     public void levelEnded()
     {
         coins += collectedCoins;
         collectedCoins = 0;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (lives <= 0)
