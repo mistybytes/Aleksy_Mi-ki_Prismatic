@@ -6,13 +6,12 @@ public class IceBlaster : MonoBehaviour
 {
     public bool isUnlocked = false;
     
-    public float freezeDuration = 2f;  // freeze duration in seconds
+    public float freezeDuration = 0.5f;  // freeze duration in seconds
     private int bulletDamage;
     private int delay = 10;
     private void Start()
     {
         bulletDamage = GameManager.instance.getBulletDamage();
-
         Destroy(gameObject, delay);
     }
     private void OnTriggerEnter(Collider collision)
@@ -36,7 +35,7 @@ public class IceBlaster : MonoBehaviour
 
     public void upgradeFreeze()
     {
-        freezeDuration += 1f;
+        freezeDuration += 0.5f;
     }
     
 }

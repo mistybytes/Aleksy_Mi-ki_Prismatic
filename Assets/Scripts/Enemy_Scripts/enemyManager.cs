@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,8 +14,14 @@ public class enemyManager : MonoBehaviour
     
     private void Start()
     {
+        Destroy(gameObject,20);
         speed = GameManager.instance.gameSpeed;
         enemyHealth = GameManager.instance.getEnemyHealth();
+    }
+
+    private void Update()
+    {
+        if(enemyHealth <= 0) Destroy(gameObject);
     }
 
     public float getSpeed()
@@ -28,6 +35,7 @@ public class enemyManager : MonoBehaviour
     public void subHealth(int damage)
     {
         enemyHealth -= damage;
+        Debug.Log(enemyHealth);
     }
     void OnTriggerEnter(Collider collision)
     {

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4633667520477220897}
   - component: {fileID: 3493837588742776580}
   - component: {fileID: 3122500969680918789}
+  - component: {fileID: 4390565669746146268}
   m_Layer: 0
   m_Name: SPARK
   m_TagString: Untagged
@@ -141,3 +142,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &4390565669746146268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2771816613438984337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ddbf00961977d14ea121521e4517a5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  shotSpeed: 5
+  playerSpeed: 5

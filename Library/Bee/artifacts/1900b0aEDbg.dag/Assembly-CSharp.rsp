@@ -386,6 +386,7 @@
 "Assets/Scripts/Player_Scripts/PlayerMovement.cs"
 "Assets/Scripts/Player_Scripts/Player_Power.cs"
 "Assets/Scripts/Player_Scripts/PrismScript.cs"
+"Assets/Scripts/PowerUP_Scripts/BlasterTypes/BlasterVariables.cs"
 "Assets/Scripts/PowerUP_Scripts/BlasterTypes/BulletMovement.cs"
 "Assets/Scripts/PowerUP_Scripts/BlasterTypes/ForceBlaster.cs"
 "Assets/Scripts/PowerUP_Scripts/BlasterTypes/IceBlaster.cs"

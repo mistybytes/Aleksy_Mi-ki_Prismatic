@@ -10,7 +10,7 @@ public class ForceBlaster : MonoBehaviour
     private float delay = 10;
     private void Start()
     {
-        bulletDamage = GameManager.instance.getBulletDamage();
+        bulletDamage = gameObject.GetComponent<BlasterVariables>().damage;
         Destroy(gameObject, delay);
     }
     private void OnTriggerEnter(Collider collision)

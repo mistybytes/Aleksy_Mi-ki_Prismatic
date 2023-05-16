@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5719415920666413461}
   - component: {fileID: 241169654826846799}
   - component: {fileID: 4789220066390001212}
+  - component: {fileID: 8080546647134877990}
   m_Layer: 0
   m_Name: FORCER
   m_TagString: Untagged
@@ -112,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042e2016a0b11014ba858aad25120874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 0
   speed: 10
   pushForce: 500
 --- !u!54 &241169654826846799
@@ -143,3 +145,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &8080546647134877990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3419333910443358370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ddbf00961977d14ea121521e4517a5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  shotSpeed: 5
+  playerSpeed: 5

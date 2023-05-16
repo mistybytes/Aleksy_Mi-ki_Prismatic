@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private float playerSpeed = 5f;
 
     public GameObject _iceBlaster;
-    public GameObject _forceBlaser;
+    public GameObject _plasmaBlaster;
     public GameObject _transformationBlaster;
     public GameObject _lightBlaster;
     public GameObject _forceBlaster;

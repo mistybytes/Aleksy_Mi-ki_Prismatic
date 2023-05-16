@@ -82,6 +82,7 @@
      <Compile Include="Assets\Scripts\Enemy_Scripts\enemyBullet.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\LightBlaster.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\BlasterVariables.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
