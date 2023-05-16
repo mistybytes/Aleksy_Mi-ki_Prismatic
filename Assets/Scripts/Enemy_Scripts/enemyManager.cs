@@ -14,7 +14,7 @@ public class enemyManager : MonoBehaviour
     
     private void Start()
     {
-        Destroy(gameObject,20);
+        Destroy(gameObject);
         speed = GameManager.instance.gameSpeed;
         enemyHealth = GameManager.instance.getEnemyHealth();
     }
