@@ -155,5 +155,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  shotSpeed: 5
-  playerSpeed: 5
+  shotSpeed: 2
+  playerSpeed: 9

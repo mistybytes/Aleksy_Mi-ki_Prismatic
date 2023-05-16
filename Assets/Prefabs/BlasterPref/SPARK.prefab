@@ -154,6 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddbf00961977d14ea121521e4517a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
-  shotSpeed: 5
-  playerSpeed: 5
+  damage: 4
+  shotSpeed: 1
+  playerSpeed: 10

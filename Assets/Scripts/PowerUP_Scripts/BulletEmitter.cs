@@ -7,12 +7,18 @@ using UnityEngine;
 public class BulletEmitter : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public float fireInterval = 3f;
+    private float fireInterval;
     private float lastFireTime = 0f;
 
     private void Start()
     {
-        fireInterval = GameManager.instance.getShotSpeed();
+        if (gameObject.CompareTag("Player"))
+            fireInterval = GameManager.instance.getBlasterType().GetComponent<BlasterVariables>().shotSpeed;
+        else
+        {
+            fireInterval = GameManager.instance.getShotSpeed();
+        }
+
     }
 
     void Update()

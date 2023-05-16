@@ -16,7 +16,7 @@ public class BulletMovement : MonoBehaviour
     {
         //dodac speed pobierany z blaster variables
         bulletDamage = GameManager.instance.getBulletDamage();
-
+        speed = gameObject.GetComponent<BlasterVariables>().playerSpeed;
         Destroy(gameObject, delay);
         // Get the player object and calculate the bullet velocity based on the player's facing direction
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
@@ -30,24 +30,6 @@ public class BulletMovement : MonoBehaviour
              circlePosition = new Vector3(Mathf.Sin(currentAngle), 0, Mathf.Cos(currentAngle)) * 40;
 
         }
-    }
-    void OnTriggerEnter(Collider collision)
-    {
-
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)
-            {
-                Destroy(gameObject);
-                Destroy(collision.gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-                collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
-            }
-        }
-
     }
     void Update()
     {

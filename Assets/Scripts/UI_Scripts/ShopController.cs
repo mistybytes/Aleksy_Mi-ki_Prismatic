@@ -12,18 +12,18 @@ public class ShopController : MonoBehaviour
     private int shotSpeedCost = 10;
     private int playerSpeedCost = 10;
     
-    private int _fireBlasterCost = 100;
-    private int _iceBlasterCost = 200;
-    private int _transformationBlasterCost = 300;
-    private int _lighBlasterCost = 400;
-    private int _forceBlasterCost = 500;
-    private int _voidBlasterCost = 600;
+    private int _fireBlasterCost = 10;
+    private int _iceBlasterCost = 20;
+    private int _transformationBlasterCost = 30;
+    private int _lighBlasterCost = 40;
+    private int _forceBlasterCost = 50;
+    private int _voidBlasterCost = 60;
     
     private GameObject selectedBlaster;
     
     public void BulletDamage()
     {
-        if (GameManager.instance.getCoins() > damageCost)
+        if (GameManager.instance.getCoins() >= damageCost)
         {
             GameManager.instance.getCoins() -= damageCost;
             damageCost  *= 5;
@@ -64,7 +64,7 @@ public class ShopController : MonoBehaviour
         }
         else
         {
-            if (GameManager.instance.getCoins() > _iceBlasterCost)
+            if (GameManager.instance.getCoins() >= _iceBlasterCost)
             {   
                 GameManager.instance._iceBlaster = blasterTypes[2];
                 GameManager.instance.setBlasterType(blasterTypes[2]);
@@ -91,8 +91,9 @@ public class ShopController : MonoBehaviour
         }
         else
         {
-            if (GameManager.instance.getCoins() > _fireBlasterCost)
+            if (GameManager.instance.getCoins() >= _fireBlasterCost)
             {
+                GameManager.instance.getCoins() -= _fireBlasterCost;
                 GameManager.instance._plasmaBlaster = blasterTypes[1];
                 GameManager.instance.setBlasterType(blasterTypes[1]);
             }
@@ -118,7 +119,7 @@ public class ShopController : MonoBehaviour
         }
         else
         {
-            if (GameManager.instance.getCoins() > _transformationBlasterCost)
+            if (GameManager.instance.getCoins() >= _transformationBlasterCost)
             {
                 GameManager.instance._transformationBlaster = blasterTypes[3];
                 GameManager.instance.setBlasterType(blasterTypes[3]);
@@ -128,7 +129,7 @@ public class ShopController : MonoBehaviour
 
     public void upgradeTransformationBlaster()
     {
-        if (GameManager.instance.getCoins() > _transformationBlasterCost)
+        if (GameManager.instance.getCoins() >= _transformationBlasterCost)
         {
             _transformationBlasterCost = _transformationBlasterCost * 2;
             GameManager.instance._transformationBlaster.GetComponent<TransformingBlaster>().transformChance += 0.05f;
@@ -144,7 +145,7 @@ public class ShopController : MonoBehaviour
         }
         else
         {
-            if (GameManager.instance.getCoins() > _lighBlasterCost)
+            if (GameManager.instance.getCoins() >= _lighBlasterCost)
             {
                 GameManager.instance._lightBlaster = blasterTypes[4];
                 GameManager.instance.setBlasterType(blasterTypes[4]);
@@ -155,7 +156,7 @@ public class ShopController : MonoBehaviour
     public void upgradeLightBlaster()
     {
         //shot speed higher for this blaster, but lower damage and the player is faster
-        if (GameManager.instance.getCoins() > _lighBlasterCost)
+        if (GameManager.instance.getCoins() >= _lighBlasterCost)
         {
             _lighBlasterCost = _lighBlasterCost * 2;
             GameManager.instance.getCoins() -= _lighBlasterCost;
@@ -170,7 +171,7 @@ public class ShopController : MonoBehaviour
         }
         else
         {
-            if (GameManager.instance.getCoins() > _forceBlasterCost)
+            if (GameManager.instance.getCoins() >= _forceBlasterCost)
             {
                 GameManager.instance._forceBlaster = blasterTypes[5];
                 GameManager.instance.setBlasterType(blasterTypes[5]);
@@ -180,7 +181,7 @@ public class ShopController : MonoBehaviour
 
     public void upgradeForceBlaster()
     {
-        if (GameManager.instance.getCoins() > _forceBlasterCost)
+        if (GameManager.instance.getCoins() >= _forceBlasterCost)
         {
             //there is extra health for this blaster
             _forceBlasterCost = _forceBlasterCost * 2;
@@ -196,7 +197,7 @@ public class ShopController : MonoBehaviour
         }
         else
         {
-            if (GameManager.instance.getCoins() > _voidBlasterCost)
+            if (GameManager.instance.getCoins() >= _voidBlasterCost)
             {
                 GameManager.instance._voidBlaster = blasterTypes[6];
                 GameManager.instance.setBlasterType(blasterTypes[6]);
@@ -206,7 +207,7 @@ public class ShopController : MonoBehaviour
 
     public void upgradeVoidBlaster()
     {
-        if (GameManager.instance.getCoins() > _voidBlasterCost)
+        if (GameManager.instance.getCoins() >= _voidBlasterCost)
         {
             _voidBlasterCost = _voidBlasterCost * 2;
             GameManager.instance.getCoins() -= _voidBlasterCost;

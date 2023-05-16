@@ -13,8 +13,9 @@ public class enemyManager : MonoBehaviour
     private float speed;
     
     private void Start()
-    {
-        Destroy(gameObject);
+    {   
+        
+        Destroy(gameObject,45);
         speed = GameManager.instance.gameSpeed;
         enemyHealth = GameManager.instance.getEnemyHealth();
     }
@@ -45,8 +46,9 @@ public class enemyManager : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Cube"))
         {
-            GameManager.instance.SubLives();
             Destroy(gameObject);
+            GameManager.instance.SubLives();
+            
         }
     }
 

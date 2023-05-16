@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void Start()
     {
+        playerSpeed = GameManager.instance.getBlasterType().GetComponent<BlasterVariables>().playerSpeed;
         BulletEmitter emitter = GetComponent<BulletEmitter>();
         
         emitter.bulletPrefab = GameManager.instance.getBlasterType();

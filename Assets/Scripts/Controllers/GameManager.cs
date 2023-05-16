@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     
     private float shotSpeed = 3f; 
-    private int coins = 0;
+    private int coins = 100;
     private int collectedCoins = 0;
     private int bullet_damage = 10;
     private int enemy_health = 10;

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class VoidBlaster : MonoBehaviour
 {
-    private int delay = 10;
+    private int delay = 20;
     private void Start()
     {
         Destroy(gameObject, delay);
     }
     private void OnTriggerEnter(Collider collision)
     {
+        if(!collision.gameObject.CompareTag("Player"))
         Destroy(collision.gameObject);
     }
 }

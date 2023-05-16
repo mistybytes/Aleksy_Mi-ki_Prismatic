@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlasterVariables : MonoBehaviour
 {
-    public int damage = 10;
+    public int damage = 5;
     public float shotSpeed = 5;
     public float playerSpeed = 5;
     
