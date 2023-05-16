@@ -6,16 +6,18 @@ public class LevelSelect : MonoBehaviour
 {
     
     public void Level1()
-    {   
+    {
         GameManager.instance.setEnemyHealth(10);
         GameManager.instance.gameSpeed = 4f;
         SceneManager.LoadScene("LEVEL1");
     }
     public void Level2()
     {
+        
         GameManager.instance.setEnemyHealth(20);
         GameManager.instance.gameSpeed = 5f;
         SceneManager.LoadScene("LEVEL1");
+        
     }
 
     public void Level3()

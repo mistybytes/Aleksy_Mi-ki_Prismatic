@@ -20,12 +20,7 @@ public class MyTimer : MonoBehaviour
             LevelCompletionManager.instance.levelCompletionStatus[k] = true;
             k++;
         }
-
-        if (k >= 7 && k<= 15 && GameManager.instance.getCurrentScene() == "TYPE1BOSS")
-        {
-            LevelCompletionManager.instance.levelCompletionStatus[k] = true;
-            k++;
-        }
+        
         //TODO dokończ, idea jest zajebista na odblokowywanie
         //I PÓŹNIEJSZY ZAPIS
     }

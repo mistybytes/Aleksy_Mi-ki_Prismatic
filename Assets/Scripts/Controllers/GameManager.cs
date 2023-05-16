@@ -150,7 +150,7 @@ public class GameManager : MonoBehaviour
         if (lives <= 0)
         {
             lives = 1;
-            
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
             SceneManager.LoadScene("GameOver");
         }
     }

@@ -12,6 +12,7 @@ public class LevelUnlocker : MonoBehaviour
     public Button level6Button;
     void Update()
     {
+        
         if (LevelCompletionManager.instance.levelCompletionStatus[0])
         {
             level2Button.interactable = true;
@@ -27,8 +28,8 @@ public class LevelUnlocker : MonoBehaviour
         }
         else
         {
-            
             level3Button.interactable = false;
+        
         }
         if (LevelCompletionManager.instance.levelCompletionStatus[2])
         {
@@ -54,7 +55,7 @@ public class LevelUnlocker : MonoBehaviour
         }
         else
         {
-            level2Button.interactable = false;
+            
         }
         
         

@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 222ba25c8285a634db5dae633697c61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelCompletionStatus: 00
+  levelCompletionStatus: 

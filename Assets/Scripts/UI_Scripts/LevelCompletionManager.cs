@@ -8,10 +8,17 @@ public class LevelCompletionManager : MonoBehaviour
 
     public bool[] levelCompletionStatus;
 
-    void Awake()
+    void Start()
     {
         if (instance == null)
         {
+            levelCompletionStatus = new bool[6];
+            levelCompletionStatus[0] = false;
+            levelCompletionStatus[1] = false;
+            levelCompletionStatus[2] = false;
+            levelCompletionStatus[3] = false;
+            levelCompletionStatus[4] = false;
+            levelCompletionStatus[5] = false;
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
@@ -20,12 +27,7 @@ public class LevelCompletionManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        levelCompletionStatus = new bool[6]; 
-        levelCompletionStatus[0] = false;
-        levelCompletionStatus[1] = false;
-        levelCompletionStatus[2] = false;
-        levelCompletionStatus[3] = false;
-        levelCompletionStatus[4] = false;
-        levelCompletionStatus[5] = false;
+       
+       
     }
 }

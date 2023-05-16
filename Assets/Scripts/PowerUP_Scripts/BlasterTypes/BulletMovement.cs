@@ -14,7 +14,7 @@ public class BulletMovement : MonoBehaviour
     
     void Start()
     {
-        
+        //dodac speed pobierany z blaster variables
         bulletDamage = GameManager.instance.getBulletDamage();
 
         Destroy(gameObject, delay);

@@ -7,11 +7,11 @@ public class ShopController : MonoBehaviour
    
     [SerializeField] 
     private GameObject[] blasterTypes = new GameObject[7];
-
+    
     private int damageCost = 10;
     private int shotSpeedCost = 10;
     private int playerSpeedCost = 10;
-
+    
     private int _fireBlasterCost = 100;
     private int _iceBlasterCost = 200;
     private int _transformationBlasterCost = 300;
@@ -164,16 +164,16 @@ public class ShopController : MonoBehaviour
     
     public void selectForceBlaster()
     {
-        if (GameManager.instance._lightBlaster != null)
+        if (GameManager.instance._forceBlaster != null)
         {
-            GameManager.instance.setBlasterType(blasterTypes[4]);
+            GameManager.instance.setBlasterType(blasterTypes[5]);
         }
         else
         {
-            if (GameManager.instance.getCoins() > _lighBlasterCost)
+            if (GameManager.instance.getCoins() > _forceBlasterCost)
             {
-                GameManager.instance._lightBlaster = blasterTypes[4];
-                GameManager.instance.setBlasterType(blasterTypes[4]);
+                GameManager.instance._forceBlaster = blasterTypes[5];
+                GameManager.instance.setBlasterType(blasterTypes[5]);
             }
         }
     }
@@ -183,34 +183,33 @@ public class ShopController : MonoBehaviour
         if (GameManager.instance.getCoins() > _forceBlasterCost)
         {
             //there is extra health for this blaster
-            _forceBlasterCost = _fireBlasterCost * 2;
+            _forceBlasterCost = _forceBlasterCost * 2;
             GameManager.instance.getCoins() -= _forceBlasterCost;
         }
     }
     
-    public void selectForceBlaster()
+    public void selectVoidBlaster()
     {
-        if (GameManager.instance._lightBlaster != null)
+        if (GameManager.instance._voidBlaster != null)
         {
-            GameManager.instance.setBlasterType(blasterTypes[4]);
+            GameManager.instance.setBlasterType(blasterTypes[6]);
         }
         else
         {
-            if (GameManager.instance.getCoins() > _lighBlasterCost)
+            if (GameManager.instance.getCoins() > _voidBlasterCost)
             {
-                GameManager.instance._lightBlaster = blasterTypes[4];
-                GameManager.instance.setBlasterType(blasterTypes[4]);
+                GameManager.instance._voidBlaster = blasterTypes[6];
+                GameManager.instance.setBlasterType(blasterTypes[6]);
             }
         }
     }
 
-    public void upgradeForceBlaster()
+    public void upgradeVoidBlaster()
     {
-        if (GameManager.instance.getCoins() > _forceBlasterCost)
+        if (GameManager.instance.getCoins() > _voidBlasterCost)
         {
-            //there is extra health for this blaster
-            _forceBlasterCost = _fireBlasterCost * 2;
-            GameManager.instance.getCoins() -= _forceBlasterCost;
+            _voidBlasterCost = _voidBlasterCost * 2;
+            GameManager.instance.getCoins() -= _voidBlasterCost;
         }
     }
     
