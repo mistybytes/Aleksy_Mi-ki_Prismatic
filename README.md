@@ -25,5 +25,7 @@ Plans for this week:
 - Add a save to a JSON and PlayerPrefs(currently working on it)
 - finish the levels and gameplay so that it only needs graphics
 - create some music for the game
-
+- add some more functionality for the weapons eg. one of them adding a second ball for the player to defend with
+- one weapon will be fast but will not shot, one will have 2 balls but will not shoot, one will destroy everything, one will freeze enemies, one will be really fast
+- add skin functionality
 
