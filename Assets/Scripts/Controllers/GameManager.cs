@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private string currentSceneName = "";
     private float playerSpeed = 5f;
 
+    public GameObject _classicalBlaster;
     public GameObject _iceBlaster;
     public GameObject _plasmaBlaster;
     public GameObject _transformationBlaster;

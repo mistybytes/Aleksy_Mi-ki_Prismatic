@@ -8,26 +8,33 @@ public class ShopController : MonoBehaviour
     [SerializeField] 
     private GameObject[] blasterTypes = new GameObject[7];
     
-    private int damageCost = 10;
-    private int shotSpeedCost = 10;
-    private int playerSpeedCost = 10;
+    public int _classicalBlasterCost = 10;
+    public int shotSpeedCost = 10;
+    public int playerSpeedCost = 10;
     
-    private int _fireBlasterCost = 10;
-    private int _iceBlasterCost = 20;
-    private int _transformationBlasterCost = 30;
-    private int _lighBlasterCost = 40;
-    private int _forceBlasterCost = 50;
-    private int _voidBlasterCost = 60;
+    public int _fireBlasterCost = 10;
+    public int _iceBlasterCost = 20;
+    public int _transformationBlasterCost = 30;
+    public int _lighBlasterCost = 40;
+    public int _forceBlasterCost = 50;
+    public int _voidBlasterCost = 60;
     
     private GameObject selectedBlaster;
     
-    public void BulletDamage()
+    public void selectBlaster()
     {
-        if (GameManager.instance.getCoins() >= damageCost)
+        GameManager.instance.setBlasterType(blasterTypes[0]);
+    }
+
+    public void upgradeBlaster()
+    {
+        if (GameManager.instance.getCoins() >= _classicalBlasterCost)
         {
-            GameManager.instance.getCoins() -= damageCost;
-            damageCost  *= 5;
-            GameManager.instance.upgradeShotDamage();
+            
+            GameManager.instance._classicalBlaster.GetComponent<BlasterVariables>().damage += 5;
+            GameManager.instance.getCoins() -= _classicalBlasterCost;
+            _classicalBlasterCost = _classicalBlasterCost * 2;
+            
         }
     }
     

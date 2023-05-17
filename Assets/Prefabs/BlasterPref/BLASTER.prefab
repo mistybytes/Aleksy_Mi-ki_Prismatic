@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5599739460261697858}
   - component: {fileID: 1131916550406060705}
   - component: {fileID: 8372277846594793104}
+  - component: {fileID: 6704021269639835837}
   m_Layer: 0
   m_Name: BLASTER
   m_TagString: Untagged
@@ -144,3 +145,15 @@ MonoBehaviour:
   damage: 5
   shotSpeed: 5
   playerSpeed: 5
+--- !u!114 &6704021269639835837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9165571919683375005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68b4f5eb11ec0c947a43f797a26964a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
