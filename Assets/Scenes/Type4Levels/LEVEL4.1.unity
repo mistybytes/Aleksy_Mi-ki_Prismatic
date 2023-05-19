@@ -614,6 +614,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6719376952352997387, guid: 6f83b5aa01e15cc41ba719f4b43d2781,
+        type: 3}
+      propertyPath: _lightBlaster
+      value: 
+      objectReference: {fileID: 2771816613438984337, guid: 03a1496eed64da94497fc923bdf4570c,
+        type: 3}
+    - target: {fileID: 6719376952352997387, guid: 6f83b5aa01e15cc41ba719f4b43d2781,
+        type: 3}
+      propertyPath: selectedBlaster
+      value: 
+      objectReference: {fileID: 2771816613438984337, guid: 03a1496eed64da94497fc923bdf4570c,
+        type: 3}
     - target: {fileID: 6719376952352997388, guid: 6f83b5aa01e15cc41ba719f4b43d2781,
         type: 3}
       propertyPath: m_RootOrder

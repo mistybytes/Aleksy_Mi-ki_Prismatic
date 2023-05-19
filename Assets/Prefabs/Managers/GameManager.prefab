@@ -45,3 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSpeed: 4
+  _classicalBlaster: {fileID: 9165571919683375005, guid: 40a659a08c356b343a8614819035b8fa,
+    type: 3}
+  _iceBlaster: {fileID: 0}
+  _plasmaBlaster: {fileID: 0}
+  _transformationBlaster: {fileID: 0}
+  _lightBlaster: {fileID: 0}
+  _forceBlaster: {fileID: 0}
+  _voidBlaster: {fileID: 0}
+  selectedBlaster: {fileID: 9165571919683375005, guid: 40a659a08c356b343a8614819035b8fa,
+    type: 3}

@@ -46,6 +46,7 @@
      <Compile Include="Assets\Scripts\PowerUP_Scripts\CoinS\BigCoinScript.cs" />
      <Compile Include="Assets\Scripts\Controllers\GameOverCon.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\PowerUpScript.cs" />
+     <Compile Include="Assets\Scripts\Enemy_Scripts\RandomStart.cs" />
      <Compile Include="Assets\Scripts\Controllers\MyTimer.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\IceBlaster.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\TextColorChange.cs" />
@@ -60,11 +61,14 @@
      <Compile Include="Assets\Scripts\UI_Scripts\LevelUnlocker.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\CoinTextScript.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\CoinS\CoinSpawner.cs" />
+     <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\BlasterPrices\FirePrice.cs" />
+     <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\ClassicBlaster.cs" />
      <Compile Include="Assets\Scripts\Enemy_Scripts\BossScripts\BossMovement.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\TransformingBlaster.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\PrismScript.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\Player_Power.cs" />
      <Compile Include="Assets\Scripts\Controllers\MainMenuCon.cs" />
+     <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\BlasterPrices\BlasterPrice.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\DamageDisplay.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\VoidBlaster.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\PlasmaBlasterProjectile.cs" />
@@ -83,9 +87,7 @@
      <Compile Include="Assets\Scripts\Enemy_Scripts\enemyBullet.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\LightBlaster.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\CameraMovement.cs" />
-     <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\ClassicBlaster.cs" />
-     <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\BlasterPrices\BlasterPrice.cs" />
-     <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\BlasterPrices\FirePrice.cs" />
+     <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\Projectile.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
