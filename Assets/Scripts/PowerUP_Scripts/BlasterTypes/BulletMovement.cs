@@ -44,7 +44,6 @@ public class BulletMovement : MonoBehaviour
     }
     void Update()
     {
- ;
- transform.position = Vector3.MoveTowards(transform.position, circlePosition, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, circlePosition, speed * Time.deltaTime);
     }
 }
