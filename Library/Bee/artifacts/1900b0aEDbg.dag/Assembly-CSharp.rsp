@@ -427,6 +427,7 @@
 "Assets/Scripts/UI_Scripts/TextScripts/ShopCoins.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/shotSpeeddisplay.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/TextColorChange.cs"
+"Assets/Scripts/UI_Scripts/TextScripts/UnlockedLvlCC.cs"
 "Assets/Scripts/UI_Scripts/TimeDisplay.cs"
 -langversion:9.0
 

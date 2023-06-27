@@ -99,6 +99,7 @@
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\LightBlaster.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Save system\SaveManager.cs" />
+     <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\UnlockedLvlCC.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

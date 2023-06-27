@@ -759,6 +759,53 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6719376952352997387, guid: 6f83b5aa01e15cc41ba719f4b43d2781,
+        type: 3}
+      propertyPath: blasterList.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719376952352997387, guid: 6f83b5aa01e15cc41ba719f4b43d2781,
+        type: 3}
+      propertyPath: blasterList.Array.data[0]
+      value: 
+      objectReference: {fileID: 9165571919683375005, guid: 40a659a08c356b343a8614819035b8fa,
+        type: 3}
+    - target: {fileID: 6719376952352997387, guid: 6f83b5aa01e15cc41ba719f4b43d2781,
+        type: 3}
+      propertyPath: blasterList.Array.data[1]
+      value: 
+      objectReference: {fileID: 663560717618360929, guid: f3901b02ccf96ba4db2fcb82b5378feb,
+        type: 3}
+    - target: {fileID: 6719376952352997387, guid: 6f83b5aa01e15cc41ba719f4b43d2781,
+        type: 3}
+      propertyPath: blasterList.Array.data[2]
+      value: 
+      objectReference: {fileID: 5405921696116420407, guid: db3c8ad9b9a60d0468dd796c94c45dae,
+        type: 3}
+    - target: {fileID: 6719376952352997387, guid: 6f83b5aa01e15cc41ba719f4b43d2781,
+        type: 3}
+      propertyPath: blasterList.Array.data[3]
+      value: 
+      objectReference: {fileID: 2440702374894264768, guid: 8e3dfd2ce4d9b794da913a154f4f56e7,
+        type: 3}
+    - target: {fileID: 6719376952352997387, guid: 6f83b5aa01e15cc41ba719f4b43d2781,
+        type: 3}
+      propertyPath: blasterList.Array.data[4]
+      value: 
+      objectReference: {fileID: 3419333910443358370, guid: 50f657c492dcea746a06a5f51e54a6ad,
+        type: 3}
+    - target: {fileID: 6719376952352997387, guid: 6f83b5aa01e15cc41ba719f4b43d2781,
+        type: 3}
+      propertyPath: blasterList.Array.data[5]
+      value: 
+      objectReference: {fileID: 855676725470156554, guid: 634be7d966f4c8c468d49d97437962a5,
+        type: 3}
+    - target: {fileID: 6719376952352997387, guid: 6f83b5aa01e15cc41ba719f4b43d2781,
+        type: 3}
+      propertyPath: blasterList.Array.data[6]
+      value: 
+      objectReference: {fileID: 2771816613438984337, guid: 03a1496eed64da94497fc923bdf4570c,
+        type: 3}
     - target: {fileID: 6719376952352997388, guid: 6f83b5aa01e15cc41ba719f4b43d2781,
         type: 3}
       propertyPath: m_RootOrder
