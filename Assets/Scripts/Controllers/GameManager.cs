@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     private string currentSceneName = "";
     private float playerSpeed = 5f;
 
+    public GameObject[] blasterList;
+    
     public GameObject _classicalBlaster;
     public GameObject _iceBlaster;
     public GameObject _plasmaBlaster;
@@ -31,7 +33,22 @@ public class GameManager : MonoBehaviour
     
     [SerializeField]
     private GameObject selectedBlaster;
-    
+
+    public void Save()
+    {
+        PlayerPrefs.SetString("classicalBlaster",_classicalBlaster.ToString());
+        PlayerPrefs.SetString("iceBlaster",_iceBlaster.ToString());
+        PlayerPrefs.SetString("plasmaBlaster",_plasmaBlaster.ToString());
+        PlayerPrefs.SetString("transformationBlaster",_transformationBlaster.ToString());
+        PlayerPrefs.SetString("lightBlaster",_lightBlaster.ToString());
+        PlayerPrefs.SetString("forceBlaster",_forceBlaster.ToString());
+        PlayerPrefs.SetString("voidBlaster",_voidBlaster.ToString());
+        
+        PlayerPrefs.SetInt("coins",coins);
+        PlayerPrefs.SetInt("lives",lives);
+        PlayerPrefs.SetInt("unlockedLevels",LevelCompletionManager.instance.getCurrentlyUnlocked());
+        
+    }
     void Awake()
     {
         if (instance == null)

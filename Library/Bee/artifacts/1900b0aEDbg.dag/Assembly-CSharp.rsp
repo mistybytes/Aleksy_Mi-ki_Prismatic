@@ -403,6 +403,7 @@
 "Assets/Scripts/PowerUP_Scripts/CoinS/CoinSpawner.cs"
 "Assets/Scripts/PowerUP_Scripts/PowerUp.cs"
 "Assets/Scripts/PowerUP_Scripts/PowerUpScript.cs"
+"Assets/Scripts/Save system/SaveManager.cs"
 "Assets/Scripts/UI_Scripts/LevelCompletionManager.cs"
 "Assets/Scripts/UI_Scripts/ShopController.cs"
 "Assets/Scripts/UI_Scripts/SkinScript.cs"

@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelCompletionManager : MonoBehaviour
 {
     public static LevelCompletionManager instance;
-
+    private int currentlyUnlocked = 0;
     private bool[] levelCompletionStatus;
 
     void Start()
@@ -34,7 +34,12 @@ public class LevelCompletionManager : MonoBehaviour
 
     public void setLevelCompletionStatus(int i)
     {
-        Debug.Log(i);
+        currentlyUnlocked++;
         levelCompletionStatus[i] = true;
+    }
+
+    public int getCurrentlyUnlocked()
+    {
+        return currentlyUnlocked;
     }
 }
