@@ -8,19 +8,10 @@ public class MyTimer : MonoBehaviour
     static public IEnumerator CountUpTo1Minute()
     {
         yield return new WaitForSeconds(6);
-       
-        OnTimerElapsed();
-    }
-    
-    private static void OnTimerElapsed()
-    {
-        /**
-         * method for unlocking levels based on the current level
-         */
-        if (!LevelCompletionManager.instance.levelCompletionStatus[GameManager.instance.getCurrenLevel()])
+        
+        if (!LevelCompletionManager.instance.getLevelCompletionStatus()[GameManager.instance.getCurrenLevel()])
         {
-            LevelCompletionManager.instance.levelCompletionStatus[GameManager.instance.getCurrenLevel()] = true;
+            LevelCompletionManager.instance.setLevelCompletionStatus(GameManager.instance.getCurrenLevel());
         }
     }
-
 }

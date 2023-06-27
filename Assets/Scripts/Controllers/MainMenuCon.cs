@@ -20,6 +20,6 @@ public class MainMenuCon : MonoBehaviour
         SceneManager.LoadScene("PowerUpStore");
     }
     
-    // Update is called once per frame
+
 
 }

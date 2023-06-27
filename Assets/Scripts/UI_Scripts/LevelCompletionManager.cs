@@ -6,7 +6,7 @@ public class LevelCompletionManager : MonoBehaviour
 {
     public static LevelCompletionManager instance;
 
-    public bool[] levelCompletionStatus;
+    private bool[] levelCompletionStatus;
 
     void Start()
     {
@@ -25,8 +25,16 @@ public class LevelCompletionManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    
+    public bool[] getLevelCompletionStatus()
+    {
+        return levelCompletionStatus;
+    }
 
-       
-       
+    public void setLevelCompletionStatus(int i)
+    {
+        Debug.Log(i);
+        levelCompletionStatus[i] = true;
     }
 }

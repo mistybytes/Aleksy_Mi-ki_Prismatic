@@ -60,7 +60,6 @@
      <Compile Include="Assets\Scripts\PowerUP_Scripts\PowerUp.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TimeDisplay.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\CoinS\CoinScript.cs" />
-     <Compile Include="Assets\Scripts\UI_Scripts\LevelUnlocker.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\CoinTextScript.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\CoinS\CoinSpawner.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\BlasterUnlocks\Blaster4Color.cs" />

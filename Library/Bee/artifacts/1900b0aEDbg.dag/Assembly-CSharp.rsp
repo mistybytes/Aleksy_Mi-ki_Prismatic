@@ -404,7 +404,6 @@
 "Assets/Scripts/PowerUP_Scripts/PowerUp.cs"
 "Assets/Scripts/PowerUP_Scripts/PowerUpScript.cs"
 "Assets/Scripts/UI_Scripts/LevelCompletionManager.cs"
-"Assets/Scripts/UI_Scripts/LevelUnlocker.cs"
 "Assets/Scripts/UI_Scripts/ShopController.cs"
 "Assets/Scripts/UI_Scripts/SkinScript.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/BlasterPrices/Blaster1.cs"
