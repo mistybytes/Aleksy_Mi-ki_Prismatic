@@ -89,6 +89,7 @@ public class ShopController : MonoBehaviour
             GameManager.instance.setBlasterType(blasterTypes[2]);
             GameManager.instance._iceBlaster.GetComponent<IceBlaster>().upgradeFreeze();
             GameManager.instance.getCoins() -= _iceBlasterCost;
+            
             _iceBlasterCost = _iceBlasterCost * 2;
             
         }
@@ -121,6 +122,7 @@ public class ShopController : MonoBehaviour
             GameManager.instance._plasmaBlaster.GetComponent<PlasmaBlasterProjectile>().fireDuration += 0.5f;
             GameManager.instance._plasmaBlaster.GetComponent<PlasmaBlasterProjectile>().fireDamagePerSecond += 5;
             GameManager.instance.getCoins() -= _fireBlasterCost;
+            
             _fireBlasterCost = _fireBlasterCost * 2;
         }
     }
@@ -149,6 +151,7 @@ public class ShopController : MonoBehaviour
             GameManager.instance.setBlasterType(blasterTypes[3]);
             GameManager.instance._transformationBlaster.GetComponent<TransformingBlaster>().transformChance += 0.05f;
             GameManager.instance.getCoins() -= _transformationBlasterCost;
+            
             _transformationBlasterCost = _transformationBlasterCost * 2;
         }
     }
@@ -171,13 +174,14 @@ public class ShopController : MonoBehaviour
 
     public void upgradeLightBlaster()
     {
-        //shot speed higher for this blaster, but lower damage and the player is faster
+      
         if (GameManager.instance.getCoins() >= _lighBlasterCost)
         {
             
             GameManager.instance._lightBlaster = blasterTypes[4];
             GameManager.instance.setBlasterType(blasterTypes[4]);
             GameManager.instance.getCoins() -= _lighBlasterCost;
+            
             _lighBlasterCost = _lighBlasterCost * 2;
         }
     }
@@ -207,6 +211,7 @@ public class ShopController : MonoBehaviour
             GameManager.instance._forceBlaster = blasterTypes[5];
             GameManager.instance.setBlasterType(blasterTypes[5]);
             GameManager.instance.getCoins() -= _forceBlasterCost;
+            
             _forceBlasterCost = _forceBlasterCost * 2;
         }
     }
@@ -234,6 +239,7 @@ public class ShopController : MonoBehaviour
             GameManager.instance._voidBlaster = blasterTypes[6];
             GameManager.instance.setBlasterType(blasterTypes[6]);
             GameManager.instance.getCoins() -= _voidBlasterCost;
+            
             _voidBlasterCost = _voidBlasterCost * 2;
         }
     }
