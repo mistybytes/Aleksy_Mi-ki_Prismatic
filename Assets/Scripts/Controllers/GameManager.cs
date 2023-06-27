@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     
     public static GameManager instance;
+
+    private int currentLevel;
     
     private float shotSpeed = 3f; 
     private int coins = 100;
@@ -145,6 +147,16 @@ public class GameManager : MonoBehaviour
     {
         coins += collectedCoins;
         collectedCoins = 0;
+    }
+
+    public void setCurrentLevel(int l)
+    {
+        currentLevel = l;
+    }
+
+    public int getCurrenLevel()
+    {
+        return currentLevel;
     }
     void Update()
     {
