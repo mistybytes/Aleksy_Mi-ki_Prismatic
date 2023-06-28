@@ -13,12 +13,20 @@ public class ShopController : MonoBehaviour
     public int playerSpeedCost = 10;
     
     public int _classicalBlasterCost = 10;
+    public int classicalBlasterUpgraded;
     public int _fireBlasterCost = 100;
+    public int fireBlasterUpgraded;
     public int _iceBlasterCost = 200;
+    public int iceBlasterUpgraded;
     public int _forceBlasterCost = 300;
+    public int forceBlasterUpgraded = 0;
     public int _lighBlasterCost = 400;
+    public int lightBlasterUpgraded = 0;
     public int _transformationBlasterCost = 500;
+    public int transformationBlasterUpgraded = 0;
     public int _voidBlasterCost = 600;
+    public int voidBlasterUpgraded = 0;
+    
     
     private GameObject selectedBlaster;
     
@@ -35,29 +43,10 @@ public class ShopController : MonoBehaviour
             GameManager.instance._classicalBlaster.GetComponent<BlasterVariables>().damage += 5;
             GameManager.instance.getCoins() -= _classicalBlasterCost;
             _classicalBlasterCost = _classicalBlasterCost * 2;
-            
+            classicalBlasterUpgraded++;
         }
     }
     
-    public void ShotSpeed()
-    {
-        if (GameManager.instance.getCoins() > shotSpeedCost)
-        {
-            GameManager.instance.getCoins() -= shotSpeedCost;
-            shotSpeedCost  *= 5;
-            GameManager.instance.upgradeShotSpeed();
-        }
-    }
-
-    public void PlayerSpeed()
-    {
-        if (GameManager.instance.getCoins() > playerSpeedCost)
-        {
-            GameManager.instance.getCoins() -= shotSpeedCost;
-            shotSpeedCost  *= 5;
-            GameManager.instance.upgradePlayerSpeed();
-        }
-    }
 
     public void backToMainMenu()
     {

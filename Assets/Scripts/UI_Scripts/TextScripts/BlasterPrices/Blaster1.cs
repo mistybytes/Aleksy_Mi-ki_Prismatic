@@ -7,6 +7,7 @@ public class Blaster1 : MonoBehaviour
     
     public ShopController sc;
     private Text _text;
+    private int timesUpgraded = 0;
     void Start()
     {
         _text = gameObject.GetComponent<Text>();
