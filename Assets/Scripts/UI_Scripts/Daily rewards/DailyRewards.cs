@@ -24,12 +24,12 @@ public class DailyRewards : MonoBehaviour
     }
 
     public void Update() {
-        // Check if 24 hours have passed since the last reward
+        
         if (DateTime.Now > lastRewardTime.AddHours(24)) {
-            // Give the reward and update the last reward time
+         
             GiveReward();
             lastRewardTime = DateTime.Now;
-            // Save the new reward time to PlayerPrefs
+            
             PlayerPrefs.SetString("LastRewardTime", lastRewardTime.ToString());
             PlayerPrefs.Save();
         }
@@ -39,7 +39,6 @@ public class DailyRewards : MonoBehaviour
         
         DateTime now = DateTime.Now;
         PlayerPrefs.SetString("LastRewardTime", now.ToString());
-        // Give your reward here
-        // This could involve updating a UI element, granting an item, etc.
+       
     }
 }

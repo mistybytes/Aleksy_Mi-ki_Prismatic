@@ -25,5 +25,9 @@ public class MainMenuCon : MonoBehaviour
         SceneManager.LoadScene("SETTINGS");
     }
 
+    public void Rewards()
+    {
+        SceneManager.LoadScene("DailyRewards");
+    }
 
 }

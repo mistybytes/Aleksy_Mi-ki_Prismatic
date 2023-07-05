@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
 {
     
     public static GameManager instance;
-
+    
+    //TODO add a field for current skin, know what type of field this will be
     private int currentLevel;
     
     private float shotSpeed = 3f; 
@@ -85,10 +86,6 @@ public class GameManager : MonoBehaviour
     {
         collectedCoins++;
     }
-    public string getCurrentScene()
-    {
-        return SceneManager.GetActiveScene().name;
-    }
     public int getCollectedCoins()
     {
         return collectedCoins;
@@ -97,7 +94,13 @@ public class GameManager : MonoBehaviour
     {
         return ref coins;
     }
-    //methods for player lives
+    public void setCoins(int i)
+    {
+        coins = i;
+    }
+    
+    //methods for special currency
+    
     public int getLives()
     {
         return lives;
@@ -140,39 +143,11 @@ public class GameManager : MonoBehaviour
     {
         enemy_health = health;
     }
-
-    public void upgradeShotDamage()
-    {
-        bullet_damage += 5;
-    }
-    public void upgradeShotSpeed()
-    {
-        if (shotSpeed - 0.5f != 0)
-        {
-            shotSpeed = shotSpeed - 0.5f;
-        }
-    }
-
-    public void setShotSpeed(int speed)
-    {
-        shotSpeed = speed;
-    }
-
-    public void upgradePlayerSpeed()
-    {
-        playerSpeed += 1;
-    }
-
-    public void setPlayerSpeed(float speed)
-    {
-        playerSpeed = speed;
-    }
     public void levelEnded()
     {
         coins += collectedCoins;
         collectedCoins = 0;
     }
-
     public void setCurrentLevel(int l)
     {
         currentLevel = l;
