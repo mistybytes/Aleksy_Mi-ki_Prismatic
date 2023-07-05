@@ -76,6 +76,7 @@
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\BlasterUnlocks\Blaster2Color.cs" />
      <Compile Include="Assets\Scripts\Save system\SaveManager.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\TimesUpgraded\Blaster6TimesUP.cs" />
+     <Compile Include="Assets\Scripts\UI_Scripts\Daily rewards\DailyRewards.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\Player_Power.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\UnlockedLvlCC.cs" />
      <Compile Include="Assets\Scripts\Controllers\MainMenuCon.cs" />
@@ -164,6 +165,7 @@
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <Folder Include="Assets\Prefabs\Graphics" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <Folder Include="Assets\Scripts\UI_Scripts\Daily rewards" />
      <Folder Include="Assets\Sprites\Assets" />
      <Folder Include="Assets\Scripts\Integration" />
      <Folder Include="Assets\Prefabs\CoinPrefabs" />

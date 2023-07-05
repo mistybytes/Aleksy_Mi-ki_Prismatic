@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,7 +30,12 @@ public class ShopController : MonoBehaviour
     
     
     private GameObject selectedBlaster;
-    
+
+    private void Start()
+    {
+        //dopisać tutaj player prefs i dowiedzieć się dlaczego redundant
+    }
+
     public void selectBlaster()
     {
         GameManager.instance.setBlasterType(blasterTypes[0]);
@@ -74,12 +80,14 @@ public class ShopController : MonoBehaviour
         if (GameManager.instance.getCoins() >= _iceBlasterCost)
         {
             
+            if(GameManager.instance._iceBlaster)
+                iceBlasterUpgraded++;
             GameManager.instance._iceBlaster = blasterTypes[2];
             GameManager.instance.setBlasterType(blasterTypes[2]);
             GameManager.instance._iceBlaster.GetComponent<IceBlaster>().upgradeFreeze();
             GameManager.instance.getCoins() -= _iceBlasterCost;
 
-            iceBlasterUpgraded++;
+            
             _iceBlasterCost = _iceBlasterCost * 2;
             
         }
@@ -226,10 +234,13 @@ public class ShopController : MonoBehaviour
     {
         if (GameManager.instance.getCoins() >= _voidBlasterCost)
         {
+            if(GameManager.instance._voidBlaster)
+                voidBlasterUpgraded++;
+            
             GameManager.instance._voidBlaster = blasterTypes[6];
             GameManager.instance.setBlasterType(blasterTypes[6]);
             GameManager.instance.getCoins() -= _voidBlasterCost;
-            voidBlasterUpgraded++;
+            
             _voidBlasterCost = _voidBlasterCost * 2;
         }
     }

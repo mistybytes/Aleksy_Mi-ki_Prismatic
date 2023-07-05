@@ -10,6 +10,8 @@ public class LevelCompletionManager : MonoBehaviour
 
     void Start()
     {
+        //dodać jeszcze ładowanie z player Prefs
+        
         if (instance == null)
         {
             levelCompletionStatus = new bool[48];

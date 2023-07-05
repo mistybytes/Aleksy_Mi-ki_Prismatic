@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6719376952352997388}
   - component: {fileID: 6719376952352997387}
+  - component: {fileID: 3464479404466101729}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSpeed: 4
+  blasterList: []
   _classicalBlaster: {fileID: 9165571919683375005, guid: 40a659a08c356b343a8614819035b8fa,
     type: 3}
   _iceBlaster: {fileID: 0}
@@ -55,3 +57,15 @@ MonoBehaviour:
   _voidBlaster: {fileID: 0}
   selectedBlaster: {fileID: 9165571919683375005, guid: 40a659a08c356b343a8614819035b8fa,
     type: 3}
+--- !u!114 &3464479404466101729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6719376952352997386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911e8427e82a0814d9ac27da2cf454ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
     
     private float shotSpeed = 3f; 
     private int coins = 100;
-    private int collectedCoins = 0;
+    private int collectedCoins;
+    private int specialCurrency;
     private int bullet_damage = 10;
     private int enemy_health = 10;
     private int lives = 1;
@@ -51,6 +52,8 @@ public class GameManager : MonoBehaviour
     }
     void Awake()
     {
+        
+        
         if (instance == null)
         {
             instance = this;
@@ -60,7 +63,11 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
+        
+        coins = PlayerPrefs.GetInt("coins");
+        collectedCoins = 0;
+        
+        //dodać życia jeszcze i ładowanie innych parametrów jak blaster
     }
 
     //blaster methods

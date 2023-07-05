@@ -19,7 +19,11 @@ public class MainMenuCon : MonoBehaviour
     {
         SceneManager.LoadScene("PowerUpStore");
     }
-    
+
+    public void Settings()
+    {
+        SceneManager.LoadScene("SETTINGS");
+    }
 
 
 }
