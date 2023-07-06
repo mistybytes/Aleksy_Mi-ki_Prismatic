@@ -12,13 +12,13 @@ public class DailyRewards : MonoBehaviour
     void Awake() {
         string timeString = PlayerPrefs.GetString("LastRewardTime", DateTime.Now.ToString());
         DateTime lastRewardTime = DateTime.Parse(timeString);
-        // Load the last reward time from PlayerPrefs
+     
         string savedTime = PlayerPrefs.GetString("LastRewardTime");
         if (string.IsNullOrEmpty(savedTime)) {
-            // If there's no saved time, use the current time
+          
             lastRewardTime = DateTime.Now;
         } else {
-            // If there is a saved time, parse it
+         
             lastRewardTime = DateTime.Parse(savedTime);
         }
     }

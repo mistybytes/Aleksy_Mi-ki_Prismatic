@@ -108,6 +108,8 @@
      <Compile Include="Assets\Scripts\Enemy_Scripts\enemyBullet.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\LightBlaster.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\UI_Scripts\SkinShop\SkinShopController.cs" />
+     <Compile Include="Assets\Scripts\UI_Scripts\BuffsShop\BuffShopManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -117,6 +119,7 @@
      <Folder Include="Assets\Scenes\Type5Levels" />
      <Folder Include="Assets\scifi-drone\material" />
      <Folder Include="Assets\Prefabs\PowerUps" />
+     <Folder Include="Assets\Prefabs\UsefullButtons" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
      <Folder Include="Assets\scifi-drone\mesh" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -172,6 +175,7 @@
      <Folder Include="Assets\Adaptive Performance\Provider" />
      <Folder Include="Assets\Scripts\UI_Scripts\TextScripts\BlasterPrices" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <Folder Include="Assets\Scripts\UI_Scripts\SkinShop" />
      <Folder Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes" />
      <Folder Include="Assets\Scripts\Enemy_Scripts\BossScripts" />
      <Folder Include="Assets\Scenes\Type4Levels" />
@@ -182,6 +186,7 @@
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Assets\Prefabs\BlasterPref" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <Folder Include="Assets\Scripts\UI_Scripts\BuffsShop" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <Reference Include="UnityEngine">
