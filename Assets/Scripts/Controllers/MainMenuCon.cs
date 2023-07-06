@@ -30,4 +30,8 @@ public class MainMenuCon : MonoBehaviour
         SceneManager.LoadScene("DailyRewards");
     }
 
+    public void BuffsShop()
+    {
+        SceneManager.LoadScene("BuffsShop");
+    }
 }
