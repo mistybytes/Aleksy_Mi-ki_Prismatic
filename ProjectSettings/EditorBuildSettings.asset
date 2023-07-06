@@ -32,9 +32,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Type1Levels/LEVEL1.1.unity
     guid: fad83cc86fd3fd043901c67ed91a408c
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Type1Levels/LEVEL2.unity
-    guid: f70e95bf7ec175e40bc52c03cf20376e
+    path: Assets/Scenes/UIFolder/PremiumShop.unity
+    guid: 7490d11c5e6d2ad429c776651b9715b3
+  - enabled: 1
+    path: Assets/Scenes/UIFolder/BuffsShop.unity
+    guid: dbb0893eeb272db43bb4da496b84c805
+  - enabled: 1
+    path: Assets/Scenes/UIFolder/DailyRewards.unity
+    guid: ed8309d74e1765f43837a6b529d36d7f
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: a33065440d555284aadc1fdac7c54505,
       type: 2}

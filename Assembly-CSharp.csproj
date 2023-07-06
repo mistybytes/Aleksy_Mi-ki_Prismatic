@@ -110,6 +110,7 @@
      <Compile Include="Assets\Scripts\Player_Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\SkinShop\SkinShopController.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\BuffsShop\BuffShopManager.cs" />
+     <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\RewardTimer\RewardTimer.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -144,6 +145,7 @@
      <Folder Include="Assets\Scripts\PowerUP_Scripts" />
      <Folder Include="Assets\Scripts\Player_Scripts" />
      <Folder Include="Assets\Sprites" />
+     <Folder Include="Assets\Scripts\UI_Scripts\TextScripts\RewardTimer" />
      <Folder Include="Assets\Scripts\UI_Scripts\TextScripts" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -169,6 +171,7 @@
      <Folder Include="Assets\Prefabs\Graphics" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\Scripts\UI_Scripts\Daily rewards" />
+     <Folder Include="Assets\Prefabs\TextPrefs" />
      <Folder Include="Assets\Sprites\Assets" />
      <Folder Include="Assets\Scripts\Integration" />
      <Folder Include="Assets\Prefabs\CoinPrefabs" />

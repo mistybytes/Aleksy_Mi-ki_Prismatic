@@ -3,16 +3,13 @@ using UnityEngine.UI;
 
 public class TimeDisplay : MonoBehaviour
 {
-    public Font font;
-  
-
+    
     private float elapsedTime;
     private Text textComponent;
 
     private void Start()
     {
         textComponent = GetComponent<Text>();
-       
     }
     private void LateUpdate()
     {
