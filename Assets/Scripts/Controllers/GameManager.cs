@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     private int bullet_damage = 10;
     private int enemy_health = 10;
     private int lives = 1;
-    private int rewardDay;
     public float gameSpeed = 4f;
     
     
@@ -52,8 +51,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("coins",coins);
         PlayerPrefs.SetInt("lives",lives);
         PlayerPrefs.SetInt("unlockedLevels",LevelCompletionManager.instance.getCurrentlyUnlocked());
-        PlayerPrefs.SetInt("rewardDay", rewardDay);
-        
+
     }
     void Awake()
     {
@@ -71,8 +69,7 @@ public class GameManager : MonoBehaviour
         
         coins = PlayerPrefs.GetInt("coins");
         collectedCoins = 0;
-
-        rewardDay = PlayerPrefs.GetInt("rewardDay");
+        
         
         //TODO lives = PlayerPrefs.GetInt("lives");
         

@@ -8,10 +8,13 @@ public class LevelCompletionManager : MonoBehaviour
     private int currentlyUnlocked = 0;
     private bool[] levelCompletionStatus;
 
+    void Save()
+    {
+        PlayerPrefs.SetInt("currentlyUnlocked", currentlyUnlocked);
+    }
     void Start()
     {
-        //dodać jeszcze ładowanie z player Prefs
-        
+
         if (instance == null)
         {
             levelCompletionStatus = new bool[48];
@@ -27,6 +30,14 @@ public class LevelCompletionManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        currentlyUnlocked = PlayerPrefs.GetInt("currentlyUnlocked");
+
+        for (int i = 0; i < currentlyUnlocked; i++)
+        {
+            levelCompletionStatus[i] = true;
+        }
+        
     }
     
     public bool[] getLevelCompletionStatus()

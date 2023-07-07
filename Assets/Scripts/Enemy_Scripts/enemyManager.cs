@@ -36,7 +36,6 @@ public class enemyManager : MonoBehaviour
     public void subHealth(int damage)
     {
         enemyHealth -= damage;
-        Debug.Log(enemyHealth);
     }
     void OnTriggerEnter(Collider collision)
     {

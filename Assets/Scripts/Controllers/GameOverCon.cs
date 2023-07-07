@@ -6,7 +6,6 @@ using UnityEngine.UIElements;
 
 public class GameOverCon : MonoBehaviour
 {
-    // Start is called before the first frame update
     public void PlayGame()
     {
         GameManager.instance.levelEnded();
