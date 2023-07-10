@@ -27,10 +27,11 @@ The weapons are:
 
 Plans for this week:
 - add the settings UI scene
-- create some music for the game
+- create some music for the game (will try)
 - functional updates, testing, bug fixing
-- simulating the game on mobile devices and making it so the resolution fits the screen
+- simulating the game on mobile devices and making it so the resolution fits the screen 
 - make the skin buttons functional
 - make the info about daily rewards
-
+- add the highscores on every level displaying amount of time survived
+- add achievements 
 
