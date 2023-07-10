@@ -73,6 +73,7 @@ public class DailyRewards : MonoBehaviour
     
     public void exitToMM()
     {
+        Debug.Log("clicked");
         SceneManager.LoadScene("MainMenu");
     }
 

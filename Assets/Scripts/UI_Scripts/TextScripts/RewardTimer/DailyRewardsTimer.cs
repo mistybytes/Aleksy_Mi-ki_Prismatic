@@ -11,7 +11,7 @@ public class DailyRewardsTimer : MonoBehaviour
     {
         timerText = GetComponent<Text>();
     }
-    
+
     private void Update()
     {
         if (DailyRewards.Instance.CanGetReward())
@@ -29,6 +29,5 @@ public class DailyRewardsTimer : MonoBehaviour
             timerText.text = "Next reward in: " + timerString;
         }
     }
-
-   
+    
 }
