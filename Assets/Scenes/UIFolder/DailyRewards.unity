@@ -233,6 +233,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1377845517}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &650975515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1273996215949194484, guid: 25c7ea290d1fbcc409f02a98db1d50b4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1273996214848587327}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1340732108 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1273996215949194483, guid: 25c7ea290d1fbcc409f02a98db1d50b4,
@@ -245,12 +251,25 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1273996214848587327}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 650975515}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1340732113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650975515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43c1b42e6eed6046854aab90c5e44d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 0}
 --- !u!1001 &1377845517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -386,7 +405,7 @@ PrefabInstance:
     - target: {fileID: 8378224395972696471, guid: 9e5ed7901765ec247bb5bbd236a52ee6,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Exit
+      value: exitToMM
       objectReference: {fileID: 0}
     - target: {fileID: 8378224395972696471, guid: 9e5ed7901765ec247bb5bbd236a52ee6,
         type: 3}
@@ -746,7 +765,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1557462138}
         m_TargetAssemblyTypeName: DailyRewards, Assembly-CSharp
-        m_MethodName: GiveReward
+        m_MethodName: GetReward
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -45,7 +45,6 @@ public class ShopController : MonoBehaviour
     {
         if (GameManager.instance.getCoins() >= _classicalBlasterCost)
         {
-            
             GameManager.instance._classicalBlaster.GetComponent<BlasterVariables>().damage += 5;
             GameManager.instance.getCoins() -= _classicalBlasterCost;
             _classicalBlasterCost = _classicalBlasterCost * 2;
@@ -79,14 +78,13 @@ public class ShopController : MonoBehaviour
     {
         if (GameManager.instance.getCoins() >= _iceBlasterCost)
         {
-            
+        
             if(GameManager.instance._iceBlaster)
                 iceBlasterUpgraded++;
             GameManager.instance._iceBlaster = blasterTypes[2];
             GameManager.instance.setBlasterType(blasterTypes[2]);
             GameManager.instance._iceBlaster.GetComponent<IceBlaster>().upgradeFreeze();
             GameManager.instance.getCoins() -= _iceBlasterCost;
-
             
             _iceBlasterCost = _iceBlasterCost * 2;
             

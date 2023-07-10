@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 533541273258071448}
   - component: {fileID: 6309328114122792144}
   - component: {fileID: 7951090466404993184}
+  - component: {fileID: -8547113400529302253}
   m_Layer: 0
   m_Name: Enemy23
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRange: 40
+  minDistanceFromOrigin: 5
 --- !u!114 &7951090466404993184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,3 +144,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 29
+--- !u!114 &-8547113400529302253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5965893860278783135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b95a36a22fb33c43b38b03cdbe4312f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6566422235379557503, guid: bc59a68ef1f949743bcf68a4a603805b,
+    type: 3}

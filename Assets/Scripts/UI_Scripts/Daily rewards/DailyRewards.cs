@@ -1,93 +1,79 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Net.Mime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
 public class DailyRewards : MonoBehaviour
 {
-    
-    private DateTime lastRewardTime;
-    private bool rewardCollected;
-    private int rewardDay;
+    public static DailyRewards Instance;
 
-    private int[] rewards = new int[7]; 
-    void Save()
-    {
-        PlayerPrefs.SetString("lastRewardTime",lastRewardTime.ToString());
-        PlayerPrefs.SetInt("rewardDay", rewardDay);
-    }
-    
-    void Start()
-    {
-        for (int i = 0; i < 7; i++)
-        {
-            rewards[i] = 10;
-        }
+    private string consecutiveDaysPrefs = "ConsecutiveDays";
+    private string coinTotalPrefs = "CoinTotal";
 
-        if (PlayerPrefs.GetInt("rewardCollected") == 1)
+    private string lastRewardTimePrefs = "LastRewardTime";
+
+    void Awake()
+    {
+        if (Instance == null)
         {
-            rewardCollected = true;
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            rewardCollected = false;
-        }
-
-        rewardDay = PlayerPrefs.GetInt("rewardDay");
-        
-        var timeString = PlayerPrefs.GetString("LastRewardTime", DateTime.Now.ToString());
-        DateTime lastRewardTime = DateTime.Parse(timeString);
-        var savedTime = PlayerPrefs.GetString("LastRewardTime");
-        if (string.IsNullOrEmpty(savedTime)) {
-            lastRewardTime = DateTime.Now;
-        } else {
-         
-            lastRewardTime = DateTime.Parse(savedTime);
+            Destroy(gameObject);
+            return;
         }
     }
 
-    public void Update() {
-        
-        TimeSpan timeDiff = lastRewardTime.AddHours(24) - DateTime.Now;
-        string timeDisplay = String.Format("{0}:{1}:{2}", timeDiff.Hours, timeDiff.Minutes, timeDiff.Seconds);
-
- 
-        if (DateTime.Now > lastRewardTime.AddHours(24))
+    public bool CanGetReward()
+    {
+        if (!PlayerPrefs.HasKey(lastRewardTimePrefs))
         {
-           
-            rewardCollected = false;
-            lastRewardTime = DateTime.Now;
-            
-            PlayerPrefs.SetString("LastRewardTime", lastRewardTime.ToString());
-            PlayerPrefs.Save();
+            return true;
         }
-    }
 
-    public void GiveReward() {
+        string lastRewardTime = PlayerPrefs.GetString(lastRewardTimePrefs);
+        DateTime lastRewardDateTime = DateTime.Parse(lastRewardTime);
 
-        if (DateTime.Now > lastRewardTime.AddHours(24) && rewardCollected == false)
+        if (DateTime.Now > lastRewardDateTime.AddDays(1))
         {
-            DateTime now = DateTime.Now;
-            PlayerPrefs.SetString("LastRewardTime", now.ToString());
-            
-            rewardCollected = true;
-            
-            //TODO make this better and add better rewards
-            GameManager.instance.setCoins(GameManager.instance.getCoins() + rewards[rewardDay]);
-            rewardDay++;
-            if (rewardDay == 6)
+            // If more than two days have passed, reset the counter
+            if (DateTime.Now > lastRewardDateTime.AddDays(2))
             {
-                GameManager.instance.setCoins(GameManager.instance.getCoins() + 100);
-                rewardDay = 0;
+                PlayerPrefs.SetInt(consecutiveDaysPrefs, 0);
             }
+
+            return true;
         }
+
+        return false;
+    }
+
+    public void GetReward()
+    {
+        
+        int consecutiveDays = PlayerPrefs.GetInt(consecutiveDaysPrefs, 0) + 1;
+        
+        if (consecutiveDays % 7 == 0)
+        {
+            GameManager.instance.setCoins(GameManager.instance.getCoins() + 200);
+        }
+        else
+        {
+            GameManager.instance.setCoins(GameManager.instance.getCoins() + 200);
+        }
+
+        PlayerPrefs.SetInt(coinTotalPrefs, GameManager.instance.getCoins());
+        PlayerPrefs.SetInt(consecutiveDaysPrefs, consecutiveDays);
+        
+        PlayerPrefs.SetString(lastRewardTimePrefs, DateTime.Now.ToString());
+
+        Debug.Log($"Player received daily reward! They now have {GameManager.instance.getCoins()} coins and have logged in {consecutiveDays} days in a row.");
     }
     
-    public void Exit()
+    public void exitToMM()
     {
         SceneManager.LoadScene("MainMenu");
     }
+
 }
