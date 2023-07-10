@@ -28,6 +28,8 @@ The weapons are:
 Plans for this week:
 - add the settings UI scene
 - create some music for the game
-- functional updates, testing, bug fixing 
+- functional updates, testing, bug fixing
+- simulating the game on mobile devices and making it so the resolution fits the screen
+- make the skin buttons functional 
 
 
