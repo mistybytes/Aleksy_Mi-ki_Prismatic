@@ -11,21 +11,23 @@ Difficulty increase:
 There will be as many locations as colors of the rainbow and the same with enemies.
 With each level enemies are going to get stronger and faster and so the player will have to buy upgrades in the shop.
 
-The locations of the game could have specific effects asociated with them for example:
-- slowing the player down
-- poor lightning
-- lightning in only one direction
+
 
 Player will be able to unlock 6 weapons with each new location, they are already implemented
+The weapons are:
+ - classical blaster
+ - blaster which freezes enemies in place
+ - blaster that deals burn damage
+ - blaster that speeds the player up and makes him fire faster but at a cost of lower damage
+ - blaster that gives the player 1 extra life, but makes him slower
+ - blaster that is able to transform enemies into coins
+ - blaster that destroys every enemy and deals a lot of damage
+ - blaster that can ricoshet from an enemy
 
-Locations are to be bought by the player by a specific amount, on location unlock the upgrades reset and a new weapon is unlocked.
 
 Plans for this week:
-
-- Add a save to a JSON and PlayerPrefs(currently working on it)
-- finish the levels and gameplay so that it only needs graphics
+- add the settings UI scene
 - create some music for the game
-- add some more functionality for the weapons eg. one of them adding a second ball for the player to defend with
-- one weapon will be fast but will not shot, one will have 2 balls but will not shoot, one will destroy everything, one will freeze enemies, one will be really fast
-- add skin functionality
+- functional updates, testing, bug fixing 
+
 
