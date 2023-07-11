@@ -6,19 +6,17 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
-    public float speed = 10f;
+    private float speed = 5f;
     
     private PlayerMovement pm;
     private Vector3 circlePosition;
     private float delay = 20f;
-    public float bounceForce = 5.0f;
     private Rigidbody rb;
     void Start()
     {
-        
-        speed = gameObject.GetComponent<BlasterVariables>().playerSpeed;
         Destroy(gameObject, delay);
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        
         rb = GetComponent<Rigidbody>();
         
         if (playerObject != null)

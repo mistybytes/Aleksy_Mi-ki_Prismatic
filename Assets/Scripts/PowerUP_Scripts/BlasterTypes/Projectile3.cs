@@ -1,23 +1,23 @@
 using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class LightBlaster : MonoBehaviour
+public class Projectile3 : MonoBehaviour
 {
-    //while selecting this blaster set the emition rate higher and the bullet damage lower
-    private int bulletDamage;
+    public bool isUnlocked = false;
+    
+    public float freezeDuration = 0.5f;  // freeze duration in seconds
+    private int bulletDamage = 10;
     private int delay = 10;
     private void Start()
     {
- 
-
+      
         Destroy(gameObject, delay);
     }
-
     private void OnTriggerEnter(Collider collision)
     {
         
-        if (collision.gameObject.CompareTag("Enemy") ) 
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)
             {
@@ -26,10 +26,18 @@ public class LightBlaster : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
+                collision.gameObject.GetComponent<enemyManager>().Freeze(freezeDuration);
+                
                 collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
+                
+                Destroy(gameObject);
             }
-        }  
-        
+        }
     }
+
+    public void upgradeFreeze()
+    {
+        freezeDuration += 0.5f;
+    }
+    
 }

@@ -1,11 +1,10 @@
 using UnityEngine;
 
-public class TransformingBlaster: MonoBehaviour
+public class Projectile4: MonoBehaviour
 {
     public GameObject newObjectPrefab;
-    public float speed = 10f;
-    public float transformChance = 0.25f;  // 25% chance to transform the enemy
-    private int bulletDamage;
+    private float transformChance = 0.25f;  // 25% chance to transform the enemy
+    private int bulletDamage = 10;
     private int delay = 10;
     private void Start()
     {

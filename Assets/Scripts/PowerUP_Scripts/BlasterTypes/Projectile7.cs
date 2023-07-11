@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VoidBlaster : MonoBehaviour
+public class Projectile7 : MonoBehaviour
 {
     private int delay = 20;
     private void Start()

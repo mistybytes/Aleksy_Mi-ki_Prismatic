@@ -13,12 +13,11 @@ public class BulletEmitter : MonoBehaviour
     private void Start()
     {
         if (gameObject.CompareTag("Player"))
-            fireInterval = GameManager.instance.getBlasterType().GetComponent<BlasterVariables>().shotSpeed;
+            fireInterval = GameManager.instance.getShotSpeed();
         else
         {
-            fireInterval = GameManager.instance.getEnemyShotSpeed();
+            fireInterval = 4f;
         }
-
     }
 
     void Update()
@@ -33,6 +32,5 @@ public class BulletEmitter : MonoBehaviour
     void FireBullet()
     {
         GameObject bullet = Instantiate(bulletPrefab, transform.position , transform.rotation);
-        // Set any necessary properties on the bullet object
     }
 }

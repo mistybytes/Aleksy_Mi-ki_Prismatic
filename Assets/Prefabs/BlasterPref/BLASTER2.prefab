@@ -15,9 +15,8 @@ GameObject:
   - component: {fileID: 3618075495454950693}
   - component: {fileID: 1753803483998062068}
   - component: {fileID: 337136658802282755}
-  - component: {fileID: 2591508053138538078}
   m_Layer: 0
-  m_Name: BLAZER
+  m_Name: BLASTER2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,18 +143,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
---- !u!114 &2591508053138538078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 663560717618360929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ddbf00961977d14ea121521e4517a5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
-  shotSpeed: 5
-  playerSpeed: 5
+  bounceForce: 5

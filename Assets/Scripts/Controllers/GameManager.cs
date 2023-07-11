@@ -38,13 +38,12 @@ public class GameManager : MonoBehaviour
     public GameObject _forceBlaster;
     public GameObject _voidBlaster;
     
-    [SerializeField]
-    private GameObject selectedBlaster;
+    public GameObject selectedBlaster;
 
     public void Save()
     {
-        PlayerPrefs.SetString("iceBlaster",_iceBlaster.ToString());
         PlayerPrefs.SetString("plasmaBlaster",_plasmaBlaster.ToString());
+        PlayerPrefs.SetString("iceBlaster",_iceBlaster.ToString());
         PlayerPrefs.SetString("transformationBlaster",_transformationBlaster.ToString());
         PlayerPrefs.SetString("lightBlaster",_lightBlaster.ToString());
         PlayerPrefs.SetString("forceBlaster",_forceBlaster.ToString());
@@ -52,6 +51,7 @@ public class GameManager : MonoBehaviour
         
         PlayerPrefs.SetInt("coins",coins);
         PlayerPrefs.SetInt("lives",lives);
+        
     }
 
   
@@ -71,22 +71,41 @@ public class GameManager : MonoBehaviour
         
      //   coins = PlayerPrefs.GetInt("coins");
         collectedCoins = 0;
-
         
+         lives = PlayerPrefs.GetInt("lives", defaultValue: 1);
         
-  
-        //TODO lives = PlayerPrefs.GetInt("lives");
-        
-        //TODO dodać życia jeszcze i ładowanie innych parametrów jak blaster
+        //TODO dodać ładowanie innych parametrów jak blaster
     }
 
     private void Start()
     {
-        _classicalBlaster = blasterList[1];
-        if (PlayerPrefs.GetString("classicalBlaster") == "BLAZER")
+        
+        _classicalBlaster = blasterList[0];
+        if (PlayerPrefs.GetString("plasmaBlaster") == "BLASTER2")
         { 
             _plasmaBlaster = blasterList[1];
         }
+        if (PlayerPrefs.GetString("iceBlaster") == "BLASTER3")
+        { 
+            _iceBlaster = blasterList[2];
+        }
+        if (PlayerPrefs.GetString("transformationBlaster") == "BLASTER4")
+        { 
+            _plasmaBlaster = blasterList[3];
+        }
+        if (PlayerPrefs.GetString("lightBlaster") == "BLASTER5")
+        { 
+            _plasmaBlaster = blasterList[4];
+        }
+        if (PlayerPrefs.GetString("forceBlaster") == "BLASTER6")
+        { 
+            _plasmaBlaster = blasterList[5];
+        }
+        if (PlayerPrefs.GetString("voidBlaster") == "BLASTER7")
+        { 
+            _plasmaBlaster = blasterList[6];
+        }
+        
 
     }
     
@@ -98,6 +117,11 @@ public class GameManager : MonoBehaviour
     public void setSpeed(float s)
     {
         speed = s;
+    }
+
+    public float getShotSpeed()
+    {
+        return shotSpeed;
     }
     public float getSpeed()
     {

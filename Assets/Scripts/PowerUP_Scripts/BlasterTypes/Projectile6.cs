@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class ForceBlaster : MonoBehaviour
+public class Projectile6 : MonoBehaviour
 {
     public bool isUnlocked = false;
     
-    public float speed;  // speed of the bullet
-    public float pushForce;  // force applied to the enemy
+    private float speed;  // speed of the bullet
+    private float pushForce;  // force applied to the enemy
     private int bulletDamage;
     private float shotSpeed;
     private float delay = 10;
@@ -20,7 +20,7 @@ public class ForceBlaster : MonoBehaviour
         pushForce = PlayerPrefs.GetFloat("pushForce", defaultValue: 1f);
         speed = PlayerPrefs.GetFloat("speed", defaultValue: 2f);
         shotSpeed = PlayerPrefs.GetFloat("shotSpeed", defaultValue: 3f);
-        bulletDamage = PlayerPrefs.GetInt("bulletDamage", defaultValue: 5);
+        bulletDamage = PlayerPrefs.GetInt("bulletDamage", defaultValue: 10);
 
         for (int i = 0; i < timesUpgraded; i++)
         {
@@ -30,8 +30,6 @@ public class ForceBlaster : MonoBehaviour
         GameManager.instance.setLives(lives);
         GameManager.instance.setSpeed(speed);
         GameManager.instance.setShotSpeed(shotSpeed);
-        
-        bulletDamage = gameObject.GetComponent<BlasterVariables>().damage;
         
         Destroy(gameObject, delay);
     }
@@ -62,6 +60,9 @@ public class ForceBlaster : MonoBehaviour
     {
         speed++;
         bulletDamage += 10;
+        
+        //TODO remake this into a blaster that orbits the player
+        
         if (timesUpgraded == 2)
         {
             shotSpeed += 0.5f;

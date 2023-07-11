@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlasmaBlasterProjectile : MonoBehaviour
+public class Projectile2 : MonoBehaviour
 {
     public float fireDamagePerSecond = 10f;
     public float fireDuration = 3f;
-    private int bulletDamage;
+    private int bulletDamage = 10;
     private int delay = 10;
     private void Start()
     {

@@ -2,30 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClassicBlaster : MonoBehaviour
+public class Projectile5 : MonoBehaviour
 {
-    private int bulletDamage;
+    //while selecting this blaster set the emition rate higher and the bullet damage lower
+    private int bulletDamage = 10;
     private int delay = 10;
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+ 
+
         Destroy(gameObject, delay);
     }
+
     private void OnTriggerEnter(Collider collision)
     {
         
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") ) 
         {
             if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)
             {
-               // Destroy(gameObject);
+                Destroy(gameObject);
                 Destroy(collision.gameObject);
             }
             else
             {
+                Destroy(gameObject);
                 collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
-               // Destroy(gameObject);
             }
-        }
+        }  
+        
     }
 }
