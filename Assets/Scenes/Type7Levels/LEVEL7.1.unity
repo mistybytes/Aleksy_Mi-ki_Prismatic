@@ -376,7 +376,7 @@ PrefabInstance:
     - target: {fileID: 4170896728560543772, guid: 6a44c15ae208d4142ae8462bd5e18bcb,
         type: 3}
       propertyPath: m_Name
-      value: TimerCanvas
+      value: Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a44c15ae208d4142ae8462bd5e18bcb, type: 3}
@@ -544,7 +544,7 @@ PrefabInstance:
     - target: {fileID: 4578383969250356585, guid: e23e9aa92db280f46910b8ffde05ad0f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4578383969250356585, guid: e23e9aa92db280f46910b8ffde05ad0f,
         type: 3}
@@ -554,7 +554,7 @@ PrefabInstance:
     - target: {fileID: 4578383969250356585, guid: e23e9aa92db280f46910b8ffde05ad0f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 4578383969250356585, guid: e23e9aa92db280f46910b8ffde05ad0f,
         type: 3}

@@ -53,7 +53,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("coins",coins);
         PlayerPrefs.SetInt("lives",lives);
         PlayerPrefs.SetInt("unlockedLevels",LevelCompletionManager.instance.getCurrentlyUnlocked());
-
     }
 
   
