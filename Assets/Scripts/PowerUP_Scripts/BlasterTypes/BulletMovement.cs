@@ -7,6 +7,7 @@ using UnityEngine;
 public class BulletMovement : MonoBehaviour
 {
     public float speed = 10f;
+    
     private PlayerMovement pm;
     private Vector3 circlePosition;
     private float delay = 20f;
@@ -25,7 +26,7 @@ public class BulletMovement : MonoBehaviour
             pm = playerObject.GetComponent<PlayerMovement>();
             float currentAngle = pm.getCurrentAngle();
 
-             circlePosition = new Vector3(Mathf.Sin(currentAngle), 0, Mathf.Cos(currentAngle)) * 40;
+            circlePosition = new Vector3(Mathf.Sin(currentAngle), 0, Mathf.Cos(currentAngle)) * 40;
         }
     }
     void OnTriggerEnter(Collider other)
@@ -36,7 +37,7 @@ public class BulletMovement : MonoBehaviour
             bounceDirection.y = 0; 
             
             Destroy(gameObject);
-            //rb.AddForce(bounceDirection.normalized * bounceForce, ForceMode.Impulse);
+            
         }
     }
     void Update()

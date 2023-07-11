@@ -10,9 +10,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 circlePosition;
     private void Start()
     {
-        playerSpeed = GameManager.instance.getBlasterType().GetComponent<BlasterVariables>().playerSpeed;
-        BulletEmitter emitter = GetComponent<BulletEmitter>();
+        playerSpeed = GameManager.instance.getSpeed();
         
+        BulletEmitter emitter = GetComponent<BulletEmitter>();
         emitter.bulletPrefab = GameManager.instance.getBlasterType();
         
         StartCoroutine(MyTimer.CountUpTo1Minute());

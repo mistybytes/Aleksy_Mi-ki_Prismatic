@@ -10,7 +10,7 @@ public class TransformingBlaster: MonoBehaviour
     private void Start()
     {
         bulletDamage = GameManager.instance.getBulletDamage();
-
+        
         Destroy(gameObject, delay);
     }
 

@@ -16,7 +16,6 @@ public class EnemyMovement : MonoBehaviour
     {
         speed = GameManager.instance.gameSpeed;
     }
-
     
     private void Update()
     {

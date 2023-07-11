@@ -208,6 +208,9 @@ public class ShopController : MonoBehaviour
             GameManager.instance.setBlasterType(blasterTypes[5]);
             GameManager.instance.getCoins() -= _forceBlasterCost;
             forceBlasterUpgraded++;
+                
+            GameManager.instance._forceBlaster.GetComponent<ForceBlaster>().upgradeForceBlaster();
+            
             _forceBlasterCost = _forceBlasterCost * 2;
         }
     }

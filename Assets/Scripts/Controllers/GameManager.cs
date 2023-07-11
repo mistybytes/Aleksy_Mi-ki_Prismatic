@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,15 +13,17 @@ public class GameManager : MonoBehaviour
     //TODO add a field for current skin, know what type of field this will be
     private int currentLevel;
     
-    private float shotSpeed = 3f; 
+    private float shotSpeed = 3f;
+    
     private int coins = 100;
     private int collectedCoins;
     private int specialCurrency;
     private int bullet_damage = 10;
     private int enemy_health = 10;
     private int lives = 1;
-    public float gameSpeed = 4f;
     
+    private float speed = 4f;
+    public float gameSpeed = 4f;
     
     private string currentSceneName = "";
     private float playerSpeed = 5f;
@@ -39,8 +43,6 @@ public class GameManager : MonoBehaviour
 
     public void Save()
     {
-        
-        PlayerPrefs.SetString("classicalBlaster",_classicalBlaster.ToString());
         PlayerPrefs.SetString("iceBlaster",_iceBlaster.ToString());
         PlayerPrefs.SetString("plasmaBlaster",_plasmaBlaster.ToString());
         PlayerPrefs.SetString("transformationBlaster",_transformationBlaster.ToString());
@@ -53,6 +55,9 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("unlockedLevels",LevelCompletionManager.instance.getCurrentlyUnlocked());
 
     }
+
+  
+
     void Awake()
     {
         
@@ -68,13 +73,37 @@ public class GameManager : MonoBehaviour
         
         coins = PlayerPrefs.GetInt("coins");
         collectedCoins = 0;
+
         
         
+  
         //TODO lives = PlayerPrefs.GetInt("lives");
         
         //TODO dodać życia jeszcze i ładowanie innych parametrów jak blaster
     }
 
+    private void Start()
+    {
+        _classicalBlaster = blasterList[1];
+        if (PlayerPrefs.GetString("classicalBlaster") == "BLAZER")
+        { 
+            _plasmaBlaster = blasterList[1];
+        }
+
+    }
+    //speed variables
+    public void setShotSpeed(float s)
+    {
+        shotSpeed = s;
+    }
+    public void setSpeed(float s)
+    {
+        speed = s;
+    }
+    public float getSpeed()
+    {
+        return speed;
+    }
     //blaster methods
     public void setBlasterType(GameObject blaster)
     {
