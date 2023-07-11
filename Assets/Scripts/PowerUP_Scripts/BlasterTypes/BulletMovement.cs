@@ -11,16 +11,16 @@ public class BulletMovement : MonoBehaviour
     private PlayerMovement pm;
     private Vector3 circlePosition;
     private float delay = 20f;
-    private int bulletDamage;
     public float bounceForce = 5.0f;
     private Rigidbody rb;
     void Start()
     {
-        bulletDamage = GameManager.instance.getBulletDamage();
+        
         speed = gameObject.GetComponent<BlasterVariables>().playerSpeed;
         Destroy(gameObject, delay);
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody>();
+        
         if (playerObject != null)
         {
             pm = playerObject.GetComponent<PlayerMovement>();

@@ -9,7 +9,6 @@ public class ClassicBlaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bulletDamage = GameManager.instance.getBulletDamage();
         Destroy(gameObject, delay);
     }
     private void OnTriggerEnter(Collider collision)

@@ -9,7 +9,7 @@ public class LightBlaster : MonoBehaviour
     private int delay = 10;
     private void Start()
     {
-        bulletDamage = GameManager.instance.getBulletDamage();
+ 
 
         Destroy(gameObject, delay);
     }

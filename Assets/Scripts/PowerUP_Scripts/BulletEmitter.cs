@@ -16,7 +16,7 @@ public class BulletEmitter : MonoBehaviour
             fireInterval = GameManager.instance.getBlasterType().GetComponent<BlasterVariables>().shotSpeed;
         else
         {
-            fireInterval = GameManager.instance.getShotSpeed();
+            fireInterval = GameManager.instance.getEnemyShotSpeed();
         }
 
     }

@@ -9,8 +9,9 @@ public class GameManager : MonoBehaviour
 {
     
     public static GameManager instance;
+
+    private Material skin;
     
-    //TODO add a field for current skin, know what type of field this will be
     private int currentLevel;
     
     private float shotSpeed = 3f;
@@ -18,7 +19,6 @@ public class GameManager : MonoBehaviour
     private int coins = 100;
     private int collectedCoins;
     private int specialCurrency;
-    private int bullet_damage = 10;
     private int enemy_health = 10;
     private int lives = 1;
     
@@ -90,6 +90,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
+    
     //speed variables
     public void setShotSpeed(float s)
     {
@@ -152,19 +153,11 @@ public class GameManager : MonoBehaviour
         lives = l;
     }
     //player bullet methods
-    public float getShotSpeed()
+    public float getEnemyShotSpeed()
     {
         return shotSpeed;
     }
-    public int getBulletDamage()
-    {
-        return bullet_damage;
-    }
-
-    public void setBulletDamage(int damage)
-    {
-        bullet_damage = damage;
-    }
+    
     //enemy script
     public int getEnemyHealth()
     {

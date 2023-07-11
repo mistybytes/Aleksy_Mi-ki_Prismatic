@@ -9,7 +9,6 @@ public class LevelSelect : MonoBehaviour
     public void Level1_1()
     {
         GameManager.instance.setCurrentLevel(0);
-        Debug.Log("clicked");
         GameManager.instance.setEnemyHealth(10);
         GameManager.instance.gameSpeed = 2f;
         SceneManager.LoadScene("LEVEL1.1");

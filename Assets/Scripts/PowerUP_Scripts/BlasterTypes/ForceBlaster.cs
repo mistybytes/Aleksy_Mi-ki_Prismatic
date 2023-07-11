@@ -32,6 +32,7 @@ public class ForceBlaster : MonoBehaviour
         GameManager.instance.setShotSpeed(shotSpeed);
         
         bulletDamage = gameObject.GetComponent<BlasterVariables>().damage;
+        
         Destroy(gameObject, delay);
     }
     private void OnTriggerEnter(Collider collision)
