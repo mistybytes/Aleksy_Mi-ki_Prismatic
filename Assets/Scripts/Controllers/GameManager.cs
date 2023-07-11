@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     private int enemy_health = 10;
     private int lives = 1;
     
-    private float speed = 4f;
+    private float speed = 2f;
     public float gameSpeed = 4f;
     
     private string currentSceneName = "";
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         
-        coins = PlayerPrefs.GetInt("coins");
+     //   coins = PlayerPrefs.GetInt("coins");
         collectedCoins = 0;
 
         

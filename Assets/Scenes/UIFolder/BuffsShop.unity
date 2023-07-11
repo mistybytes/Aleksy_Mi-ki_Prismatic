@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 167231671}
   - component: {fileID: 167231670}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Pirids amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,8 +249,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 668, y: 426}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: 221}
+  m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &167231670
 MonoBehaviour:
@@ -274,11 +274,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d4f72d2c650db3c48a37a54f077a5e7d, type: 3}
-    m_FontSize: 25
+    m_FontSize: 50
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -303,13 +303,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8378224395164433637, guid: 9e5ed7901765ec247bb5bbd236a52ee6,
         type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378224395164433637, guid: 9e5ed7901765ec247bb5bbd236a52ee6,
+        type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8378224395164433637, guid: 9e5ed7901765ec247bb5bbd236a52ee6,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 40
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8378224395972696465, guid: 9e5ed7901765ec247bb5bbd236a52ee6,
         type: 3}
@@ -399,12 +404,12 @@ PrefabInstance:
     - target: {fileID: 8378224395972696470, guid: 9e5ed7901765ec247bb5bbd236a52ee6,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -616
+      value: -677
       objectReference: {fileID: 0}
     - target: {fileID: 8378224395972696470, guid: 9e5ed7901765ec247bb5bbd236a52ee6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 435
+      value: 408
       objectReference: {fileID: 0}
     - target: {fileID: 8378224395972696470, guid: 9e5ed7901765ec247bb5bbd236a52ee6,
         type: 3}
@@ -1402,7 +1407,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
