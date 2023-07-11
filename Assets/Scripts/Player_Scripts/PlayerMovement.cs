@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private float playerSpeed = 3f;
     private bool isClockwise = true;
     private float currentAngle = 2.0f;
-    
+    private Vector3 circlePosition;
     private void Start()
     {
         playerSpeed = GameManager.instance.getBlasterType().GetComponent<BlasterVariables>().playerSpeed;
@@ -19,26 +19,35 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        
+        if (Input.touchCount > 0)
         {
-            isClockwise = false;
+                Touch touch = Input.GetTouch(0);
+                
+                if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Began )
+                {
+                    if (touch.position.x < Screen.width / 2)
+                    {
+                      
+                       isClockwise = false;
+                       float angleDelta = Time.deltaTime * playerSpeed * (isClockwise ? -1f : 1f);
+                       currentAngle += angleDelta; 
+                       circlePosition = new Vector3(Mathf.Sin(currentAngle), 0, Mathf.Cos(currentAngle)) * 3;
+                       transform.position = circlePosition;
+                       
+                    }
+                    else
+                    {
+                    
+                        isClockwise = true;
+                        float angleDelta = Time.deltaTime * playerSpeed * (isClockwise ? -1f : 1f);
+                        currentAngle += angleDelta;
+                        circlePosition = new Vector3(Mathf.Sin(currentAngle), 0, Mathf.Cos(currentAngle)) * 3;
+                        transform.position = circlePosition;
+                        
+                    }
+                }
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            isClockwise = true;
-        }
-
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
-        {
-            float angleDelta = Time.deltaTime * playerSpeed * (isClockwise ? -1f : 1f);
-            currentAngle += angleDelta;
-            Vector3 circlePosition = new Vector3(Mathf.Sin(currentAngle), 0, Mathf.Cos(currentAngle)) * 3;
-
-            transform.position = circlePosition;
-        }
-
-
     }
 
     public float getCurrentAngle()

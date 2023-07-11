@@ -7,7 +7,7 @@ public class PrismScript : MonoBehaviour
 {
 
     
-    public Color newColor = new Color(1f, 0f, 0f, 1f);
+    public Color newColor = new Color(255f,255f,255f);
 
     private Renderer renderer;
 

@@ -17,19 +17,7 @@ public class EnemyMovement : MonoBehaviour
         speed = GameManager.instance.gameSpeed;
     }
 
-    void OnTriggerEnter(Collider collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("Cube"))
-        {
-            GameManager.instance.SubLives();
-            Destroy(gameObject);
-        }
-    }
-
+    
     private void Update()
     {
         freeze = gameObject.GetComponent<enemyManager>().getFreeze();
