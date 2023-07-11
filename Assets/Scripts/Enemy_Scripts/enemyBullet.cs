@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class enemyBullet : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 2f;
     public Vector3 targetPosition = Vector3.zero;
 
     void Update()

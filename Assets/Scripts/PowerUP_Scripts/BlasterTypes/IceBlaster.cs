@@ -27,7 +27,9 @@ public class IceBlaster : MonoBehaviour
             else
             {
                 collision.gameObject.GetComponent<enemyManager>().Freeze(freezeDuration);
+                
                 collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
+                
                 Destroy(gameObject);
             }
         }
