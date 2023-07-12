@@ -141,5 +141,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isUnlocked: 0
-  speed: 0
-  pushForce: 0

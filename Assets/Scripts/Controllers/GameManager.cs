@@ -89,27 +89,27 @@ public class GameManager : MonoBehaviour
         
         if (PlayerPrefs.GetString("iceBlaster") != null)
         { 
-            _plasmaBlaster = blasterList[1];
+            _iceBlaster = blasterList[1];
         }
         if (PlayerPrefs.GetString("plasmaBlaster") != null )
         { 
-            _iceBlaster = blasterList[2];
+            _plasmaBlaster = blasterList[2];
         }
         if (PlayerPrefs.GetString("transformationBlaster") != null)
         { 
-            _plasmaBlaster = blasterList[3];
+            _transformationBlaster = blasterList[3];
         }
         if (PlayerPrefs.GetString("lightBlaster") != null)
         { 
-            _plasmaBlaster = blasterList[4];
+            _lightBlaster = blasterList[4];
         }
         if (PlayerPrefs.GetString("forceBlaster") != null)
         { 
-            _plasmaBlaster = blasterList[5];
+            _forceBlaster = blasterList[5];
         }
         if (PlayerPrefs.GetString("voidBlaster") != null)
         { 
-            _plasmaBlaster = blasterList[6];
+            _voidBlaster = blasterList[6];
         }
         
 

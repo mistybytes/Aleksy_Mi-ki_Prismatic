@@ -11,11 +11,10 @@ public class Blaster6 : MonoBehaviour
     {
         _text = gameObject.GetComponent<Text>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        if (GameManager.instance._transformationBlaster)
+        if (GameManager.instance._transformationBlaster != null)
         {
             _text.text = "UPGRADE : " + sc._transformationBlasterCost;
         }

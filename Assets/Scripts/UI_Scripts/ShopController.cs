@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ShopController : MonoBehaviour
@@ -8,11 +9,6 @@ public class ShopController : MonoBehaviour
    
     [SerializeField] 
     private GameObject[] blasterTypes = new GameObject[7];
-
-    
-    
-    public int shotSpeedCost = 10;
-    public int playerSpeedCost = 10;
     
     public int _classicalBlasterCost = 10;
     public int classicalBlasterUpgraded;
@@ -34,7 +30,6 @@ public class ShopController : MonoBehaviour
 
     private void Start()
     {
-        
         classicalBlasterUpgraded = PlayerPrefs.GetInt("classicalBlasterUpgraded", 0);
         fireBlasterUpgraded = PlayerPrefs.GetInt("fireBlasterUpgraded", 0);
         iceBlasterUpgraded = PlayerPrefs.GetInt("iceBlasterUpgraded", 0);
@@ -42,12 +37,12 @@ public class ShopController : MonoBehaviour
         lightBlasterUpgraded = PlayerPrefs.GetInt("lighBlasterUpgraded", 0);
         transformationBlasterUpgraded = PlayerPrefs.GetInt("transformationBlasterUpgraded", 0);
         voidBlasterUpgraded = PlayerPrefs.GetInt("voidBlasterUpgraded", 0);
-        
+
     }
 
     public void selectBlaster()
     {
-        GameManager.instance.setBlasterType(blasterTypes[0]);
+        GameManager.instance.setBlasterType(GameManager.instance.blasterList[0]);
     }
 
     public void upgradeBlaster()
@@ -72,28 +67,29 @@ public class ShopController : MonoBehaviour
     {
         if (GameManager.instance._iceBlaster != null)
         {
-            GameManager.instance.setBlasterType(blasterTypes[2]);
+            GameManager.instance.setBlasterType(blasterTypes[1]);
         }
         else
         {
             if (GameManager.instance.getCoins() >= _iceBlasterCost)
             {   
-                GameManager.instance._iceBlaster = blasterTypes[2];
-                GameManager.instance.setBlasterType(blasterTypes[2]);
+                GameManager.instance._iceBlaster = blasterTypes[1];
+                GameManager.instance.setBlasterType(blasterTypes[1]);
             }
         }
     }
 
     public void upgradeIceBlaster()
     {
-        if (GameManager.instance.getCoins() >= _iceBlasterCost)
+        if (GameManager.instance.getCoins() >= _iceBlasterCost && GameManager.instance._iceBlaster)
         {
         
             if(GameManager.instance._iceBlaster) 
                 iceBlasterUpgraded++;
-            GameManager.instance._iceBlaster = blasterTypes[2];
-            GameManager.instance.setBlasterType(blasterTypes[2]);
-            GameManager.instance._iceBlaster.GetComponent<Projectile3>().upgradeFreeze();
+            GameManager.instance._iceBlaster = blasterTypes[1];
+            GameManager.instance.setBlasterType(blasterTypes[1]);
+            
+            
             GameManager.instance.getCoins() -= _iceBlasterCost;
             
             _iceBlasterCost = _iceBlasterCost * 2;
@@ -105,29 +101,30 @@ public class ShopController : MonoBehaviour
     {
         if (GameManager.instance._plasmaBlaster != null)
         {
-            GameManager.instance.setBlasterType(blasterTypes[1]);
+            GameManager.instance.setBlasterType(blasterTypes[2]);
         }
         else
         {
             if (GameManager.instance.getCoins() >= _fireBlasterCost)
             {
                 GameManager.instance.getCoins() -= _fireBlasterCost;
-                GameManager.instance._plasmaBlaster = blasterTypes[1];
-                GameManager.instance.setBlasterType(blasterTypes[1]);
+                GameManager.instance._plasmaBlaster = blasterTypes[2];
+                GameManager.instance.setBlasterType(blasterTypes[2]);
             }
         }
     }
     
     public void upgradeFireBlaster()
     {
-        if (GameManager.instance.getCoins() >= _fireBlasterCost)
+        if (GameManager.instance.getCoins() >= _fireBlasterCost && GameManager.instance._plasmaBlaster)
         {
            
-            GameManager.instance._plasmaBlaster = blasterTypes[1];
-            GameManager.instance.setBlasterType(blasterTypes[1]);
-            GameManager.instance._plasmaBlaster.GetComponent<Projectile2>().fireDuration += 0.5f;
-            GameManager.instance._plasmaBlaster.GetComponent<Projectile2>().fireDamagePerSecond += 5;
+            GameManager.instance._plasmaBlaster = blasterTypes[2];
+            GameManager.instance.setBlasterType(blasterTypes[2]);
+            
+            
             GameManager.instance.getCoins() -= _fireBlasterCost;
+            
             fireBlasterUpgraded++;
             _fireBlasterCost = _fireBlasterCost * 2;
         }
@@ -151,7 +148,7 @@ public class ShopController : MonoBehaviour
 
     public void upgradeTransformationBlaster()
     {
-        if (GameManager.instance.getCoins() >= _transformationBlasterCost)
+        if (GameManager.instance.getCoins() >= _transformationBlasterCost && GameManager.instance._transformationBlaster)
         {
             GameManager.instance._transformationBlaster = blasterTypes[3];
             GameManager.instance.setBlasterType(blasterTypes[3]);
@@ -220,7 +217,7 @@ public class ShopController : MonoBehaviour
 
             if (GameManager.instance._forceBlaster)
             {
-                GameManager.instance._forceBlaster.GetComponent<Projectile6>().upgradeForceBlaster();
+//                GameManager.instance._forceBlaster.GetComponent<Projectile6>().upgradeForceBlaster();
             }
 
             _forceBlasterCost = _forceBlasterCost * 2;

@@ -4962,7 +4962,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: selectTransformationBlaster
+        m_MethodName: upgradeTransformationBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5444,25 +5444,25 @@ PrefabInstance:
         type: 3}
       propertyPath: blasterTypes.Array.data[3]
       value: 
-      objectReference: {fileID: 855676725470156554, guid: 634be7d966f4c8c468d49d97437962a5,
+      objectReference: {fileID: 2440702374894264768, guid: 8e3dfd2ce4d9b794da913a154f4f56e7,
         type: 3}
     - target: {fileID: 6686915617126245227, guid: ecd8f47b3c500d14d82792aca9589e22,
         type: 3}
       propertyPath: blasterTypes.Array.data[4]
       value: 
-      objectReference: {fileID: 2771816613438984337, guid: 03a1496eed64da94497fc923bdf4570c,
+      objectReference: {fileID: 3419333910443358370, guid: 50f657c492dcea746a06a5f51e54a6ad,
         type: 3}
     - target: {fileID: 6686915617126245227, guid: ecd8f47b3c500d14d82792aca9589e22,
         type: 3}
       propertyPath: blasterTypes.Array.data[5]
       value: 
-      objectReference: {fileID: 3419333910443358370, guid: 50f657c492dcea746a06a5f51e54a6ad,
+      objectReference: {fileID: 855676725470156554, guid: 634be7d966f4c8c468d49d97437962a5,
         type: 3}
     - target: {fileID: 6686915617126245227, guid: ecd8f47b3c500d14d82792aca9589e22,
         type: 3}
       propertyPath: blasterTypes.Array.data[6]
       value: 
-      objectReference: {fileID: 2440702374894264768, guid: 8e3dfd2ce4d9b794da913a154f4f56e7,
+      objectReference: {fileID: 2771816613438984337, guid: 03a1496eed64da94497fc923bdf4570c,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecd8f47b3c500d14d82792aca9589e22, type: 3}
