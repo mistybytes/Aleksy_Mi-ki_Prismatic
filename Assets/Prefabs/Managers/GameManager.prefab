@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6719376952352997388}
   - component: {fileID: 6719376952352997387}
   - component: {fileID: 3464479404466101729}
+  - component: {fileID: 8521373815580284779}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -50,6 +51,10 @@ MonoBehaviour:
   - {fileID: 9165571919683375005, guid: 40a659a08c356b343a8614819035b8fa, type: 3}
   - {fileID: 663560717618360929, guid: f3901b02ccf96ba4db2fcb82b5378feb, type: 3}
   - {fileID: 5405921696116420407, guid: db3c8ad9b9a60d0468dd796c94c45dae, type: 3}
+  - {fileID: 2440702374894264768, guid: 8e3dfd2ce4d9b794da913a154f4f56e7, type: 3}
+  - {fileID: 3419333910443358370, guid: 50f657c492dcea746a06a5f51e54a6ad, type: 3}
+  - {fileID: 855676725470156554, guid: 634be7d966f4c8c468d49d97437962a5, type: 3}
+  - {fileID: 2771816613438984337, guid: 03a1496eed64da94497fc923bdf4570c, type: 3}
   _classicalBlaster: {fileID: 9165571919683375005, guid: 40a659a08c356b343a8614819035b8fa,
     type: 3}
   _iceBlaster: {fileID: 0}
@@ -70,5 +75,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 911e8427e82a0814d9ac27da2cf454ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8521373815580284779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6719376952352997386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d26d5a088ca8a3449637cd71a471983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

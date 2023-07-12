@@ -20,7 +20,8 @@ public class DailyRewardsTimer : MonoBehaviour
         }
         else
         {
-            string lastRewardTime = PlayerPrefs.GetString("LastRewardTime");
+            string lastRewardTime = PlayerPrefs.GetString("LastRewardTime","10:10:10");
+            
             DateTime lastRewardDateTime = DateTime.Parse(lastRewardTime);
 
             TimeSpan timeUntilNextReward = lastRewardDateTime.AddDays(1) - DateTime.Now;

@@ -4,29 +4,20 @@ using UnityEngine;
 
 public class SaveManager : MonoBehaviour
 {
-    public GoogleSave googleSave;
-    public SkinManager skinManager;
     
-    bool afterBoot = false;
-
-    void Start() {
-        afterBoot = false;
+    void OnApplicationQuit()
+    {
+        Debug.Log("GAME SAVED");
+        GameManager.instance.Save();
     }
-    
-    void Update() {
-        if(afterBoot == false) {
-   //         LocalLoadGame();
-   //         OnlineLoadGame();
-            afterBoot = true;
+
+    void OnApplicationPause(bool pauseStatus)
+    {
+        if (pauseStatus)
+        {
+            Debug.Log("GAME SAVED");
+            GameManager.instance.Save();
         }
-    }
-
-    public void LocalSaveGame() {
-     //   SaveData tData = CreateSavefile();
-        //string JSONSave = JsonUtility.ToJson(tData);
-
-       // PlayerPrefs.SetString(saveFilePath, JSONSave);
-        PlayerPrefs.Save();
     }
     // Update is called once per frame
 }

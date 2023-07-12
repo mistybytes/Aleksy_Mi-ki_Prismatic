@@ -30,11 +30,7 @@ public class ShopController : MonoBehaviour
     
     
     private GameObject selectedBlaster;
-
-    private void Start()
-    {
-        //dopisać tutaj player prefs i dowiedzieć się dlaczego redundant
-    }
+    
 
     public void selectBlaster()
     {

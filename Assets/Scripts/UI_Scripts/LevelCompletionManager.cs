@@ -5,13 +5,10 @@ using UnityEngine;
 public class LevelCompletionManager : MonoBehaviour
 {
     public static LevelCompletionManager instance;
-    private int currentlyUnlocked = 0;
+    public int currentlyUnlocked = 0;
     private bool[] levelCompletionStatus;
 
-    void Save()
-    {
-        PlayerPrefs.SetInt("currentlyUnlocked", currentlyUnlocked);
-    }
+   
     void Start()
     {
 

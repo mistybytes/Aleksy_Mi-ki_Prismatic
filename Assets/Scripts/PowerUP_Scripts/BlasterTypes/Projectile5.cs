@@ -9,8 +9,6 @@ public class Projectile5 : MonoBehaviour
     private int delay = 10;
     private void Start()
     {
- 
-
         Destroy(gameObject, delay);
     }
 

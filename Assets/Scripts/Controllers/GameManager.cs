@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
 
     public void Save()
     {
+        
         PlayerPrefs.SetString("plasmaBlaster",_plasmaBlaster.ToString());
         PlayerPrefs.SetString("iceBlaster",_iceBlaster.ToString());
         PlayerPrefs.SetString("transformationBlaster",_transformationBlaster.ToString());
@@ -51,7 +52,8 @@ public class GameManager : MonoBehaviour
         
         PlayerPrefs.SetInt("coins",coins);
         PlayerPrefs.SetInt("lives",lives);
-        
+        PlayerPrefs.SetInt("currentlyUnlocked", LevelCompletionManager.instance.currentlyUnlocked);
+
     }
 
   
