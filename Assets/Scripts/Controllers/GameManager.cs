@@ -69,10 +69,10 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         
-     //   coins = PlayerPrefs.GetInt("coins");
+        coins = PlayerPrefs.GetInt("coins");
         collectedCoins = 0;
         
-         lives = PlayerPrefs.GetInt("lives", defaultValue: 1);
+        lives = PlayerPrefs.GetInt("lives", defaultValue: 1);
         
         //TODO dodać ładowanie innych parametrów jak blaster
     }

@@ -11,14 +11,11 @@ public class BulletMovement : MonoBehaviour
     private PlayerMovement pm;
     private Vector3 circlePosition;
     private float delay = 20f;
-    private Rigidbody rb;
     void Start()
     {
         Destroy(gameObject, delay);
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
-        
-        rb = GetComponent<Rigidbody>();
-        
+
         if (playerObject != null)
         {
             pm = playerObject.GetComponent<PlayerMovement>();
@@ -29,13 +26,9 @@ public class BulletMovement : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.CompareTag("Enemy"))
         {
-            Vector3 bounceDirection = transform.position - other.gameObject.transform.position;
-            bounceDirection.y = 0; 
-            
             Destroy(gameObject);
-            
         }
     }
     void Update()

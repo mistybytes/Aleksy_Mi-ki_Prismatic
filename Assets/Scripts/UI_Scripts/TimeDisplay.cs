@@ -28,7 +28,7 @@ public class TimeDisplay : MonoBehaviour
         string seconds = Mathf.Floor(elapsedTime % 60).ToString("00");
         string milliseconds = Mathf.Floor((elapsedTime * 1000) % 1000).ToString("000");
 
-        textComponent.text = minutes + ":" + seconds + ":" + milliseconds;
+        textComponent.text = minutes + " : " + seconds + " : " + milliseconds;
 
     }
 }
