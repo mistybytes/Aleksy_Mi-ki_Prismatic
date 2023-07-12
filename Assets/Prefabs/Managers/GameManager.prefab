@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6719376952352997388}
   - component: {fileID: 6719376952352997387}
-  - component: {fileID: 3464479404466101729}
   - component: {fileID: 8521373815580284779}
   m_Layer: 0
   m_Name: GameManager
@@ -46,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ff5e5478c7c5b74eb6e17e59b88c6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sc: {fileID: 6686915617126245227, guid: ecd8f47b3c500d14d82792aca9589e22, type: 3}
   gameSpeed: 4
   blasterList:
   - {fileID: 9165571919683375005, guid: 40a659a08c356b343a8614819035b8fa, type: 3}
@@ -65,18 +65,6 @@ MonoBehaviour:
   _voidBlaster: {fileID: 0}
   selectedBlaster: {fileID: 9165571919683375005, guid: 40a659a08c356b343a8614819035b8fa,
     type: 3}
---- !u!114 &3464479404466101729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6719376952352997386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 911e8427e82a0814d9ac27da2cf454ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8521373815580284779
 MonoBehaviour:
   m_ObjectHideFlags: 0

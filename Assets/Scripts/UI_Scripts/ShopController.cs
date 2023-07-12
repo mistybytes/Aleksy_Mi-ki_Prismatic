@@ -8,6 +8,7 @@ public class ShopController : MonoBehaviour
    
     [SerializeField] 
     private GameObject[] blasterTypes = new GameObject[7];
+
     
     
     public int shotSpeedCost = 10;
@@ -30,7 +31,19 @@ public class ShopController : MonoBehaviour
     
     
     private GameObject selectedBlaster;
-    
+
+    private void Start()
+    {
+        
+        classicalBlasterUpgraded = PlayerPrefs.GetInt("classicalBlasterUpgraded", 0);
+        fireBlasterUpgraded = PlayerPrefs.GetInt("fireBlasterUpgraded", 0);
+        iceBlasterUpgraded = PlayerPrefs.GetInt("iceBlasterUpgraded", 0);
+        forceBlasterUpgraded = PlayerPrefs.GetInt("forceBlasterUpgraded", 0);
+        lightBlasterUpgraded = PlayerPrefs.GetInt("lighBlasterUpgraded", 0);
+        transformationBlasterUpgraded = PlayerPrefs.GetInt("transformationBlasterUpgraded", 0);
+        voidBlasterUpgraded = PlayerPrefs.GetInt("voidBlasterUpgraded", 0);
+        
+    }
 
     public void selectBlaster()
     {
@@ -45,6 +58,7 @@ public class ShopController : MonoBehaviour
             GameManager.instance.getCoins() -= _classicalBlasterCost;
             _classicalBlasterCost = _classicalBlasterCost * 2;
             classicalBlasterUpgraded++;
+            
         }
     }
     
@@ -203,9 +217,12 @@ public class ShopController : MonoBehaviour
             GameManager.instance.setBlasterType(blasterTypes[5]);
             GameManager.instance.getCoins() -= _forceBlasterCost;
             forceBlasterUpgraded++;
-                
-            GameManager.instance._forceBlaster.GetComponent<Projectile6>().upgradeForceBlaster();
-            
+
+            if (GameManager.instance._forceBlaster)
+            {
+                GameManager.instance._forceBlaster.GetComponent<Projectile6>().upgradeForceBlaster();
+            }
+
             _forceBlasterCost = _forceBlasterCost * 2;
         }
     }

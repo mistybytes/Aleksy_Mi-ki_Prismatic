@@ -476,7 +476,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 983.00073, y: -44}
+  m_AnchoredPosition: {x: 983.00073, y: -100}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &194438948
@@ -1478,7 +1478,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2683.0007, y: -44}
+  m_AnchoredPosition: {x: 2683.0007, y: -100}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &443580597
@@ -1723,7 +1723,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: selectForceBlaster
+        m_MethodName: selectTransformationBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2446,7 +2446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1783.0007, y: -116}
+  m_AnchoredPosition: {x: 1783.0007, y: -300}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880014901
@@ -2527,7 +2527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -816.9993, y: -44}
+  m_AnchoredPosition: {x: -816.9993, y: -100}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &932324509
@@ -2732,7 +2732,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1716.9993, y: -116}
+  m_AnchoredPosition: {x: -1716.9993, y: -300}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1245959521
@@ -2919,7 +2919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -816.9993, y: -116}
+  m_AnchoredPosition: {x: -816.9993, y: -300}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1353098338
@@ -3093,7 +3093,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1716.9993, y: -44}
+  m_AnchoredPosition: {x: -1716.9993, y: -100}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1371826128
@@ -3935,7 +3935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 983.00073, y: -116}
+  m_AnchoredPosition: {x: 983.00073, y: -300}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1661656187
@@ -4322,7 +4322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2683.0007, y: -116}
+  m_AnchoredPosition: {x: 2683.0007, y: -300}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1771994161
@@ -4810,7 +4810,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1783.0007, y: -44}
+  m_AnchoredPosition: {x: 1783.0007, y: -100}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1899004338
@@ -4859,7 +4859,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: upgradeTransformationBlaster
+        m_MethodName: upgradeForceBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4913,7 +4913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 83.00063, y: -44}
+  m_AnchoredPosition: {x: 83.00063, y: -100}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925507050
@@ -4962,7 +4962,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: upgradeForceBlaster
+        m_MethodName: selectTransformationBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5065,7 +5065,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: selectTransformationBlaster
+        m_MethodName: selectForceBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5118,7 +5118,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 83.00063, y: -116}
+  m_AnchoredPosition: {x: 83.00063, y: -300}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2077169478

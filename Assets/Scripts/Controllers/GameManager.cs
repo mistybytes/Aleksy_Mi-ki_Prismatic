@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     private Material skin;
     
+    [SerializeField]
+    private ShopController sc;
+    
     private int currentLevel;
     
     private float shotSpeed = 3f;
@@ -42,7 +45,6 @@ public class GameManager : MonoBehaviour
 
     public void Save()
     {
-        
         PlayerPrefs.SetString("plasmaBlaster",_plasmaBlaster.ToString());
         PlayerPrefs.SetString("iceBlaster",_iceBlaster.ToString());
         PlayerPrefs.SetString("transformationBlaster",_transformationBlaster.ToString());
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("lives",lives);
         PlayerPrefs.SetInt("currentlyUnlocked", LevelCompletionManager.instance.currentlyUnlocked);
 
+        
     }
 
   
@@ -83,27 +86,28 @@ public class GameManager : MonoBehaviour
     {
         
         _classicalBlaster = blasterList[0];
-        if (PlayerPrefs.GetString("plasmaBlaster") == "BLASTER2")
+        
+        if (PlayerPrefs.GetString("iceBlaster") != null)
         { 
             _plasmaBlaster = blasterList[1];
         }
-        if (PlayerPrefs.GetString("iceBlaster") == "BLASTER3")
+        if (PlayerPrefs.GetString("plasmaBlaster") != null )
         { 
             _iceBlaster = blasterList[2];
         }
-        if (PlayerPrefs.GetString("transformationBlaster") == "BLASTER4")
+        if (PlayerPrefs.GetString("transformationBlaster") != null)
         { 
             _plasmaBlaster = blasterList[3];
         }
-        if (PlayerPrefs.GetString("lightBlaster") == "BLASTER5")
+        if (PlayerPrefs.GetString("lightBlaster") != null)
         { 
             _plasmaBlaster = blasterList[4];
         }
-        if (PlayerPrefs.GetString("forceBlaster") == "BLASTER6")
+        if (PlayerPrefs.GetString("forceBlaster") != null)
         { 
             _plasmaBlaster = blasterList[5];
         }
-        if (PlayerPrefs.GetString("voidBlaster") == "BLASTER7")
+        if (PlayerPrefs.GetString("voidBlaster") != null)
         { 
             _plasmaBlaster = blasterList[6];
         }
