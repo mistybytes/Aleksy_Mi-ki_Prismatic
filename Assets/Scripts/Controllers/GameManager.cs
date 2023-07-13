@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     
     public static GameManager instance;
 
-    private Material skin;
+    public Material playerSkin;
     
     [SerializeField]
     private ShopController sc;
@@ -32,7 +32,8 @@ public class GameManager : MonoBehaviour
     private float playerSpeed = 5f;
 
     public GameObject[] blasterList;
-    
+    public Material[] unlockedSkins;
+    public Material[] skins;
     public GameObject _classicalBlaster;
     public GameObject _iceBlaster;
     public GameObject _plasmaBlaster;

@@ -11,7 +11,6 @@ public class Projectile3 : MonoBehaviour
     private int delay = 10;
     private void Start()
     {
-      
         Destroy(gameObject, delay);
     }
     private void OnTriggerEnter(Collider collision)
@@ -35,6 +34,10 @@ public class Projectile3 : MonoBehaviour
         }
     }
 
+    public void setVariables()
+    {
+        //TODO add this to every blaster and call upon selecting it to set the variables of the player and stuff
+    }
     public void upgradeFreeze()
     {
         freezeDuration += 0.5f;
