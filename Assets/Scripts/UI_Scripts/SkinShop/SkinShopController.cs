@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,15 @@ public class SkinShopController : MonoBehaviour
     private int skin4Cost = 200;
     private int skin5Cost = 250;
     private int skin6Cost = 300;
+    private int unlocked_skins;
+    private void Start()
+    { 
+        unlocked_skins = PlayerPrefs.GetInt("numberOfUnlockedSkins", 1);
+        for (int i = 0; i <= unlocked_skins ; i++)
+        {
+            GameManager.instance.unlockedSkins[i] = GameManager.instance.skins[i];
+        }
+    }
 
     public void selectSkin0()
     {
@@ -26,6 +36,7 @@ public class SkinShopController : MonoBehaviour
         else if (GameManager.instance.getCoins() >= skin1Cost)
         {
             GameManager.instance.unlockedSkins[1] = GameManager.instance.skins[1];
+            PlayerPrefs.SetInt("numberOfUnlockedSkins", 1);
         }
     }
     public void selectSkin2()
@@ -37,6 +48,7 @@ public class SkinShopController : MonoBehaviour
         else if (GameManager.instance.getCoins() >= skin2Cost)
         {
             GameManager.instance.unlockedSkins[2] = GameManager.instance.skins[2];
+            PlayerPrefs.SetInt("numberOfUnlockedSkins", 2);
         }    
     }
     public void selectSkin3()
@@ -48,6 +60,7 @@ public class SkinShopController : MonoBehaviour
         else if (GameManager.instance.getCoins() >= skin3Cost)
         {
             GameManager.instance.unlockedSkins[3] = GameManager.instance.skins[3];
+            PlayerPrefs.SetInt("numberOfUnlockedSkins", 3);
         }
         
     }
@@ -60,6 +73,7 @@ public class SkinShopController : MonoBehaviour
         else if (GameManager.instance.getCoins() >= skin4Cost)
         {
             GameManager.instance.unlockedSkins[4] = GameManager.instance.skins[4];
+            PlayerPrefs.SetInt("numberOfUnlockedSkins", 4);
         }    
     }
     public void selectSkin5()
@@ -71,6 +85,7 @@ public class SkinShopController : MonoBehaviour
         else if (GameManager.instance.getCoins() >= skin5Cost)
         {
             GameManager.instance.unlockedSkins[5] = GameManager.instance.skins[5];
+            PlayerPrefs.SetInt("numberOfUnlockedSkins", 5);
         }
         
     }
@@ -83,6 +98,7 @@ public class SkinShopController : MonoBehaviour
         else if (GameManager.instance.getCoins() >= skin6Cost)
         {
             GameManager.instance.unlockedSkins[6] = GameManager.instance.skins[6];
+            PlayerPrefs.SetInt("numberOfUnlockedSkins", 6);
         }
         
     }
