@@ -12,17 +12,13 @@ public class Blaster7TimesUP : MonoBehaviour
     {
         _text = gameObject.GetComponent<Text>();
     }
-
     
     void Update()
     {
-
         if (times < sc.voidBlasterUpgraded)
         {
             times++;
             _text.text += "III";
-            
         }
-
     }
 }

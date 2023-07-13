@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile1 : MonoBehaviour
 {
-    private int bulletDamage = 10;
+    public int bulletDamage = 10;
     private int delay = 10;
     // Start is called before the first frame update
     void Start()

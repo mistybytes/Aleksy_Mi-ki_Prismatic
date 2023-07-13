@@ -16,13 +16,13 @@ public class Blaster4 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.instance._forceBlaster)
+        if (GameManager.instance._transformationBlaster)
         {
-            _text.text = "UPGRADE : " + sc._forceBlasterCost;
+            _text.text = "UPGRADE : " + sc._transformationBlasterCost;
         }
         else
         {
-            _text.text = "UNLOCK : " + sc._forceBlasterCost;
+            _text.text = "UNLOCK : " + sc._transformationBlasterCost;
         }
     }
 }

@@ -17,7 +17,7 @@ public class Blaster4TimesUP : MonoBehaviour
     void Update()
     {
 
-        if (times < sc.forceBlasterUpgraded)
+        if (times < sc.transformationBlasterUpgraded)
         {
             times++;
             _text.text += "III";
