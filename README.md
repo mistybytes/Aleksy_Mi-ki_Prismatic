@@ -26,12 +26,12 @@ The weapons are:
 
 
 Plans for this week:
-- add the settings UI scene
-- create some music for the game (will try)
-- functional updates, testing, bug fixing
-- simulating the game on mobile devices and making it so the resolution fits the screen 
-- make the skin buttons functional
-- make the info about daily rewards
+- add the settings UI scene - done
+- create some music for the game (will try) 
+- functional updates, testing, bug fixing - mostly done
+- simulating the game on mobile devices and making it so the resolution fits the screen - done
+- make the skin buttons functional - done
+- make the info about daily rewards - almost done
 - add the highscores on every level displaying amount of time survived
-- add achievements 
+- add achievements - in progress
 
