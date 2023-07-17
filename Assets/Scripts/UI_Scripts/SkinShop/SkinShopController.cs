@@ -14,12 +14,13 @@ public class SkinShopController : MonoBehaviour
     private int skin5Cost = 250;
     private int skin6Cost = 300;
     private int unlocked_skins;
+    
     private void Start()
     { 
-        unlocked_skins = PlayerPrefs.GetInt("numberOfUnlockedSkins", 1);
+        unlocked_skins = PlayerPrefs.GetInt("numberOfUnlockedSkins", 0);
         for (int i = 0; i <= unlocked_skins ; i++)
         {
-            GameManager.instance.unlockedSkins[i] = GameManager.instance.skins[i];
+           // GameManager.instance.unlockedSkins[i] = GameManager.instance.skins[i];
         }
     }
 

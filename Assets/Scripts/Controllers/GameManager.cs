@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] blasterList;
     public Material[] unlockedSkins;
     public Material[] skins;
+    
     public GameObject _classicalBlaster;
     public GameObject _iceBlaster;
     public GameObject _plasmaBlaster;
