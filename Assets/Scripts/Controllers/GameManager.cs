@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     private int enemy_health = 10;
     private int lives = 1;
     
-    private float speed = 2f;
+    private float speed;
     public float gameSpeed = 4f;
     
     private string currentSceneName = "";
@@ -52,8 +52,8 @@ public class GameManager : MonoBehaviour
     public int voidBlasterTimesUp;
 
     public int classicalBlasterCost;
-    public int iceBlasterCost;
     public int plasmaBlasterCost;
+    public int iceBlasterCost;
     public int transformationBlasterCost;
     public int lightBlasterCost;
     public int forceBlasterCost;
@@ -118,7 +118,11 @@ public class GameManager : MonoBehaviour
     {
         
         _classicalBlaster = blasterList[0];
-
+        selectedBlaster.GetComponent<BlasterVariables>().setVariables();
+        
+        //add the initial upgrading of the weapons
+        
+        PlayerPrefs.DeleteAll();
         
         if (PlayerPrefs.GetString("plasmaBlaster") == "BLASTER2 (UnityEngine.GameObject)")
         {
@@ -161,7 +165,8 @@ public class GameManager : MonoBehaviour
         forceBlasterCost = PlayerPrefs.GetInt("forceBlasterCost", 300);
         voidBlasterCost = PlayerPrefs.GetInt("voidBlasterCost", 500);
 
-        
+        currentLevel = PlayerPrefs.GetInt("currentlyUnlocked", 0);
+
     }
     
     //speed variables

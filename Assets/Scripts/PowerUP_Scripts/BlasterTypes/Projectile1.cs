@@ -6,7 +6,6 @@ public class Projectile1 : MonoBehaviour
 {
     public int bulletDamage = 10;
     private int delay = 10;
-    // Start is called before the first frame update
     void Start()
     {
         Destroy(gameObject, delay);
@@ -18,14 +17,21 @@ public class Projectile1 : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)
             {
-               // Destroy(gameObject);
+                Destroy(gameObject);
                 Destroy(collision.gameObject);
             }
             else
             {
                 collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
-               // Destroy(gameObject);
+                Destroy(gameObject);
             }
         }
     }
+
+    public void upgradeBlaster1()
+    {
+        bulletDamage += 10;
+        delay -= 1;
+    }
+    
 }

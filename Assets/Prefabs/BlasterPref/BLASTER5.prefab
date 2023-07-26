@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 241169654826846799}
   - component: {fileID: 4789220066390001212}
   - component: {fileID: -4211679860555925434}
+  - component: {fileID: 9172133535259240679}
   m_Layer: 0
   m_Name: BLASTER5
   m_TagString: Untagged
@@ -140,3 +141,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 278246bde7e620744ad3ac758d50c470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9172133535259240679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3419333910443358370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f247620e19f625442a28f25f326b08fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerSpeed: 5
+  playerLives: 1

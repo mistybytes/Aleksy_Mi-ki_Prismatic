@@ -5,8 +5,8 @@ using UnityEngine;
 public class LevelCompletionManager : MonoBehaviour
 {
     public static LevelCompletionManager instance;
-    public int currentlyUnlocked = 0;
-    private bool[] levelCompletionStatus;
+    public int currentlyUnlocked;
+    private bool[] levelCompletionStatus = new bool[48];
 
    
     void Start()
@@ -14,7 +14,7 @@ public class LevelCompletionManager : MonoBehaviour
 
         if (instance == null)
         {
-            levelCompletionStatus = new bool[48];
+            
             for (int i = 0; i < 48; i++)
             {
                 levelCompletionStatus[i] = false;
@@ -28,9 +28,9 @@ public class LevelCompletionManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        currentlyUnlocked = PlayerPrefs.GetInt("currentlyUnlocked");
+        currentlyUnlocked = GameManager.instance.getCurrenLevel();
 
-        for (int i = 0; i < currentlyUnlocked; i++)
+        for (var i = 0; i < currentlyUnlocked; i++)
         {
             levelCompletionStatus[i] = true;
         }

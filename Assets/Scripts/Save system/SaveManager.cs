@@ -6,7 +6,6 @@ public class SaveManager : MonoBehaviour
 {
     void OnApplicationQuit()
     {
-        Debug.Log("GAME SAVED");
         GameManager.instance.Save();
     }
 
@@ -14,7 +13,6 @@ public class SaveManager : MonoBehaviour
     {
         if (pauseStatus)
         {
-            Debug.Log("GAME SAVED");
             GameManager.instance.Save();
         }
     }

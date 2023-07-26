@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3197005744004047731}
   - component: {fileID: 6364746125687119511}
   - component: {fileID: -958023424882947465}
+  - component: {fileID: 6750464464764548193}
   m_Layer: 0
   m_Name: BLASTER3
   m_TagString: Untagged
@@ -112,7 +113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf639ecf95473374cab5bc236316eaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isUnlocked: 0
   freezeDuration: 1
 --- !u!114 &6364746125687119511
 MonoBehaviour:
@@ -126,8 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5534f4ce56d4064a84d0d55238b7f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  bounceForce: 5
 --- !u!54 &-958023424882947465
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -144,3 +142,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6750464464764548193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5405921696116420407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f247620e19f625442a28f25f326b08fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerSpeed: 3
+  playerLives: 2

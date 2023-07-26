@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Projectile3 : MonoBehaviour
 {
-    public bool isUnlocked = false;
-    
     public float freezeDuration = 0.5f;  // freeze duration in seconds
     private int bulletDamage = 10;
     private int delay = 10;

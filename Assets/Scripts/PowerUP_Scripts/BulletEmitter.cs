@@ -18,6 +18,8 @@ public class BulletEmitter : MonoBehaviour
         {
             fireInterval = 4f;
         }
+
+        bulletPrefab = GameManager.instance.selectedBlaster;
     }
 
     void Update()

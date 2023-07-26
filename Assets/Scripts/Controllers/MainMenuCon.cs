@@ -34,7 +34,7 @@ public class MainMenuCon : MonoBehaviour
     {
         SceneManager.LoadScene("BuffsShop");
     }
-
+    
     public void exit()
     {
         SceneManager.LoadScene("MainMenu");

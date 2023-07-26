@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8258266754675861129}
   - component: {fileID: 2101159455}
   - component: {fileID: 2116398310}
-  - component: {fileID: 2116398311}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Player
@@ -113,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6052093bad76464185689cd7973ce08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpeed: 3
 --- !u!54 &2101159455
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -143,16 +143,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 9165571919683375005, guid: 40a659a08c356b343a8614819035b8fa,
     type: 3}
-  fireInterval: 3
---- !u!114 &2116398311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8258266754675861130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 592c0bb2066ab024cbd69461bd261874, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

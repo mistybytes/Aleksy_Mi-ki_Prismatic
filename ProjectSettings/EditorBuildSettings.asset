@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UIFolder/DailyRewards.unity
     guid: ed8309d74e1765f43837a6b529d36d7f
+  - enabled: 1
+    path: Assets/Scenes/UIFolder/RewardsInfo.unity
+    guid: 99e9594c849e53848aeb7a760b855c5f
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: a33065440d555284aadc1fdac7c54505,
       type: 2}

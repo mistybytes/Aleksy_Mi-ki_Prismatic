@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     private Material skin;
-    private float playerSpeed = 3f;
+    public float playerSpeed = 3f;
     
     private bool isClockwise = true;
     private float currentAngle = 2.0f;
@@ -13,9 +13,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         skin = GameManager.instance.playerSkin;
-        
-        //make this be taken from current weapon or make the weapon set the variables
-        
         playerSpeed = GameManager.instance.getSpeed();
         
         BulletEmitter emitter = GetComponent<BulletEmitter>();

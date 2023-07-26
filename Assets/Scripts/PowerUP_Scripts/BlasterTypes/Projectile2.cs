@@ -43,4 +43,9 @@ public class Projectile2 : MonoBehaviour
             yield return null;
         }
     }
+
+    public void upgradeBlaster2()
+    {
+        
+    }
 }

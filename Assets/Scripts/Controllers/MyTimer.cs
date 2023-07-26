@@ -7,7 +7,7 @@ public class MyTimer : MonoBehaviour
 {
     static public IEnumerator CountUpTo1Minute()
     {
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(6);
         
         if (!LevelCompletionManager.instance.getLevelCompletionStatus()[GameManager.instance.getCurrenLevel()])
         {
