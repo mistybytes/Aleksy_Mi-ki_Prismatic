@@ -9,7 +9,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     public Vector3 target = Vector3.zero;
 
-    private bool freeze = false;
+    public bool freeze = false;
     private float speed;
 
     private void Start()
@@ -19,9 +19,8 @@ public class EnemyMovement : MonoBehaviour
     
     private void Update()
     {
-        freeze = gameObject.GetComponent<enemyManager>().getFreeze();
     }
-
+    
     void LateUpdate()
     {
         if (!freeze)

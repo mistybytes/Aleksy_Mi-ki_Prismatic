@@ -23,20 +23,25 @@ public class Projectile3 : MonoBehaviour
             }
             else
             {
-                collision.gameObject.GetComponent<enemyManager>().Freeze(freezeDuration);
-                
                 collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
-                
+                ApplyFreezeEffect(freezeDuration, collision);
                 Destroy(gameObject);
             }
         }
     }
+    private IEnumerator ApplyFreezeEffect(float duration, Collider g)
+    {
+        g.gameObject.GetComponent<EnemyMovement>().freeze = true;
 
+        yield return new WaitForSeconds(duration);
+
+        g.gameObject.GetComponent<EnemyMovement>().freeze = false;
+    }
     public void setVariables()
     {
         //TODO add this to every blaster and call upon selecting it to set the variables of the player and stuff
     }
-    public void upgradeFreeze()
+    public void upgradeBlaster3()
     {
         freezeDuration += 0.5f;
     }

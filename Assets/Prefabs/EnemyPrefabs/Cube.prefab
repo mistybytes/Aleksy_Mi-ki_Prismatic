@@ -114,9 +114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  spiralSpeed: 10
+  spiralSpeed: 3
   target: {x: 0, y: 0, z: 0}
-  minHeight: 0
+  minHeight: 4
 --- !u!114 &3144166694884586766
 MonoBehaviour:
   m_ObjectHideFlags: 0

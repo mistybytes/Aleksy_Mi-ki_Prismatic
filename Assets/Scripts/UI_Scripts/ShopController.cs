@@ -22,7 +22,7 @@ public class ShopController : MonoBehaviour
             GameManager.instance.classicalBlasterTimesUp++;
             GameManager.instance._classicalBlaster.GetComponent<Projectile1>().upgradeBlaster1();
             
-            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0);
+            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0,1);
 
         }
     }
@@ -58,7 +58,7 @@ public class ShopController : MonoBehaviour
             GameManager.instance.plasmaBlasterCost *= 2;
             GameManager.instance.plasmaBlasterTimesUp++;
             
-            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0);
+            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0,1);
 
         }
     }
@@ -89,7 +89,7 @@ public class ShopController : MonoBehaviour
             GameManager.instance.iceBlasterTimesUp++;
             GameManager.instance.iceBlasterCost *= 2;
             
-            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0);
+            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0,1);
 
         }
     }
@@ -118,7 +118,7 @@ public class ShopController : MonoBehaviour
             GameManager.instance.transformationBlasterCost *= 2;
             GameManager.instance.transformationBlasterTimesUp++;
             
-            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0);
+            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0,1);
 
         }
     }
@@ -149,7 +149,7 @@ public class ShopController : MonoBehaviour
             GameManager.instance.lightBlasterCost *= 2;
             GameManager.instance.lightBlasterTimesUp++;
             
-            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0);
+            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0,1);
 
         }
     }
@@ -178,7 +178,7 @@ public class ShopController : MonoBehaviour
             GameManager.instance.forceBlasterTimesUp++;
             GameManager.instance.forceBlasterCost *= 2;
             
-            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0);
+            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0,1);
 
         }
     }
@@ -206,7 +206,7 @@ public class ShopController : MonoBehaviour
             GameManager.instance.voidBlasterTimesUp++;
             GameManager.instance.voidBlasterCost *= 2;
             
-            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0);
+            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0,1);
 
         }
     }

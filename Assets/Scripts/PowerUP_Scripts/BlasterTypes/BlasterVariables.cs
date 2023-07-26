@@ -8,15 +8,17 @@ public class BlasterVariables : MonoBehaviour
     public PlayerMovement player;
     public float playerSpeed;
     public int playerLives;
-
+    public float shotSpeed;
     public void setVariables()
     {
         GameManager.instance.setSpeed(playerSpeed);
         GameManager.instance.setLives(playerLives);
+        GameManager.instance.setShotSpeed(shotSpeed);
     }
 
-    public void upgradeBlasterVariables(float s, int l)
+    public void upgradeBlasterVariables(float s,float ss, int l)
     {
+        shotSpeed -= ss;
         playerSpeed += s;
         playerLives += l;
     }

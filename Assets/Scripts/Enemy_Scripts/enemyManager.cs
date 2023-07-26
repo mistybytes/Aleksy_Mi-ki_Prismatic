@@ -49,25 +49,10 @@ public class enemyManager : MonoBehaviour
             
         }
     }
-
-    public bool getFreeze()
-    {
-        return isFrozen;
-    }
     
-    public void Freeze(float duration)
-    {
-        StartCoroutine(ApplyFreezeEffect(duration));
-    }
+    
 
-    private IEnumerator ApplyFreezeEffect(float duration)
-    {
-        isFrozen = true;
-
-        yield return new WaitForSeconds(duration);
-
-        isFrozen = false;
-    }
+   
     
     
 }

@@ -157,3 +157,4 @@ MonoBehaviour:
   player: {fileID: 0}
   playerSpeed: 9
   playerLives: 4
+  shotSpeed: 5

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class BulletEmitter : MonoBehaviour
 {
-    public GameObject bulletPrefab;
+    public GameObject bulletPrefab = GameManager.instance.selectedBlaster;
     private float fireInterval;
     private float lastFireTime = 0f;
 
@@ -18,8 +18,6 @@ public class BulletEmitter : MonoBehaviour
         {
             fireInterval = 4f;
         }
-
-        bulletPrefab = GameManager.instance.selectedBlaster;
     }
 
     void Update()

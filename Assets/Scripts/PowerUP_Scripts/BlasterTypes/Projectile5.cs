@@ -30,4 +30,9 @@ public class Projectile5 : MonoBehaviour
         }  
         
     }
+    
+    public void upgradeBlaster5()
+    {
+        
+    }
 }

@@ -14,4 +14,9 @@ public class Projectile7 : MonoBehaviour
         if (!collision.gameObject.CompareTag("Player"))
             Destroy(collision.gameObject);
     }
+    
+    public void upgradeBlaster7()
+    {
+        
+    }
 }

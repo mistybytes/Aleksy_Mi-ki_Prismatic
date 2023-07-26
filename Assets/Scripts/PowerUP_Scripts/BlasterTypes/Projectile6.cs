@@ -70,4 +70,8 @@ public class Projectile6 : MonoBehaviour
         }
         
     }
+    public void upgradeBlaster6()
+    {
+        
+    }
 }
