@@ -42,11 +42,27 @@ public class GameManager : MonoBehaviour
     public GameObject _lightBlaster;
     public GameObject _forceBlaster;
     public GameObject _voidBlaster;
+
+    public int classicalBlasterTimesUp;
+    public int iceBlasterTimesUp;
+    public int plasmaBlasterTimesUp;
+    public int transformationBlasterTimesUp;
+    public int lightBlasterTimesUp;
+    public int forceBlasterTimesUp;
+    public int voidBlasterTimesUp;
     
     public GameObject selectedBlaster;
 
     public void Save()
     {
+        PlayerPrefs.SetInt("classicalBlasterUpgraded",classicalBlasterTimesUp);
+        PlayerPrefs.SetInt("iceBlasterUpgraded",iceBlasterTimesUp);
+        PlayerPrefs.SetInt("plasmaBlasterUpgraded",plasmaBlasterTimesUp);
+        PlayerPrefs.SetInt("transformationBlasterUpgraded",transformationBlasterTimesUp);
+        PlayerPrefs.SetInt("lightBlasterUpgraded",lightBlasterTimesUp);
+        PlayerPrefs.SetInt("forceBlasterUpgraded",forceBlasterTimesUp);
+        PlayerPrefs.SetInt("voidBlasterUpgraded",voidBlasterTimesUp);
+        
         PlayerPrefs.SetString("plasmaBlaster",_plasmaBlaster.ToString());
         PlayerPrefs.SetString("iceBlaster",_iceBlaster.ToString());
         PlayerPrefs.SetString("transformationBlaster",_transformationBlaster.ToString());

@@ -26,11 +26,11 @@ public class ShopController : MonoBehaviour
 
     private void Start()
     {
-        classicalBlasterUpgraded = PlayerPrefs.GetInt("classicalBlasterUpgraded", 0);
+        classicalBlasterUpgraded = PlayerPrefs.GetInt("classicalBlasterUpgraded");
         fireBlasterUpgraded = PlayerPrefs.GetInt("fireBlasterUpgraded", 0);
         iceBlasterUpgraded = PlayerPrefs.GetInt("iceBlasterUpgraded", 0);
         forceBlasterUpgraded = PlayerPrefs.GetInt("forceBlasterUpgraded", 0);
-        lightBlasterUpgraded = PlayerPrefs.GetInt("lighBlasterUpgraded", 0);
+        lightBlasterUpgraded = PlayerPrefs.GetInt("lightBlasterUpgraded", 0);
         transformationBlasterUpgraded = PlayerPrefs.GetInt("transformationBlasterUpgraded", 0);
         voidBlasterUpgraded = PlayerPrefs.GetInt("voidBlasterUpgraded", 0);
     }
@@ -47,8 +47,8 @@ public class ShopController : MonoBehaviour
         {
             GameManager.instance.getCoins() -= _classicalBlasterCost;
             _classicalBlasterCost = _classicalBlasterCost * 2;
+            GameManager.instance.classicalBlasterTimesUp++;
             classicalBlasterUpgraded++;
-            
             //upgrade logic here
             GameManager.instance._classicalBlaster.GetComponent<Projectile1>().bulletDamage += 20;
         }

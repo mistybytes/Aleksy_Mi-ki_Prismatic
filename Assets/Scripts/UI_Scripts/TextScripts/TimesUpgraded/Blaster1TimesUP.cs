@@ -7,7 +7,6 @@ public class Blaster1TimesUP : MonoBehaviour
     // Start is called before the first frame update
     public ShopController sc;
     private Text _text;
-    private int timesUpgraded = 0;
     private int times = 0;
     void Start()
     {
