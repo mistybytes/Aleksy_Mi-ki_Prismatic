@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Projectile1 : MonoBehaviour
 {
-    public int bulletDamage = 10;
-    private int delay = 10;
+    private int bulletDamage = 5;
+    private int delay = 20;
+    
+    //TODO ADD LOADING THE UPGRADES AND ALSO THE UPGRADES THEMSELVES
+    
     void Start()
     {
+    //Do upgrades somewhere else
+        
         Destroy(gameObject, delay);
     }
     private void OnTriggerEnter(Collider collision)
     {
-        
         if (collision.gameObject.CompareTag("Enemy"))
         {
             if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)

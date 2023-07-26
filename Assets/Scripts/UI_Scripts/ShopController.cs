@@ -65,11 +65,10 @@ public class ShopController : MonoBehaviour
     
     public void selectIceBlaster()
     {
-        if (GameManager.instance._plasmaBlaster != null)
+        if (GameManager.instance._iceBlaster != null)
         {
             GameManager.instance.setBlasterType(GameManager.instance.blasterList[2]);
             GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().setVariables();
-
         }
     }
     
@@ -82,15 +81,12 @@ public class ShopController : MonoBehaviour
         }
         else if (GameManager.instance.getCoins() >= GameManager.instance.iceBlasterCost)
         {
-            
             GameManager.instance._iceBlaster = GameManager.instance.blasterList[2];
-            GameManager.instance._iceBlaster.GetComponent<Projectile3>().freezeDuration += 0.5f;
             GameManager.instance.getCoins() -= GameManager.instance.iceBlasterCost;
             GameManager.instance.iceBlasterTimesUp++;
             GameManager.instance.iceBlasterCost *= 2;
             
             GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0,1);
-
         }
     }
     
@@ -203,7 +199,6 @@ public class ShopController : MonoBehaviour
         {
             GameManager.instance._voidBlaster = GameManager.instance.blasterList[6];
             GameManager.instance.getCoins() -= GameManager.instance.voidBlasterCost;
-            GameManager.instance.voidBlasterTimesUp++;
             GameManager.instance.voidBlasterCost *= 2;
             
             GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.2f,0,1);

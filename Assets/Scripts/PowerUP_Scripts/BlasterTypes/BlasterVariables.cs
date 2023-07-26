@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class BlasterVariables : MonoBehaviour
 {
-    public PlayerMovement player;
     public float playerSpeed;
     public int playerLives;
     public float shotSpeed;

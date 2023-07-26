@@ -18,12 +18,7 @@ public class enemyManager : MonoBehaviour
         speed = GameManager.instance.getSpeed();
         enemyHealth = GameManager.instance.getEnemyHealth();
     }
-
-    private void Update()
-    {
-        if(enemyHealth <= 0) Destroy(gameObject);
-    }
-
+    
     public float getSpeed()
     {
         return speed;
@@ -34,7 +29,7 @@ public class enemyManager : MonoBehaviour
     }
     public void subHealth(int damage)
     {
-        enemyHealth -= damage;
+        enemyHealth = enemyHealth - damage;
     }
     void OnTriggerEnter(Collider collision)
     {

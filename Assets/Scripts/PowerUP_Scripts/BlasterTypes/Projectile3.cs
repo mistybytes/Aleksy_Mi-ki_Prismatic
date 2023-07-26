@@ -3,10 +3,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class Projectile3 : MonoBehaviour
-{
-    public float freezeDuration = 0.5f;  // freeze duration in seconds
+{ 
     private int bulletDamage = 10;
-    private int delay = 10;
+    public int delay = 10;
     private void Start()
     {
         Destroy(gameObject, delay);
@@ -24,26 +23,20 @@ public class Projectile3 : MonoBehaviour
             else
             {
                 collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
-                ApplyFreezeEffect(freezeDuration, collision);
                 Destroy(gameObject);
+                collision.gameObject.GetComponent<EnemyMovement>().freeze = true;
             }
         }
-    }
-    private IEnumerator ApplyFreezeEffect(float duration, Collider g)
-    {
-        g.gameObject.GetComponent<EnemyMovement>().freeze = true;
-
-        yield return new WaitForSeconds(duration);
-
-        g.gameObject.GetComponent<EnemyMovement>().freeze = false;
-    }
+    } 
+    
+  
     public void setVariables()
     {
-        //TODO add this to every blaster and call upon selecting it to set the variables of the player and stuff
+        
     }
     public void upgradeBlaster3()
     {
-        freezeDuration += 0.5f;
+        
     }
     
 }
