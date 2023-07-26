@@ -16,11 +16,11 @@ public class Blaster2 : MonoBehaviour
     {
         if (GameManager.instance._plasmaBlaster)
         {
-            _text.text = "UPGRADE : " + sc._fireBlasterCost;
+            _text.text = "UPGRADE : " + GameManager.instance.plasmaBlasterCost;
         }
         else
         {
-            _text.text = "UNLOCK : " + sc._fireBlasterCost;
+            _text.text = "UNLOCK : " + GameManager.instance.plasmaBlasterCost;
         }
     }
 }

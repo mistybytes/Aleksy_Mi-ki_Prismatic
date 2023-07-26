@@ -18,11 +18,11 @@ public class Blaster4 : MonoBehaviour
     {
         if (GameManager.instance._transformationBlaster)
         {
-            _text.text = "UPGRADE : " + sc._transformationBlasterCost;
+            _text.text = "UPGRADE : " + GameManager.instance.transformationBlasterCost;
         }
         else
         {
-            _text.text = "UNLOCK : " + sc._transformationBlasterCost;
+            _text.text = "UNLOCK : " + GameManager.instance.transformationBlasterCost;
         }
     }
 }

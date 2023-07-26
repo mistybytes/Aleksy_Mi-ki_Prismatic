@@ -17,11 +17,11 @@ public class Blaster7 : MonoBehaviour
     {
         if (GameManager.instance._voidBlaster)
         {
-            _text.text = "UPGRADE : " + sc._voidBlasterCost;
+            _text.text = "UPGRADE : " + GameManager.instance.voidBlasterCost;
         }
         else
         {
-            _text.text = "UNLOCK : " + sc._voidBlasterCost;
+            _text.text = "UNLOCK : " + GameManager.instance.voidBlasterCost;
         }
     }
 }

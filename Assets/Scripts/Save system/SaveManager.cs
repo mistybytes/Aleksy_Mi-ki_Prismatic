@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SaveManager : MonoBehaviour
 {
-    
     void OnApplicationQuit()
     {
         Debug.Log("GAME SAVED");

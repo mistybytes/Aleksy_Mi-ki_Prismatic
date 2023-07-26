@@ -4,10 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Blaster3TimesUP : MonoBehaviour
 {
-    public ShopController sc;
     private Text _text;
-    private int timesUpgraded = 0;
-    private int times = 0;
+    private int times;
     void Start()
     {
         _text = gameObject.GetComponent<Text>();
@@ -17,7 +15,7 @@ public class Blaster3TimesUP : MonoBehaviour
     void Update()
     {
 
-        if (times < sc.iceBlasterUpgraded)
+        if (times < GameManager.instance.iceBlasterTimesUp)
         {
             times++;
             _text.text += "III";

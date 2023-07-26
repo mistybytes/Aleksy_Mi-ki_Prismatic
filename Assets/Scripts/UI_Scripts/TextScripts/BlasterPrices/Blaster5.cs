@@ -14,13 +14,13 @@ public class Blaster5 : MonoBehaviour
     
     void Update()
     {
-        if (GameManager.instance._lightBlaster != null )
+        if (GameManager.instance._lightBlaster)
         {
-            _text.text = "UPGRADE : " + sc._lighBlasterCost;
+            _text.text = "UPGRADE : " + GameManager.instance.lightBlasterCost;
         }
         else
         {
-            _text.text = "UNLOCK : " + sc._lighBlasterCost;
+            _text.text = "UNLOCK : " + GameManager.instance.lightBlasterCost;
         }
     }
 }

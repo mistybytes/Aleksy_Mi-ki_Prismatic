@@ -9,7 +9,6 @@ public class Blaster2Color : MonoBehaviour
     void Start()
     {
         _text = gameObject.GetComponent<Text>();
-
     }
 
     // Update is called once per frame

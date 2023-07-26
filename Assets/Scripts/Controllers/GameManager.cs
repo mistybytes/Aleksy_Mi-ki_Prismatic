@@ -36,8 +36,8 @@ public class GameManager : MonoBehaviour
     public Material[] skins;
     
     public GameObject _classicalBlaster;
-    public GameObject _iceBlaster;
     public GameObject _plasmaBlaster;
+    public GameObject _iceBlaster;
     public GameObject _transformationBlaster;
     public GameObject _lightBlaster;
     public GameObject _forceBlaster;
@@ -50,6 +50,14 @@ public class GameManager : MonoBehaviour
     public int lightBlasterTimesUp;
     public int forceBlasterTimesUp;
     public int voidBlasterTimesUp;
+
+    public int classicalBlasterCost;
+    public int iceBlasterCost;
+    public int plasmaBlasterCost;
+    public int transformationBlasterCost;
+    public int lightBlasterCost;
+    public int forceBlasterCost;
+    public int voidBlasterCost;
     
     public GameObject selectedBlaster;
 
@@ -63,6 +71,14 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("forceBlasterUpgraded",forceBlasterTimesUp);
         PlayerPrefs.SetInt("voidBlasterUpgraded",voidBlasterTimesUp);
         
+        PlayerPrefs.SetInt("classicalBlasterCost",classicalBlasterCost);
+        PlayerPrefs.SetInt("iceBlasterCost",iceBlasterCost);
+        PlayerPrefs.SetInt("plasmaBlasterCost",plasmaBlasterCost);
+        PlayerPrefs.SetInt("transformationBlasterCost",transformationBlasterCost);
+        PlayerPrefs.SetInt("lightBlasterCost",lightBlasterCost);
+        PlayerPrefs.SetInt("forceBlasterCost",forceBlasterCost);
+        PlayerPrefs.SetInt("voidBlasterCost",voidBlasterCost);
+        
         PlayerPrefs.SetString("plasmaBlaster",_plasmaBlaster.ToString());
         PlayerPrefs.SetString("iceBlaster",_iceBlaster.ToString());
         PlayerPrefs.SetString("transformationBlaster",_transformationBlaster.ToString());
@@ -73,7 +89,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("coins",coins);
         PlayerPrefs.SetInt("lives",lives);
         PlayerPrefs.SetInt("currentlyUnlocked", LevelCompletionManager.instance.currentlyUnlocked);
-
         
     }
 
@@ -81,7 +96,6 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        
         if (instance == null)
         {
             instance = this;
@@ -104,33 +118,50 @@ public class GameManager : MonoBehaviour
     {
         
         _classicalBlaster = blasterList[0];
+
         
-        if (PlayerPrefs.GetString("iceBlaster") != null)
-        { 
-            _iceBlaster = blasterList[1];
+        if (PlayerPrefs.GetString("plasmaBlaster") == "BLASTER2 (UnityEngine.GameObject)")
+        {
+            _plasmaBlaster = blasterList[1];
         }
-        if (PlayerPrefs.GetString("plasmaBlaster") != null )
+        if (PlayerPrefs.GetString("iceBlaster") == "BLASTER3 (UnityEngine.GameObject)" )
         { 
-            _plasmaBlaster = blasterList[2];
+            _iceBlaster = blasterList[2];
         }
-        if (PlayerPrefs.GetString("transformationBlaster") != null)
+        if (PlayerPrefs.GetString("transformationBlaster") == "BLASTER4 (UnityEngine.GameObject)")
         { 
             _transformationBlaster = blasterList[3];
         }
-        if (PlayerPrefs.GetString("lightBlaster") != null)
+        if (PlayerPrefs.GetString("lightBlaster") == "BLASTER5 (UnityEngine.GameObject)")
         { 
             _lightBlaster = blasterList[4];
         }
-        if (PlayerPrefs.GetString("forceBlaster") != null)
+        if (PlayerPrefs.GetString("forceBlaster") == "BLASTER6 (UnityEngine.GameObject)")
         { 
             _forceBlaster = blasterList[5];
         }
-        if (PlayerPrefs.GetString("voidBlaster") != null)
+        if (PlayerPrefs.GetString("voidBlaster") == "BLASTER7 (UnityEngine.GameObject)")
         { 
             _voidBlaster = blasterList[6];
         }
         
+        classicalBlasterTimesUp = PlayerPrefs.GetInt("classicalBlasterUpgraded", 0);
+        plasmaBlasterTimesUp = PlayerPrefs.GetInt("plasmaBlasterUpgraded", 0);
+        iceBlasterTimesUp = PlayerPrefs.GetInt("iceBlasterUpgraded", 0);
+        forceBlasterTimesUp = PlayerPrefs.GetInt("forceBlasterUpgraded", 0);
+        lightBlasterTimesUp = PlayerPrefs.GetInt("lightBlasterUpgraded", 0);
+        transformationBlasterTimesUp = PlayerPrefs.GetInt("transformationBlasterUpgraded", 0);
+        voidBlasterTimesUp = PlayerPrefs.GetInt("voidBlasterUpgraded", 0);
+        
+        classicalBlasterCost = PlayerPrefs.GetInt("classicalBlasterCost",10);
+        plasmaBlasterCost = PlayerPrefs.GetInt("plasmaBlasterCost", 50);
+        iceBlasterCost = PlayerPrefs.GetInt("iceBlasterCost", 100);
+        transformationBlasterCost = PlayerPrefs.GetInt("transformationBlasterCost", 200);
+        lightBlasterCost = PlayerPrefs.GetInt("lightBlasterCost", 250);
+        forceBlasterCost = PlayerPrefs.GetInt("forceBlasterCost", 300);
+        voidBlasterCost = PlayerPrefs.GetInt("voidBlasterCost", 500);
 
+        
     }
     
     //speed variables

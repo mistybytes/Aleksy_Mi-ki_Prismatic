@@ -4,10 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Blaster1TimesUP : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public ShopController sc;
     private Text _text;
-    private int times = 0;
+    private int times;
     void Start()
     {
         _text = gameObject.GetComponent<Text>();
@@ -17,7 +15,7 @@ public class Blaster1TimesUP : MonoBehaviour
     void Update()
     {
 
-        if (times < sc.classicalBlasterUpgraded)
+        if (times < GameManager.instance.classicalBlasterTimesUp)
         {
             times++;
             _text.text += "III";
