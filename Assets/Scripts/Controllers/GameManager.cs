@@ -87,9 +87,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("currentlyUnlocked", LevelCompletionManager.instance.currentlyUnlocked);
         
     }
-
-  
-
     void Awake()
     {
         if (instance == null)
@@ -112,38 +109,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        
+        PlayerPrefs.DeleteAll();
+
         classicalBlaster = blasterList[0];
         selectedBlaster.GetComponent<BlasterVariables>().setVariables();
-        
-        //add the initial upgrading of the weapons
-        
-        PlayerPrefs.DeleteAll();
-        
-        if (PlayerPrefs.GetString("plasmaBlaster") == "BLASTER2 (UnityEngine.GameObject)")
-        {
-            plasmaBlaster = blasterList[1];
-        }
-        if (PlayerPrefs.GetString("iceBlaster") == "BLASTER3 (UnityEngine.GameObject)" )
-        { 
-            iceBlaster = blasterList[2];
-        }
-        if (PlayerPrefs.GetString("transformationBlaster") == "BLASTER4 (UnityEngine.GameObject)")
-        { 
-            transformationBlaster = blasterList[3];
-        }
-        if (PlayerPrefs.GetString("lightBlaster") == "BLASTER5 (UnityEngine.GameObject)")
-        { 
-            lightBlaster = blasterList[4];
-        }
-        if (PlayerPrefs.GetString("forceBlaster") == "BLASTER6 (UnityEngine.GameObject)")
-        { 
-            forceBlaster = blasterList[5];
-        }
-        if (PlayerPrefs.GetString("voidBlaster") == "BLASTER7 (UnityEngine.GameObject)")
-        { 
-            voidBlaster = blasterList[6];
-        }
         
         classicalBlasterTimesUp = PlayerPrefs.GetInt("classicalBlasterUpgraded", 0);
         plasmaBlasterTimesUp = PlayerPrefs.GetInt("plasmaBlasterUpgraded", 0);
@@ -160,7 +129,57 @@ public class GameManager : MonoBehaviour
         lightBlasterCost = PlayerPrefs.GetInt("lightBlasterCost", 250);
         forceBlasterCost = PlayerPrefs.GetInt("forceBlasterCost", 300);
         voidBlasterCost = PlayerPrefs.GetInt("voidBlasterCost", 500);
-
+        
+        
+        if (PlayerPrefs.GetString("plasmaBlaster") == "BLASTER2 (UnityEngine.GameObject)")
+        {
+            plasmaBlaster = blasterList[1];
+            for (int i = 0; i < plasmaBlasterTimesUp; i++)
+            {
+                plasmaBlaster.GetComponent<Projectile2>().upgradeBlaster2();
+            }
+        }
+        if (PlayerPrefs.GetString("iceBlaster") == "BLASTER3 (UnityEngine.GameObject)" )
+        { 
+            iceBlaster = blasterList[2];
+            for (int i = 0; i < iceBlasterTimesUp; i++)
+            {
+                iceBlaster.GetComponent<Projectile3>().upgradeBlaster3();
+            }
+        }
+        if (PlayerPrefs.GetString("transformationBlaster") == "BLASTER4 (UnityEngine.GameObject)")
+        { 
+            transformationBlaster = blasterList[3];
+            for (int i = 0; i < transformationBlasterTimesUp; i++)
+            { 
+                transformationBlaster.GetComponent<Projectile4>().upgradeBlaster4();
+            }
+        }
+        if (PlayerPrefs.GetString("lightBlaster") == "BLASTER5 (UnityEngine.GameObject)")
+        { 
+            lightBlaster = blasterList[4];
+            for (int i = 0; i < lightBlasterTimesUp; i++)
+            {
+                lightBlaster.GetComponent<Projectile5>().upgradeBlaster5();
+            }
+        }
+        if (PlayerPrefs.GetString("forceBlaster") == "BLASTER6 (UnityEngine.GameObject)")
+        { 
+            forceBlaster = blasterList[5];
+            for (int i = 0; i < forceBlasterTimesUp; i++)
+            {
+                forceBlaster.GetComponent<Projectile6>().upgradeBlaster6();
+            }
+        }
+        if (PlayerPrefs.GetString("voidBlaster") == "BLASTER7 (UnityEngine.GameObject)")
+        { 
+            voidBlaster = blasterList[6];
+            for (int i = 0; i < voidBlasterTimesUp; i++)
+            {
+                voidBlaster.GetComponent<Projectile7>().upgradeBlaster7();
+            }
+        }
+        
         currentLevel = PlayerPrefs.GetInt("currentlyUnlocked", 40);
 
     }
