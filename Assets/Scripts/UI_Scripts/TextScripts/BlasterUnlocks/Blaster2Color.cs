@@ -14,7 +14,7 @@ public class Blaster2Color : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.instance._plasmaBlaster)
+        if (GameManager.instance.plasmaBlaster)
         {
             float hue = Mathf.PingPong(Time.time, 1f);
             Color color = Color.HSVToRGB(hue, 0.8f, 1f);

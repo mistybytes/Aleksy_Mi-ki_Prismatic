@@ -12,13 +12,14 @@ public class BulletEmitter : MonoBehaviour
 
     private void Start()
     {
+       
+
         lastFireTime = Time.time;
 
-        tag = gameObject.tag;
-
-        switch (tag)
+        switch (gameObject.tag)
         {
             case "Player":
+                bulletPrefab = GameManager.instance.selectedBlaster;
                 fireInterval = GameManager.instance.getShotSpeed();
                 break;
             case "Enemy2":
@@ -41,6 +42,6 @@ public class BulletEmitter : MonoBehaviour
 
     void FireBullet()
     {
-        Instantiate(bulletPrefab, transform.position , transform.rotation);
+        GameObject g = Instantiate(bulletPrefab, transform.position , transform.rotation);
     }
 }

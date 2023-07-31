@@ -15,9 +15,6 @@ public class PlayerMovement : MonoBehaviour
         skin = GameManager.instance.playerSkin;
         playerSpeed = GameManager.instance.getSpeed();
         
-        BulletEmitter emitter = GetComponent<BulletEmitter>();
-        emitter.bulletPrefab = GameManager.instance.getBlasterType();
-        
         StartCoroutine(MyTimer.CountUpTo1Minute());
     }
     void Update()

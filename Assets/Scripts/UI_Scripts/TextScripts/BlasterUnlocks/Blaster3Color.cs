@@ -16,7 +16,7 @@ public class Blaster3Color : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.instance._iceBlaster)
+        if (GameManager.instance.iceBlaster)
         {
             float hue = Mathf.PingPong(Time.time, 1f);
             Color color = Color.HSVToRGB(hue, 0.8f, 1f);

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3907126861517918226}
   m_Layer: 0
   m_Name: BLASTER1
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9165571919683375005}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -113,7 +113,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -141,7 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b4f5eb11ec0c947a43f797a26964a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 5
 --- !u!114 &3907126861517918226
 MonoBehaviour:
   m_ObjectHideFlags: 0

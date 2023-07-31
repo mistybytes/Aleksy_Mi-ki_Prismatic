@@ -27,18 +27,21 @@ public class enemyManager : MonoBehaviour
     }
     public void subHealth(int damage)
     {
-        enemyHealth = enemyHealth - damage;
+        enemyHealth -= damage;
     }
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        switch (collision.gameObject.tag)
         {
-            Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("Cube"))
-        {
-            Destroy(gameObject);
-            GameManager.instance.SubLives();
+            case "Player":
+                Destroy(gameObject);
+                break;
+            case "Cube":
+                Destroy(gameObject);
+                GameManager.instance.SubLives();
+                break;
+            default:
+                break;
         }
     }
     

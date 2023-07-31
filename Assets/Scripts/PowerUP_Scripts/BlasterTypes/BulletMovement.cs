@@ -24,13 +24,7 @@ public class BulletMovement : MonoBehaviour
             circlePosition = new Vector3(Mathf.Sin(currentAngle), 0, Mathf.Cos(currentAngle)) * 40;
         }
     }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            Destroy(gameObject);
-        }
-    }
+   
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, circlePosition, speed * Time.deltaTime);

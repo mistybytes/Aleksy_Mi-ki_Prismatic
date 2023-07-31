@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile7 : MonoBehaviour
 {
-    private int delay = 20;
+    private int delay = 10;
     private void Start()
     {
         Destroy(gameObject, delay);

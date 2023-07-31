@@ -52,7 +52,7 @@ public class LevelSelect : MonoBehaviour
         {
             GameManager.instance.setCurrentLevel(4);
             GameManager.instance.setEnemyHealth(50);
-            GameManager.instance.gameSpeed = 6f;
+            GameManager.instance.gameSpeed = 5f;
             SceneManager.LoadScene("LEVEL1.1");
         }
     }
@@ -64,7 +64,7 @@ public class LevelSelect : MonoBehaviour
         {
             GameManager.instance.setCurrentLevel(5);
             GameManager.instance.setEnemyHealth(50);
-            GameManager.instance.gameSpeed = 7f;
+            GameManager.instance.gameSpeed = 5f;
             SceneManager.LoadScene("LEVEL1.1");
         }
     }

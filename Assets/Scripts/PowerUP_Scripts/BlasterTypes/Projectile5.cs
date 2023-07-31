@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Projectile5 : MonoBehaviour
 {
-    //while selecting this blaster set the emition rate higher and the bullet damage lower
-    private int bulletDamage = 10;
+    //TODO while selecting this blaster set the emition rate higher and the bullet damage lower
+    private int bulletDamage = 5;
     private int delay = 10;
     private void Start()
     {

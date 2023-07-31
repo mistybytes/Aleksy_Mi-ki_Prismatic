@@ -9,9 +9,9 @@ public class MyTimer : MonoBehaviour
     {
         yield return new WaitForSeconds(6);
         
-        if (!LevelCompletionManager.instance.getLevelCompletionStatus()[GameManager.instance.getCurrenLevel()])
+        if (!LevelCompletionManager.instance.getLevelCompletionStatus()[GameManager.instance.currentLevel])
         {
-            LevelCompletionManager.instance.setLevelCompletionStatus(GameManager.instance.getCurrenLevel());
+            LevelCompletionManager.instance.setLevelCompletionStatus(GameManager.instance.currentLevel);
         }
     }
 }

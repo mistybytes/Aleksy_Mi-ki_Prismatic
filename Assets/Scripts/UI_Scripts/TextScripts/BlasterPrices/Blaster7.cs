@@ -15,7 +15,7 @@ public class Blaster7 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.instance._voidBlaster)
+        if (GameManager.instance.voidBlaster)
         {
             _text.text = "UPGRADE : " + GameManager.instance.voidBlasterCost;
         }

@@ -463,8 +463,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8284283663472742660, guid: 2347c57557591bf40b63a2315084cbb0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2347c57557591bf40b63a2315084cbb0, type: 3}
+--- !u!1 &813744729 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8831544127758487231, guid: 2347c57557591bf40b63a2315084cbb0,
+    type: 3}
+  m_PrefabInstance: {fileID: 813744728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &813744730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813744729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b685036718e2ef4291ef1d2c36eef3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &865048876
 PrefabInstance:
   m_ObjectHideFlags: 0

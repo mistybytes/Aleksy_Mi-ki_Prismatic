@@ -14,7 +14,7 @@ public class Blaster5 : MonoBehaviour
     
     void Update()
     {
-        if (GameManager.instance._lightBlaster)
+        if (GameManager.instance.lightBlaster)
         {
             _text.text = "UPGRADE : " + GameManager.instance.lightBlasterCost;
         }

@@ -613,11 +613,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8672105514919318646, guid: 0402570c01c060c4ab30be8f8ba79523,
-        type: 3}
-      propertyPath: enemyHealth
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 1143421127316550705, guid: 0402570c01c060c4ab30be8f8ba79523,
         type: 3}
       propertyPath: m_Name
@@ -678,16 +673,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6562243947961898198, guid: 0402570c01c060c4ab30be8f8ba79523,
-        type: 3}
-      propertyPath: radius
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 8712100705463821489, guid: 0402570c01c060c4ab30be8f8ba79523,
         type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 7873781805819953174, guid: 5b6b72781ae8e0c48b6f5446b6a5fcfa,
+      objectReference: {fileID: 4176145594588933631, guid: 6c2e14e697f2a2147a7d472e549c7e07,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0402570c01c060c4ab30be8f8ba79523, type: 3}

@@ -28,7 +28,7 @@ public class LevelCompletionManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        currentlyUnlocked = GameManager.instance.getCurrenLevel();
+        currentlyUnlocked = GameManager.instance.currentLevel;
 
         for (var i = 0; i < currentlyUnlocked; i++)
         {

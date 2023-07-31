@@ -4,7 +4,7 @@ public class Projectile4: MonoBehaviour
 {
     public GameObject newObjectPrefab;
     private float transformChance = 0.25f;  // 25% chance to transform the enemy
-    private int bulletDamage = 10;
+    private int bulletDamage = 5;
     private int delay = 10;
     private void Start()
     {
@@ -26,7 +26,7 @@ public class Projectile4: MonoBehaviour
                 
                 if (randomFloat < transformChance)
                 {
-                    GameObject newObject = Instantiate(newObjectPrefab, collision.transform.position, Quaternion.identity);
+                    Instantiate(newObjectPrefab, collision.transform.position, Quaternion.identity);
 
                     Destroy(collision.gameObject);
                 }

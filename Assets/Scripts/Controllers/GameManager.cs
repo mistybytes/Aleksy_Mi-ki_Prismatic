@@ -11,36 +11,33 @@ public class GameManager : MonoBehaviour
     
     public Material playerSkin;
     
-    [SerializeField]
-    private ShopController sc;
+    public int currentLevel;
     
-    private int currentLevel;
+    public float shotSpeed = 3f;
     
-    private float shotSpeed = 3f;
-    
-    private int coins = 100;
+    private int coins;
     private int collectedCoins;
     private int specialCurrency;
-    private int enemy_health = 10;
+    private int enemy_health;
+    
     private int lives = 1;
     
     private float speed;
     public float gameSpeed = 4f;
     
     private string currentSceneName = "";
-    private float playerSpeed = 5f;
 
     public GameObject[] blasterList;
     public Material[] unlockedSkins;
     public Material[] skins;
     
-    public GameObject _classicalBlaster;
-    public GameObject _plasmaBlaster;
-    public GameObject _iceBlaster;
-    public GameObject _transformationBlaster;
-    public GameObject _lightBlaster;
-    public GameObject _forceBlaster;
-    public GameObject _voidBlaster;
+    public GameObject classicalBlaster;
+    public GameObject plasmaBlaster;
+    public GameObject iceBlaster;
+    public GameObject transformationBlaster;
+    public GameObject lightBlaster;
+    public GameObject forceBlaster;
+    public GameObject voidBlaster;
 
     public int classicalBlasterTimesUp;
     public int iceBlasterTimesUp;
@@ -78,12 +75,12 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("forceBlasterCost",forceBlasterCost);
         PlayerPrefs.SetInt("voidBlasterCost",voidBlasterCost);
         
-        PlayerPrefs.SetString("plasmaBlaster",_plasmaBlaster.ToString());
-        PlayerPrefs.SetString("iceBlaster",_iceBlaster.ToString());
-        PlayerPrefs.SetString("transformationBlaster",_transformationBlaster.ToString());
-        PlayerPrefs.SetString("lightBlaster",_lightBlaster.ToString());
-        PlayerPrefs.SetString("forceBlaster",_forceBlaster.ToString());
-        PlayerPrefs.SetString("voidBlaster",_voidBlaster.ToString());
+        PlayerPrefs.SetString("plasmaBlaster",plasmaBlaster.ToString());
+        PlayerPrefs.SetString("iceBlaster",iceBlaster.ToString());
+        PlayerPrefs.SetString("transformationBlaster",transformationBlaster.ToString());
+        PlayerPrefs.SetString("lightBlaster",lightBlaster.ToString());
+        PlayerPrefs.SetString("forceBlaster",forceBlaster.ToString());
+        PlayerPrefs.SetString("voidBlaster",voidBlaster.ToString());
         
         PlayerPrefs.SetInt("coins",coins);
         PlayerPrefs.SetInt("lives",lives);
@@ -116,7 +113,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         
-        _classicalBlaster = blasterList[0];
+        classicalBlaster = blasterList[0];
         selectedBlaster.GetComponent<BlasterVariables>().setVariables();
         
         //add the initial upgrading of the weapons
@@ -125,27 +122,27 @@ public class GameManager : MonoBehaviour
         
         if (PlayerPrefs.GetString("plasmaBlaster") == "BLASTER2 (UnityEngine.GameObject)")
         {
-            _plasmaBlaster = blasterList[1];
+            plasmaBlaster = blasterList[1];
         }
         if (PlayerPrefs.GetString("iceBlaster") == "BLASTER3 (UnityEngine.GameObject)" )
         { 
-            _iceBlaster = blasterList[2];
+            iceBlaster = blasterList[2];
         }
         if (PlayerPrefs.GetString("transformationBlaster") == "BLASTER4 (UnityEngine.GameObject)")
         { 
-            _transformationBlaster = blasterList[3];
+            transformationBlaster = blasterList[3];
         }
         if (PlayerPrefs.GetString("lightBlaster") == "BLASTER5 (UnityEngine.GameObject)")
         { 
-            _lightBlaster = blasterList[4];
+            lightBlaster = blasterList[4];
         }
         if (PlayerPrefs.GetString("forceBlaster") == "BLASTER6 (UnityEngine.GameObject)")
         { 
-            _forceBlaster = blasterList[5];
+            forceBlaster = blasterList[5];
         }
         if (PlayerPrefs.GetString("voidBlaster") == "BLASTER7 (UnityEngine.GameObject)")
         { 
-            _voidBlaster = blasterList[6];
+            voidBlaster = blasterList[6];
         }
         
         classicalBlasterTimesUp = PlayerPrefs.GetInt("classicalBlasterUpgraded", 0);
@@ -164,7 +161,7 @@ public class GameManager : MonoBehaviour
         forceBlasterCost = PlayerPrefs.GetInt("forceBlasterCost", 300);
         voidBlasterCost = PlayerPrefs.GetInt("voidBlasterCost", 500);
 
-        currentLevel = PlayerPrefs.GetInt("currentlyUnlocked", 30);
+        currentLevel = PlayerPrefs.GetInt("currentlyUnlocked", 40);
 
     }
     
@@ -191,11 +188,7 @@ public class GameManager : MonoBehaviour
     {
         selectedBlaster = blaster;
     }
-
-    public GameObject getBlasterType()
-    {
-        return selectedBlaster;
-    }
+    
     //methods for coins
     public void coinPickedUp()
     {
@@ -213,8 +206,6 @@ public class GameManager : MonoBehaviour
     {
         coins = i;
     }
-    
-    //methods for special currency
     
     public int getLives()
     {
@@ -259,11 +250,7 @@ public class GameManager : MonoBehaviour
     {
         currentLevel = l;
     }
-
-    public int getCurrenLevel()
-    {
-        return currentLevel;
-    }
+    
     void Update()
     {
         if (lives <= 0)

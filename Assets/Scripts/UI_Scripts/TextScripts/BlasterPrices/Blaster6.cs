@@ -14,7 +14,7 @@ public class Blaster6 : MonoBehaviour
     
     void Update()
     {
-        if (GameManager.instance._forceBlaster)
+        if (GameManager.instance.forceBlaster)
         {
             _text.text = "UPGRADE : " + GameManager.instance.forceBlasterCost;
         }

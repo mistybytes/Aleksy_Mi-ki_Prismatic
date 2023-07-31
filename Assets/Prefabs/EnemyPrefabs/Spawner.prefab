@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy:
-  - {fileID: 463747375050899528, guid: 9a14dbdc89e001f448d62e06daf1f5bf, type: 3}
+  - {fileID: 288011000458620683, guid: 2a08a2f59aade654d94ad7d6db8fde41, type: 3}
   leftPos: {fileID: 6066971430743402349}
   rightPos: {fileID: 6066971430068577383}
   upPos: {fileID: 6066971431121015202}
