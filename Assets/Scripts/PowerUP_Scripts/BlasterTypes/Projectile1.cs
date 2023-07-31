@@ -11,6 +11,10 @@ public class Projectile1 : MonoBehaviour
     
     void Start()
     {
+        for (int i = 0; i < GameManager.instance.classicalBlasterTimesUp; i++)
+        {
+            upgradeBlaster1();
+        }
         Destroy(gameObject, delay);
     }
     private void OnTriggerEnter(Collider collision)
