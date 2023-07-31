@@ -4,27 +4,21 @@ using UnityEngine;
 
 public class BossManager : MonoBehaviour
 {
-    
-    [SerializeField]
-    private int enemyHealth;
+    private int bossHealth;
     // Start is called before the first frame update
     private void Start()
     {
-        enemyHealth = GameManager.instance.getEnemyHealth();
+        bossHealth = 100;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+ 
     public int getHealth()
     {
-        return enemyHealth;
+        return bossHealth;
     }
     public void subHealth(int damage)
     {
-        enemyHealth -= damage;
+        bossHealth -= damage;
     }
  
 }

@@ -6,17 +6,27 @@ using UnityEngine;
 
 public class BulletEmitter : MonoBehaviour
 {
-    public GameObject bulletPrefab = GameManager.instance.selectedBlaster;
+    public GameObject bulletPrefab;
     private float fireInterval;
-    private float lastFireTime = 0f;
+    private float lastFireTime;
 
     private void Start()
     {
-        if (gameObject.CompareTag("Player"))
-            fireInterval = GameManager.instance.getShotSpeed();
-        else
+        lastFireTime = Time.time;
+
+        tag = gameObject.tag;
+
+        switch (tag)
         {
-            fireInterval = 4f;
+            case "Player":
+                fireInterval = GameManager.instance.getShotSpeed();
+                break;
+            case "Enemy2":
+                fireInterval = 7f;
+                break;
+            default:
+                fireInterval = 5f;
+                break;
         }
     }
 
@@ -31,6 +41,6 @@ public class BulletEmitter : MonoBehaviour
 
     void FireBullet()
     {
-        GameObject bullet = Instantiate(bulletPrefab, transform.position , transform.rotation);
+        Instantiate(bulletPrefab, transform.position , transform.rotation);
     }
 }

@@ -10,6 +10,17 @@ public class CameraMovement : MonoBehaviour
     private float currentAngle = 2.0f;
 
 
+    private void Start()
+    {
+        isClockwise = true;
+
+        float angleDelta = Time.deltaTime * (isClockwise ? -1f : 1f);
+        currentAngle += angleDelta;
+
+        Vector3 circlePosition = new Vector3(Mathf.Sin(currentAngle), 2, Mathf.Cos(currentAngle) ) * 10;
+
+        transform.position = circlePosition;
+    }
 
     // Update is called once per frame
     void Update()

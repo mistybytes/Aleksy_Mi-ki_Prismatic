@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -8321582441729418901}
   m_Layer: 0
   m_Name: Boss1
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,8 +113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 787a484ed8dbe154fbc053f1d9cd9a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 15
-  speed: 0.5
 --- !u!114 &8315644168084887566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,9 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b95a36a22fb33c43b38b03cdbe4312f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 6566422235379557503, guid: bc59a68ef1f949743bcf68a4a603805b,
+  bulletPrefab: {fileID: 7873781805819953174, guid: 5b6b72781ae8e0c48b6f5446b6a5fcfa,
     type: 3}
-  fireInterval: 6
 --- !u!54 &8315644168084887565
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -158,4 +155,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b685036718e2ef4291ef1d2c36eef3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 0

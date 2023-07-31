@@ -97,7 +97,7 @@ public class LevelSelect : MonoBehaviour
         {
             GameManager.instance.setCurrentLevel(8);
             GameManager.instance.setEnemyHealth(20);
-            GameManager.instance.gameSpeed = 3f;
+            GameManager.instance.gameSpeed = 2f;
             SceneManager.LoadScene("LEVEL2.1");
         }
     }
@@ -109,7 +109,7 @@ public class LevelSelect : MonoBehaviour
         {
             GameManager.instance.setCurrentLevel(9);
             GameManager.instance.setEnemyHealth(20);
-            GameManager.instance.gameSpeed = 4f;
+            GameManager.instance.gameSpeed = 2f;
             SceneManager.LoadScene("LEVEL2.1");
         }
     }
@@ -119,20 +119,18 @@ public class LevelSelect : MonoBehaviour
         {
             GameManager.instance.setCurrentLevel(10);
             GameManager.instance.setEnemyHealth(30);
-            GameManager.instance.gameSpeed = 5f;
+            GameManager.instance.gameSpeed = 3f;
             SceneManager.LoadScene("LEVEL2.1");
         }
     }
-
-  
-
+    
     public void Level2_5()
     {
         if (LevelCompletionManager.instance.getLevelCompletionStatus()[10])
         {
             GameManager.instance.setCurrentLevel(11);
             GameManager.instance.setEnemyHealth(50);
-            GameManager.instance.gameSpeed = 6f;
+            GameManager.instance.gameSpeed = 3f;
             SceneManager.LoadScene("LEVEL2.1");
         }
     }
@@ -144,7 +142,7 @@ public class LevelSelect : MonoBehaviour
         {
             GameManager.instance.setCurrentLevel(12);
             GameManager.instance.setEnemyHealth(50);
-            GameManager.instance.gameSpeed = 7f;
+            GameManager.instance.gameSpeed = 4f;
             SceneManager.LoadScene("LEVEL2.1");
         }
     }

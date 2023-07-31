@@ -674,6 +674,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss2
       objectReference: {fileID: 0}
+    - target: {fileID: 8669059052161598584, guid: e787708f71bf7e541aeba59ed080f498,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 6566422235379557503, guid: bc59a68ef1f949743bcf68a4a603805b,
+        type: 3}
     - target: {fileID: 8669059052161598585, guid: e787708f71bf7e541aeba59ed080f498,
         type: 3}
       propertyPath: m_RootOrder

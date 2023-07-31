@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class enemyBullet : MonoBehaviour
 {
-    public float speed = 2f;
-    public Vector3 targetPosition = Vector3.zero;
+    private float speed = 3f;
+    private Vector3 target = Vector3.zero;
 
     void Update()
     {
@@ -13,8 +13,16 @@ public class enemyBullet : MonoBehaviour
 
     void MoveTowardsTarget()
     {
-        Vector3 directionToTarget = (targetPosition - transform.position).normalized;
-        transform.position += directionToTarget * speed * Time.deltaTime;
+        Vector3 direction = target - transform.position;
+
+        float distanceToTarget = Vector3.Distance(transform.position, target);
+
+        if (distanceToTarget > 0)
+        {
+            direction.Normalize();
+            //transform.position += direction * speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

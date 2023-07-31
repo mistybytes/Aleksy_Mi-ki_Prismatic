@@ -113,10 +113,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 137e430045db0e4448c0e88c3ef47bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  spiralSpeed: 3
+  speed: 4
+  spiralSpeed: 70
   target: {x: 0, y: 0, z: 0}
-  minHeight: 4
+  minHeight: 0
 --- !u!114 &3144166694884586766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,4 +159,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9791ec85105919742a5e4db270bc05d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 10

@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class enemyManager : MonoBehaviour
 {
-    
-    [SerializeField]
     private int enemyHealth;
 
     private bool isFrozen = false;
@@ -41,7 +39,6 @@ public class enemyManager : MonoBehaviour
         {
             Destroy(gameObject);
             GameManager.instance.SubLives();
-            
         }
     }
     

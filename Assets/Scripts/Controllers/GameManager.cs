@@ -164,7 +164,7 @@ public class GameManager : MonoBehaviour
         forceBlasterCost = PlayerPrefs.GetInt("forceBlasterCost", 300);
         voidBlasterCost = PlayerPrefs.GetInt("voidBlasterCost", 500);
 
-        currentLevel = PlayerPrefs.GetInt("currentlyUnlocked", 0);
+        currentLevel = PlayerPrefs.GetInt("currentlyUnlocked", 30);
 
     }
     

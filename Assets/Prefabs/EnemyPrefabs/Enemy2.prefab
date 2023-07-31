@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 2977281026332786999}
   - component: {fileID: 2221273304313274880}
   - component: {fileID: 3883968908007533661}
+  - component: {fileID: 8351275451659382038}
   m_Layer: 0
   m_Name: Enemy2
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -128,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c05e89d186aef4bb19d4bef5dc2854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {x: 0, y: 0, z: 0}
+  freeze: 0
 --- !u!114 &3883968908007533661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,3 +144,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6566422235379557503, guid: bc59a68ef1f949743bcf68a4a603805b,
     type: 3}
+--- !u!114 &8351275451659382038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288011000458620683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9791ec85105919742a5e4db270bc05d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

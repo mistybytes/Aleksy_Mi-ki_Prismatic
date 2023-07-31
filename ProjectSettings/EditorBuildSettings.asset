@@ -47,6 +47,45 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UIFolder/RewardsInfo.unity
     guid: 99e9594c849e53848aeb7a760b855c5f
+  - enabled: 1
+    path: Assets/Scenes/Type1Levels/TYPE1BOSS.unity
+    guid: 341d9c924aa4bb6479a233aad5e78af7
+  - enabled: 1
+    path: Assets/Scenes/Type2Levels/LEVEL2.1.unity
+    guid: 2a47cfc9aa1b8a748b649dd8495c804b
+  - enabled: 1
+    path: Assets/Scenes/Type2Levels/TYPE2BOSS.unity
+    guid: d3c7f4812bf283d46aefd69050af3704
+  - enabled: 1
+    path: Assets/Scenes/Type3Levels/LEVEL3.1.unity
+    guid: c1a24388d67fe6b4aa0fca5fd3e9059c
+  - enabled: 1
+    path: Assets/Scenes/Type4Levels/LEVEL4.1.unity
+    guid: 162e0c6bcde153a438f85f4d15fd0b2f
+  - enabled: 1
+    path: Assets/Scenes/Type4Levels/TYPE4BOSS.unity
+    guid: 2c89e5e4da4e59646a6867f09e62c0b7
+  - enabled: 1
+    path: Assets/Scenes/Type3Levels/TYPE3BOSS.unity
+    guid: 8c47d35d0c2692441bb1a53b3da8655d
+  - enabled: 1
+    path: Assets/Scenes/Type5Levels/LEVEL5.1.unity
+    guid: 1b39e18a8b3976c47a0191dff0401fb8
+  - enabled: 1
+    path: Assets/Scenes/Type5Levels/TYPE5BOSS.unity
+    guid: 686dbe4dd99ff8849b1d3599ab60f6a3
+  - enabled: 1
+    path: Assets/Scenes/Type6Levels/LEVEL6.1.unity
+    guid: 38d4c59c42fd669468f3b5c2286091ca
+  - enabled: 1
+    path: Assets/Scenes/Type6Levels/TYPE6BOSS.unity
+    guid: 6c5f1051348e9f8499db9cf570cf2984
+  - enabled: 1
+    path: Assets/Scenes/Type7Levels/LEVEL7.1.unity
+    guid: 2337355ad40a46c4a86b14daeacc5157
+  - enabled: 1
+    path: Assets/Scenes/Type7Levels/TYPE7BOSS.unity
+    guid: be881de4f9d17ea4a83cc69d34cc7fd1
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: a33065440d555284aadc1fdac7c54505,
       type: 2}

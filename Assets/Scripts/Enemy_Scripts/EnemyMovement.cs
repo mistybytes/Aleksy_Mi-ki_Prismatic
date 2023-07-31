@@ -2,12 +2,13 @@ using System;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField]
-    public Vector3 target = Vector3.zero;
+    
+    private Vector3 target = Vector3.zero;
 
     public bool freeze;
     private float speed;
@@ -21,7 +22,6 @@ public class EnemyMovement : MonoBehaviour
     {
         if (freeze == false)
         {
-            speed = 2f;
             Vector3 direction = target - transform.position;
 
             float distanceToTarget = Vector3.Distance(transform.position, target);
@@ -29,7 +29,8 @@ public class EnemyMovement : MonoBehaviour
             if (distanceToTarget > 0)
             {
                 direction.Normalize();
-                transform.position += direction * speed * Time.deltaTime;
+                //transform.position += direction * speed * Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
             }
         }
     }
