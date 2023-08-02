@@ -5,23 +5,16 @@ using UnityEngine;
 
 public class BlasterVariables : MonoBehaviour
 {
-    public float playerSpeed;
-    public int playerLives;
-    public float shotSpeed;
-
+    //TODO remove the blaster variables script from the Blasters and make is so that it is held by a different object that i can instantiate eralier
+    private float playerSpeed = 1f;
+    private int playerLives = 1;
+    private float shotSpeed = 4f;
+    
     public void Start()
     {
-        switch (GameManager.instance.selectedBlaster.ToString())
-        {
-            case "Blaster1":
-                for (int i = 0; i < GameManager.instance.classicalBlasterTimesUp; i++)
-                {
-                    if(i == 0)
-                        upgradeBlasterVariables(0.2f,0.5f,1);
-                }
-                break;
-                
-        }
+        Debug.Log("Blaster variables is created and the values are as such:\nplayer speed: " + playerSpeed +"\nplayer lives: " + playerLives + "\nshot speed: " + shotSpeed);
+        
+        setVariables();
     }
 
     public void setVariables()
@@ -34,7 +27,10 @@ public class BlasterVariables : MonoBehaviour
     public void upgradeBlasterVariables(float s,float ss, int l)
     {
         shotSpeed -= ss;
+        Debug.Log(shotSpeed);
         playerSpeed += s;
         playerLives += l;
+        
+        setVariables();
     }
 }

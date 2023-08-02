@@ -8,12 +8,14 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+
+    public ShopController sc;
     
     public Material playerSkin;
     
     public int currentLevel;
     
-    public float shotSpeed = 3f;
+    
     
     private int coins;
     private int collectedCoins;
@@ -21,8 +23,9 @@ public class GameManager : MonoBehaviour
     private int enemy_health;
     
     private int lives = 1;
+    private float shotSpeed = 4f;
+    private float speed = 1;
     
-    private float speed;
     public float gameSpeed = 4f;
     
     private string currentSceneName = "";
@@ -112,8 +115,8 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.DeleteAll();
 
         classicalBlaster = blasterList[0];
-        selectedBlaster.GetComponent<BlasterVariables>().setVariables();
-        
+        selectedBlaster = blasterList[0];
+
         classicalBlasterTimesUp = PlayerPrefs.GetInt("classicalBlasterUpgraded", 0);
         plasmaBlasterTimesUp = PlayerPrefs.GetInt("plasmaBlasterUpgraded", 0);
         iceBlasterTimesUp = PlayerPrefs.GetInt("iceBlasterUpgraded", 0);
@@ -133,7 +136,9 @@ public class GameManager : MonoBehaviour
         
         if (PlayerPrefs.GetString("plasmaBlaster") == "BLASTER2 (UnityEngine.GameObject)")
         {
+            
             plasmaBlaster = blasterList[1];
+            
             for (int i = 0; i < plasmaBlasterTimesUp; i++)
             {
                 plasmaBlaster.GetComponent<Projectile2>().upgradeBlaster2();
@@ -153,6 +158,7 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < transformationBlasterTimesUp; i++)
             { 
                 transformationBlaster.GetComponent<Projectile4>().upgradeBlaster4();
+                
             }
         }
         if (PlayerPrefs.GetString("lightBlaster") == "BLASTER5 (UnityEngine.GameObject)")
@@ -187,19 +193,23 @@ public class GameManager : MonoBehaviour
     //speed variables
     public void setShotSpeed(float s)
     {
+        
         shotSpeed = s;
     }
     public void setSpeed(float s)
     {
+        
         speed = s;
     }
 
     public float getShotSpeed()
     {
+        Debug.Log(shotSpeed);
         return shotSpeed;
     }
     public float getSpeed()
     {
+        Debug.Log(speed);
         return speed;
     }
     //blaster methods

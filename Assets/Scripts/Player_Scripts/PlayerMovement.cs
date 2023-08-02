@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     private Material skin;
-    public float playerSpeed = 3f;
+    
+    private float playerSpeed;
     
     private bool isClockwise = true;
     private float currentAngle = 2.0f;
@@ -13,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         skin = GameManager.instance.playerSkin;
+        
         playerSpeed = GameManager.instance.getSpeed();
         
         StartCoroutine(MyTimer.CountUpTo1Minute());
