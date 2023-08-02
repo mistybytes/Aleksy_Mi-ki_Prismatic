@@ -27,7 +27,6 @@ public class Projectile4: MonoBehaviour
                 if (randomFloat < transformChance)
                 {
                     Instantiate(newObjectPrefab, collision.transform.position, Quaternion.identity);
-
                     Destroy(collision.gameObject);
                 }
                 Destroy(gameObject);

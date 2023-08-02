@@ -18,7 +18,7 @@ public class EnemyMovement : MonoBehaviour
         speed = GameManager.instance.gameSpeed;
     }
     
-    void LateUpdate()
+    void Update()
     {
         if(freeze == false)
         {
