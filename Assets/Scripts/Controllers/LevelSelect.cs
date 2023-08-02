@@ -10,7 +10,7 @@ public class LevelSelect : MonoBehaviour
     {
         GameManager.instance.setCurrentLevel(0);
         GameManager.instance.setEnemyHealth(10);
-        GameManager.instance.gameSpeed = 2f;
+        GameManager.instance.gameSpeed = 3f;
         SceneManager.LoadScene("LEVEL1.1");
     }
     public void Level1_2()
@@ -19,7 +19,7 @@ public class LevelSelect : MonoBehaviour
         {
             GameManager.instance.setCurrentLevel(1);
             GameManager.instance.setEnemyHealth(20);
-            GameManager.instance.gameSpeed = 3f;
+            GameManager.instance.gameSpeed = 4f;
             SceneManager.LoadScene("LEVEL1.1");
         }
     }
@@ -30,7 +30,7 @@ public class LevelSelect : MonoBehaviour
         {
             GameManager.instance.setCurrentLevel(2);
             GameManager.instance.setEnemyHealth(20);
-            GameManager.instance.gameSpeed = 4f;
+            GameManager.instance.gameSpeed = 5f;
             SceneManager.LoadScene("LEVEL1.1");
         }
     }
@@ -41,7 +41,7 @@ public class LevelSelect : MonoBehaviour
         {
             GameManager.instance.setCurrentLevel(3);
             GameManager.instance.setEnemyHealth(30);
-            GameManager.instance.gameSpeed = 5f;
+            GameManager.instance.gameSpeed = 6f;
             SceneManager.LoadScene("LEVEL1.1");
         }
     }
@@ -52,7 +52,7 @@ public class LevelSelect : MonoBehaviour
         {
             GameManager.instance.setCurrentLevel(4);
             GameManager.instance.setEnemyHealth(50);
-            GameManager.instance.gameSpeed = 5f;
+            GameManager.instance.gameSpeed = 7f;
             SceneManager.LoadScene("LEVEL1.1");
         }
     }
@@ -64,7 +64,7 @@ public class LevelSelect : MonoBehaviour
         {
             GameManager.instance.setCurrentLevel(5);
             GameManager.instance.setEnemyHealth(50);
-            GameManager.instance.gameSpeed = 5f;
+            GameManager.instance.gameSpeed = 7f;
             SceneManager.LoadScene("LEVEL1.1");
         }
     }
@@ -75,7 +75,7 @@ public class LevelSelect : MonoBehaviour
         {
             GameManager.instance.setCurrentLevel(6);
             GameManager.instance.setEnemyHealth(50);
-            GameManager.instance.gameSpeed = 8f;
+            GameManager.instance.gameSpeed = 5f;
             SceneManager.LoadScene("TYPE1BOSS");
         }
     }

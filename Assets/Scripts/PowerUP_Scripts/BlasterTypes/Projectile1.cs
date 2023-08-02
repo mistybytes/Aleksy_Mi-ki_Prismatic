@@ -49,8 +49,7 @@ public class Projectile1 : MonoBehaviour
 
     public void upgradeBlaster1()
     {
-        bulletDamage += 10;
-        delay -= 1;
+        bulletDamage += 5;
     }
     
 }
