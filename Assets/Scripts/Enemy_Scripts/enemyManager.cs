@@ -16,7 +16,12 @@ public class enemyManager : MonoBehaviour
         speed = GameManager.instance.getSpeed();
         enemyHealth = GameManager.instance.getEnemyHealth();
     }
-    
+
+    public void OnDestroy()
+    {
+        GameManager.instance.EnemyKilled();
+    }
+
     public float getSpeed()
     {
         return speed;

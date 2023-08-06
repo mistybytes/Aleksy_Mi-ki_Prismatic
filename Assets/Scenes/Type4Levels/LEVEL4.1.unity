@@ -208,6 +208,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3925048436806562876, guid: 98032e95c26fd5b4399ad4a1236b88d8,
+        type: 3}
+      propertyPath: enemy.Array.data[0]
+      value: 
+      objectReference: {fileID: 4454906583878659, guid: 6a1d6be9e3dfce44faa0cb57b96be8ce,
+        type: 3}
     - target: {fileID: 6066971430568867561, guid: 98032e95c26fd5b4399ad4a1236b88d8,
         type: 3}
       propertyPath: m_RootOrder
@@ -490,6 +496,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 143816952, guid: 6a44c15ae208d4142ae8462bd5e18bcb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1885
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170896727393864118, guid: 6a44c15ae208d4142ae8462bd5e18bcb,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170896727393864118, guid: 6a44c15ae208d4142ae8462bd5e18bcb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1899
+      objectReference: {fileID: 0}
     - target: {fileID: 4170896728560543744, guid: 6a44c15ae208d4142ae8462bd5e18bcb,
         type: 3}
       propertyPath: m_Pivot.x

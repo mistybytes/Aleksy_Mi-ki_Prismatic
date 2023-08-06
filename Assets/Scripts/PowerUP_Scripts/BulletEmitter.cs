@@ -21,11 +21,13 @@ public class BulletEmitter : MonoBehaviour
                 bulletPrefab = GameManager.instance.selectedBlaster; 
                 fireInterval = GameManager.instance.getShotSpeed();
                 break;
+            
             case "Enemy2":
-                fireInterval = 7f;
+                fireInterval = 8f;
                 break;
             default:
-                fireInterval = 5f;
+                
+                fireInterval = 8f;
                 break;
         }
     }

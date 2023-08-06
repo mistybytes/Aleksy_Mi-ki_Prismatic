@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5599739460261697858}
   - component: {fileID: 1131916550406060705}
   - component: {fileID: 892304067668926273}
-  - component: {fileID: 3907126861517918226}
   m_Layer: 0
   m_Name: BLASTER1
   m_TagString: Bullet
@@ -141,18 +140,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b4f5eb11ec0c947a43f797a26964a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3907126861517918226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9165571919683375005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f247620e19f625442a28f25f326b08fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSpeed: 1
-  playerLives: 1
-  shotSpeed: 4

@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     
     private int lives = 1;
     private float shotSpeed = 4f;
-    private float speed = 1;
+    private float speed = 5f;
     
     public float gameSpeed = 4f;
     
@@ -217,11 +217,15 @@ public class GameManager : MonoBehaviour
     {
         selectedBlaster = blaster;
     }
-    
+
+    public void EnemyKilled()
+    {
+        collectedCoins += 3;
+    }
     //methods for coins
     public void coinPickedUp()
     {
-        collectedCoins++;
+        collectedCoins += 6;
     }
     public int getCollectedCoins()
     {
