@@ -22,9 +22,10 @@ public class GameManager : MonoBehaviour
     private int specialCurrency;
     private int enemy_health;
     
-    private int lives = 1;
-    private float shotSpeed = 4f;
-    private float speed = 5f;
+    public int lives = 1;
+    public float shotSpeed = 4f;
+    public float speed = 5f;
+    public int bulletDamage = 10;
     
     public float gameSpeed = 4f;
     
@@ -86,7 +87,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetString("voidBlaster",voidBlaster.ToString());
         
         PlayerPrefs.SetInt("coins",coins);
-        PlayerPrefs.SetInt("lives",lives);
         PlayerPrefs.SetInt("currentlyUnlocked", LevelCompletionManager.instance.currentlyUnlocked);
         
     }
@@ -104,10 +104,6 @@ public class GameManager : MonoBehaviour
         
         coins = PlayerPrefs.GetInt("coins");
         collectedCoins = 0;
-        
-        lives = PlayerPrefs.GetInt("lives", defaultValue: 1);
-        
-        //TODO dodać ładowanie innych parametrów jak blaster
     }
 
     private void Start()
@@ -116,7 +112,9 @@ public class GameManager : MonoBehaviour
 
         classicalBlaster = blasterList[0];
         selectedBlaster = blasterList[0];
-
+        
+        BlasterVariables.instance.SetBlaster1Variables();
+        
         classicalBlasterTimesUp = PlayerPrefs.GetInt("classicalBlasterUpgraded", 0);
         plasmaBlasterTimesUp = PlayerPrefs.GetInt("plasmaBlasterUpgraded", 0);
         iceBlasterTimesUp = PlayerPrefs.GetInt("iceBlasterUpgraded", 0);
@@ -136,54 +134,27 @@ public class GameManager : MonoBehaviour
         
         if (PlayerPrefs.GetString("plasmaBlaster") == "BLASTER2 (UnityEngine.GameObject)")
         {
-            
             plasmaBlaster = blasterList[1];
-            
-            for (int i = 0; i < plasmaBlasterTimesUp; i++)
-            {
-                plasmaBlaster.GetComponent<Projectile2>().upgradeBlaster2();
-            }
         }
         if (PlayerPrefs.GetString("iceBlaster") == "BLASTER3 (UnityEngine.GameObject)" )
         { 
             iceBlaster = blasterList[2];
-            for (int i = 0; i < iceBlasterTimesUp; i++)
-            {
-                iceBlaster.GetComponent<Projectile3>().upgradeBlaster3();
-            }
         }
         if (PlayerPrefs.GetString("transformationBlaster") == "BLASTER4 (UnityEngine.GameObject)")
         { 
             transformationBlaster = blasterList[3];
-            for (int i = 0; i < transformationBlasterTimesUp; i++)
-            { 
-                transformationBlaster.GetComponent<Projectile4>().upgradeBlaster4();
-                
-            }
         }
         if (PlayerPrefs.GetString("lightBlaster") == "BLASTER5 (UnityEngine.GameObject)")
         { 
             lightBlaster = blasterList[4];
-            for (int i = 0; i < lightBlasterTimesUp; i++)
-            {
-                lightBlaster.GetComponent<Projectile5>().upgradeBlaster5();
-            }
         }
         if (PlayerPrefs.GetString("forceBlaster") == "BLASTER6 (UnityEngine.GameObject)")
         { 
             forceBlaster = blasterList[5];
-            for (int i = 0; i < forceBlasterTimesUp; i++)
-            {
-                forceBlaster.GetComponent<Projectile6>().upgradeBlaster6();
-            }
         }
         if (PlayerPrefs.GetString("voidBlaster") == "BLASTER7 (UnityEngine.GameObject)")
         { 
             voidBlaster = blasterList[6];
-            for (int i = 0; i < voidBlasterTimesUp; i++)
-            {
-                voidBlaster.GetComponent<Projectile7>().upgradeBlaster7();
-            }
         }
         
         currentLevel = PlayerPrefs.GetInt("currentlyUnlocked", 40);

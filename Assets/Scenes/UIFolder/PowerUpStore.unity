@@ -208,7 +208,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: selectVoidBlaster
+        m_MethodName: SelectVoidBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -525,7 +525,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: upgradeLightBlaster
+        m_MethodName: UpgradeLightBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1027,7 +1027,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: selectLightBlaster
+        m_MethodName: SelectLightBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1526,7 +1526,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: upgradeVoidBlaster
+        m_MethodName: UpgradeVoidBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1722,7 +1722,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: selectTransformationBlaster
+        m_MethodName: SelectTransformationBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1910,7 +1910,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: selectIceBlaster
+        m_MethodName: SelectIceBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2573,7 +2573,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: upgradeIceBlaster
+        m_MethodName: UpgradeIceBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2676,7 +2676,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: upgradeBlaster
+        m_MethodName: UpgradeBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3138,7 +3138,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: upgradeFireBlaster
+        m_MethodName: UpgradeFireBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3683,7 +3683,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: selectFireBlaster
+        m_MethodName: SelectFireBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3780,6 +3780,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 0
+--- !u!1001 &1568669366
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7097540904741399536, guid: ac2286bc48e623d4d842958650604885,
+        type: 3}
+      propertyPath: m_Name
+      value: BlasterVariablesManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097540904741399538, guid: ac2286bc48e623d4d842958650604885,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097540904741399538, guid: ac2286bc48e623d4d842958650604885,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.27679437
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097540904741399538, guid: ac2286bc48e623d4d842958650604885,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.4489268
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097540904741399538, guid: ac2286bc48e623d4d842958650604885,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 97.117546
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097540904741399538, guid: ac2286bc48e623d4d842958650604885,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097540904741399538, guid: ac2286bc48e623d4d842958650604885,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097540904741399538, guid: ac2286bc48e623d4d842958650604885,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097540904741399538, guid: ac2286bc48e623d4d842958650604885,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097540904741399538, guid: ac2286bc48e623d4d842958650604885,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097540904741399538, guid: ac2286bc48e623d4d842958650604885,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097540904741399538, guid: ac2286bc48e623d4d842958650604885,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac2286bc48e623d4d842958650604885, type: 3}
 --- !u!1 &1615202220
 GameObject:
   m_ObjectHideFlags: 0
@@ -3865,7 +3934,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: backToMainMenu
+        m_MethodName: BackToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4553,7 +4622,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: selectBlaster
+        m_MethodName: SelectBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4853,7 +4922,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: upgradeForceBlaster
+        m_MethodName: UpgradeForceBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4956,7 +5025,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: upgradeTransformationBlaster
+        m_MethodName: UpgradeTransformationBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5059,7 +5128,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1627990120}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
-        m_MethodName: selectForceBlaster
+        m_MethodName: SelectForceBlaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

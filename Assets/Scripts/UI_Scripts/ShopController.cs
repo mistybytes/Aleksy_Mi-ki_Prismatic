@@ -7,122 +7,69 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ShopController : MonoBehaviour
 {
-    public void Start()
-    {
-        if (!GameManager.instance.sc)
-        {
-            GameManager.instance.sc = this;
-            
-            for (var i = 0; i < GameManager.instance.classicalBlasterTimesUp; i++)
-            {
-                upgradeBlaster();
-            }
-
-            for (var i = 0; i < GameManager.instance.plasmaBlasterTimesUp; i++)
-            {
-                upgradeFireBlaster();
-            }
-
-            for (var i = 0; i < GameManager.instance.iceBlasterTimesUp; i++)
-            {
-                upgradeIceBlaster();
-            }
-
-            for (var i = 0; i < GameManager.instance.transformationBlasterTimesUp; i++)
-            {
-                upgradeTransformationBlaster();
-            }
-
-            for (var i = 0; i < GameManager.instance.lightBlasterTimesUp; i++)
-            {
-                upgradeLightBlaster();
-            }
-
-            for (var i = 0; i < GameManager.instance.forceBlasterTimesUp; i++)
-            {
-                upgradeForceBlaster();
-            }
-
-            for (var i = 0; i < GameManager.instance.voidBlasterTimesUp; i++)
-            {
-                upgradeVoidBlaster();
-            }
-
-            DontDestroyOnLoad(gameObject);
-        }
-    }
-
-
-
-    public void selectBlaster()
+    public void SelectBlaster()
     {
         GameManager.instance.setBlasterType(GameManager.instance.classicalBlaster);
-        GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().setVariables();
+        BlasterVariables.instance.SetBlaster1Variables();
     }
-
-    public void upgradeBlaster()
+    
+    public void UpgradeBlaster()
     {
         if (GameManager.instance.getCoins() >= GameManager.instance.classicalBlasterCost && GameManager.instance.classicalBlasterTimesUp < 7)
-            {
-                GameManager.instance.getCoins() -= GameManager.instance.classicalBlasterCost;
-                GameManager.instance.classicalBlasterCost *= 2;
-                GameManager.instance.classicalBlasterTimesUp++;
-                GameManager.instance.classicalBlaster.GetComponent<Projectile1>().upgradeBlaster1();
-                
-                switch (GameManager.instance.classicalBlasterTimesUp)
+        {
+            GameManager.instance.getCoins() -= GameManager.instance.classicalBlasterCost;
+            GameManager.instance.classicalBlasterCost *= 2;
+            GameManager.instance.classicalBlasterTimesUp++;
+            switch (GameManager.instance.classicalBlasterTimesUp)
                 {
                     case 1:
-                        GameManager.instance.classicalBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0f, 0, 0);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,10);
                         break;
                     
                     case 2:
-                        GameManager.instance.classicalBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,10);
                         break;
                     
                     case 3:
-                        GameManager.instance.classicalBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,10);
                         break;
                     
                     case 4:
-                        GameManager.instance.classicalBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,10);
                         break;
                     
                     case 5:
-                        GameManager.instance.classicalBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,10);
                         break;
                     
                     case 6:
-                        GameManager.instance.classicalBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,10);
                         break;
                     
                     case 7:
-                        GameManager.instance.classicalBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,10);
                         break;
                     
                     default:
                         break;
                 }
-            }
-        
+        }
     }
 
-    public void backToMainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
+  
 
-    public void selectFireBlaster()
+    public void SelectFireBlaster()
     {
         if (GameManager.instance.plasmaBlaster != null)
         {
             GameManager.instance.setBlasterType(GameManager.instance.blasterList[1]);
-            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().setVariables();
+            BlasterVariables.instance.SetBlaster2Variables();
 
         }
     }
     
 
-    public void upgradeFireBlaster()
+    public void UpgradeFireBlaster()
     {
         if (GameManager.instance.plasmaBlaster == null && GameManager.instance.getCoins() >= GameManager.instance.plasmaBlasterCost)
         {
@@ -136,54 +83,51 @@ public class ShopController : MonoBehaviour
             GameManager.instance.plasmaBlasterCost *= 2;
             GameManager.instance.plasmaBlasterTimesUp++;
             
-            GameManager.instance.plasmaBlaster.GetComponent<Projectile2>().upgradeBlaster2();
-            
             switch (GameManager.instance.plasmaBlasterTimesUp) 
             {
                 case 1:
-                    GameManager.instance.plasmaBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                    BlasterVariables.instance.UpgradeBlaster2Variables(0.2f,0.5f,1,10);
                     break;
                     
                 case 2:
-                    GameManager.instance.plasmaBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                    BlasterVariables.instance.UpgradeBlaster2Variables(0.2f,0.5f,1,10);
                     break;
                     
                 case 3:
-                    GameManager.instance.plasmaBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                    BlasterVariables.instance.UpgradeBlaster2Variables(0.2f,0.5f,1,10);
                     break;
                     
                 case 4:
-                    GameManager.instance.plasmaBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                    BlasterVariables.instance.UpgradeBlaster2Variables(0.2f,0.5f,1,10);
                     break;
                     
                 case 5:
-                    GameManager.instance.plasmaBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                    BlasterVariables.instance.UpgradeBlaster2Variables(0.2f,0.5f,1,10);
                     break;
                     
                 case 6:
-                    GameManager.instance.plasmaBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                    BlasterVariables.instance.UpgradeBlaster2Variables(0.2f,0.5f,1,10);
                     break;
-                    
+                
                 case 7:
-                    GameManager.instance.plasmaBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                    BlasterVariables.instance.UpgradeBlaster2Variables(0.2f,0.5f,1,10);
                     break;
-                    
-                default:
-                    break;
+                
             }
         }
     }
     
-    public void selectIceBlaster()
+    public void SelectIceBlaster()
     {
         if (GameManager.instance.iceBlaster != null)
         {
             GameManager.instance.setBlasterType(GameManager.instance.blasterList[2]);
-            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().setVariables();
+            BlasterVariables.instance.SetBlaster3Variables();
+
         }
     }
     
-    public void upgradeIceBlaster()
+    public void UpgradeIceBlaster()
     {
         if (GameManager.instance.iceBlaster == null && GameManager.instance.getCoins() >= GameManager.instance.iceBlasterCost)
         {
@@ -197,55 +141,52 @@ public class ShopController : MonoBehaviour
             GameManager.instance.iceBlasterTimesUp++;
             GameManager.instance.iceBlasterCost *= 2;
             
-            GameManager.instance.iceBlaster.GetComponent<Projectile3>().upgradeBlaster3(); 
-            
             switch (GameManager.instance.iceBlasterTimesUp)
             {
                 case 1:
-                    GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                    BlasterVariables.instance.UpgradeBlaster3Variables(0.2f,0.5f,1,10);
                     break;
                     
                 case 2:
-                    GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                    BlasterVariables.instance.UpgradeBlaster3Variables(0.2f,0.5f,1,10);
                     break;
                     
                 case 3:
-                    GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                    BlasterVariables.instance.UpgradeBlaster3Variables(0.2f,0.5f,1,10);
                     break;
                     
                 case 4:
-                    GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                    BlasterVariables.instance.UpgradeBlaster3Variables(0.2f,0.5f,1,10);
                     break;
                     
                 case 5:
-                    GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                    BlasterVariables.instance.UpgradeBlaster3Variables(0.2f,0.5f,1,10);
                     break;
                     
                 case 6:
-                    GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                    BlasterVariables.instance.UpgradeBlaster3Variables(0.2f,0.5f,1,10);
                     break;
                     
                 case 7:
-                    GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
+                    BlasterVariables.instance.UpgradeBlaster3Variables(0.2f,0.5f,1,10);
                     break;
-                    
-                default:
-                    break;
+                
             }
         }
     }
     
-    public void selectTransformationBlaster()
+    public void SelectTransformationBlaster()
     {
         if (GameManager.instance.transformationBlaster != null)
         {
             GameManager.instance.setBlasterType(GameManager.instance.blasterList[3]);
-            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().setVariables();
+            BlasterVariables.instance.SetBlaster4Variables();
+
 
         }
     }
 
-    public void upgradeTransformationBlaster()
+    public void UpgradeTransformationBlaster()
     {
         if (GameManager.instance.transformationBlaster == null && GameManager.instance.getCoins() >= GameManager.instance.transformationBlasterCost)
         {
@@ -259,55 +200,51 @@ public class ShopController : MonoBehaviour
             GameManager.instance.transformationBlasterCost *= 2;
             GameManager.instance.transformationBlasterTimesUp++;
             
-            GameManager.instance.transformationBlaster.GetComponent<Projectile4>().upgradeBlaster4();
-            
             switch (GameManager.instance.transformationBlasterTimesUp) 
             {
                 case 1:
-                GameManager.instance.transformationBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster4Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 2:
-                GameManager.instance.transformationBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster4Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 3:
-                GameManager.instance.transformationBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster4Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 4:
-                GameManager.instance.transformationBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster4Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 5:
-                GameManager.instance.transformationBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster4Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 6:
-                GameManager.instance.transformationBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster4Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 7:
-                GameManager.instance.transformationBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
-                    
-                default:
-                break;
+                    BlasterVariables.instance.UpgradeBlaster4Variables(0.2f,0.5f,1,10);
+                    break;
+        
             }
         }
     }
     
-    public void selectLightBlaster()
+    public void SelectLightBlaster()
     {
         if (GameManager.instance.lightBlaster != null)
         {
             GameManager.instance.setBlasterType(GameManager.instance.blasterList[4]);
-            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().setVariables();
+            BlasterVariables.instance.SetBlaster5Variables();
 
         }
     }
 
-    public void upgradeLightBlaster()
+    public void UpgradeLightBlaster()
     {
       
         if (GameManager.instance.lightBlaster == null && GameManager.instance.getCoins() >= GameManager.instance.lightBlasterCost)
@@ -323,55 +260,51 @@ public class ShopController : MonoBehaviour
             GameManager.instance.lightBlasterCost *= 2;
             GameManager.instance.lightBlasterTimesUp++;
             
-            GameManager.instance.lightBlaster.GetComponent<Projectile5>().upgradeBlaster5();
-            
             switch (GameManager.instance.lightBlasterTimesUp) 
             {
                 case 1:
-                GameManager.instance.lightBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster5Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 2:
-                GameManager.instance.lightBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster5Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 3:
-                GameManager.instance.lightBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster5Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 4:
-                GameManager.instance.lightBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster5Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 5:
-                GameManager.instance.lightBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster5Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 6:
-                GameManager.instance.lightBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster5Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 7:
-                GameManager.instance.lightBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
-                    
-                default:
-                break;
+                    BlasterVariables.instance.UpgradeBlaster5Variables(0.2f,0.5f,1,10);
+                    break;
+                
             }
         }
     }
     
-    public void selectForceBlaster()
+    public void SelectForceBlaster()
     {
         if (GameManager.instance.forceBlaster != null)
         {
             GameManager.instance.setBlasterType(GameManager.instance.blasterList[5]);
-            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().setVariables();
+            BlasterVariables.instance.SetBlaster6Variables();
 
         }
     }
 
-    public void upgradeForceBlaster()
+    public void UpgradeForceBlaster()
     {
         if (GameManager.instance.forceBlaster == null && GameManager.instance.getCoins() >= GameManager.instance.forceBlasterCost)
         {
@@ -385,54 +318,52 @@ public class ShopController : MonoBehaviour
             GameManager.instance.forceBlasterTimesUp++;
             GameManager.instance.forceBlasterCost *= 2;
             
-            GameManager.instance.forceBlaster.GetComponent<Projectile6>().upgradeBlaster6();
 
             switch (GameManager.instance.forceBlasterTimesUp) 
             {
                 case 1:
-                GameManager.instance.forceBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster6Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 2:
-                GameManager.instance.forceBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster6Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 3:
-                GameManager.instance.forceBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster6Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 4:
-                GameManager.instance.forceBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster6Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 5:
-                GameManager.instance.forceBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster6Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 6:
-                GameManager.instance.forceBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster6Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 7:
-                GameManager.instance.forceBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
-                    
-                default:
-                break;
+                    BlasterVariables.instance.UpgradeBlaster6Variables(0.2f,0.5f,1,10);
+                    break;
+                
             }
         }
     }
     
-    public void selectVoidBlaster()
+    public void SelectVoidBlaster()
     {
         if (GameManager.instance.voidBlaster != null)
         {
             GameManager.instance.setBlasterType(GameManager.instance.blasterList[6]);
-            GameManager.instance.selectedBlaster.GetComponent<BlasterVariables>().setVariables();
+            BlasterVariables.instance.SetBlaster7Variables();
+
         }
     }
 
-    public void upgradeVoidBlaster()
+    public void UpgradeVoidBlaster()
     {
         if (GameManager.instance.voidBlaster == null && GameManager.instance.getCoins() >= GameManager.instance.voidBlasterCost)
         {
@@ -445,44 +376,43 @@ public class ShopController : MonoBehaviour
             GameManager.instance.getCoins() -= GameManager.instance.voidBlasterCost;
             GameManager.instance.voidBlasterCost *= 2;
             
-            GameManager.instance.voidBlaster.GetComponent<Projectile7>().upgradeBlaster7();
             
             switch (GameManager.instance.voidBlasterTimesUp) 
             {
                 case 1:
-                GameManager.instance.voidBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster7Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 2:
-                GameManager.instance.voidBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster7Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 3:
-                GameManager.instance.voidBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster7Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 4:
-                GameManager.instance.voidBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster7Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 5:
-                GameManager.instance.voidBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster7Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 6:
-                GameManager.instance.voidBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
+                    BlasterVariables.instance.UpgradeBlaster7Variables(0.2f,0.5f,1,10);
+                    break;
                     
                 case 7:
-                GameManager.instance.voidBlaster.GetComponent<BlasterVariables>().upgradeBlasterVariables(0.4f, 1, 1);
-                break;
-                    
-                default:
-                break;
+                    BlasterVariables.instance.UpgradeBlaster7Variables(0.2f,0.5f,1,10);
+                    break;
             }
         }
     }
-    
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     
     
 }

@@ -11,14 +11,7 @@ public class Projectile6 : MonoBehaviour
     //TODO MAKE THIS PROJECTILE BE STATIONARY
     private void Start()
     {
-        timesUpgraded = PlayerPrefs.GetInt("timesUpgraded", defaultValue: 0);
         bulletDamage = PlayerPrefs.GetInt("bulletDamage", defaultValue: 10);
-
-        for (int i = 0; i < timesUpgraded; i++)
-        {
-            upgradeForceBlaster();
-        }
-        Destroy(gameObject, delay);
     }
     private void OnTriggerEnter(Collider collision)
     {
@@ -36,16 +29,6 @@ public class Projectile6 : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        
-    }
-
-    public void upgradeForceBlaster()
-    {
-        
-        //TODO remake this into a blaster that orbits the player
-    }
-    public void upgradeBlaster6()
-    {
         
     }
 }

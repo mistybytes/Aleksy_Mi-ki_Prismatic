@@ -430,6 +430,7 @@
 "Assets/Scripts/UI_Scripts/TextScripts/GlitchTextEffect.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/MMCoinsScript.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/RewardTimer/DailyRewardsTimer.cs"
+"Assets/Scripts/UI_Scripts/TextScripts/RewardTimer/UnlockedLvlCC.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/ShopCoins.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/TextColorChange.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/TimesUpgraded/Blaster1TimesUP.cs"
@@ -439,7 +440,6 @@
 "Assets/Scripts/UI_Scripts/TextScripts/TimesUpgraded/Blaster5TimesUP.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/TimesUpgraded/Blaster6TimesUP.cs"
 "Assets/Scripts/UI_Scripts/TextScripts/TimesUpgraded/Blaster7TimesUP.cs"
-"Assets/Scripts/UI_Scripts/TextScripts/UnlockedLvlCC.cs"
 "Assets/Scripts/UI_Scripts/TimeDisplay.cs"
 -langversion:9.0
 

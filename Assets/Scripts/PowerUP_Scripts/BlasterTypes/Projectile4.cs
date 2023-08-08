@@ -34,8 +34,4 @@ public class Projectile4: MonoBehaviour
         }
     }
     
-    public void upgradeBlaster4()
-    {
-        
-    }
 }

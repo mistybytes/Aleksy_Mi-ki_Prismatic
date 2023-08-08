@@ -15,8 +15,4 @@ public class Projectile7 : MonoBehaviour
             Destroy(collision.gameObject);
     }
     
-    public void upgradeBlaster7()
-    {
-        
-    }
 }

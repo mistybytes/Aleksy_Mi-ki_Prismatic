@@ -80,7 +80,7 @@
      <Compile Include="Assets\Scripts\Save system\SaveManager.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\TimesUpgraded\Blaster6TimesUP.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\Daily rewards\DailyRewards.cs" />
-     <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\UnlockedLvlCC.cs" />
+     <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\RewardTimer\UnlockedLvlCC.cs" />
      <Compile Include="Assets\Scripts\Controllers\MainMenuCon.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\RewardTimer\DailyRewardsTimer.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\BlasterUnlocks\Blaster3Color.cs" />
@@ -103,6 +103,7 @@
      <Compile Include="Assets\Scripts\UI_Scripts\ShopController.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\BlasterVariables.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\BlasterPrices\Blaster5.cs" />
+     <Compile Include="Assets\Scripts\Enemy_Scripts\EnemyZigZag.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\CoinsAndLives.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\BlasterPrices\Blaster6.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\BulletMovement.cs" />
@@ -111,7 +112,6 @@
      <Compile Include="Assets\Scripts\Enemy_Scripts\enemyBullet.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\Projectile5.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\CameraMovement.cs" />
-     <Compile Include="Assets\Scripts\Enemy_Scripts\EnemyZigZag.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

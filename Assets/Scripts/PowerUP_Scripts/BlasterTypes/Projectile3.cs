@@ -61,14 +61,5 @@ public class Projectile3 : MonoBehaviour
    
     } 
     
-  
-    public void setVariables()
-    {
-        
-    }
-    public void upgradeBlaster3()
-    {
-        
-    }
-    
+
 }
