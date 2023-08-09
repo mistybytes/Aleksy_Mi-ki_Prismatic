@@ -22,15 +22,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if(freeze == false)
         {
-            Vector3 direction = target - transform.position;
-
-            float distanceToTarget = Vector3.Distance(transform.position, target);
-
-            if (distanceToTarget > 0)
-            {
-                direction.Normalize();
-                transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-            }
+            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
         }
         
     }

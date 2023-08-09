@@ -199,7 +199,37 @@ public class GameManager : MonoBehaviour
 
     public void LevelStart()
     {
-        //TODO add the setting up of the blaster variables here according to the selected blaster
+        switch (selectedBlaster.ToString())
+        {
+            case "BLASTER1 (UnityEngine.GameObject)":
+                BlasterVariables.instance.SetBlaster1Variables();
+                break;
+            case "BLASTER2 (UnityEngine.GameObject)":
+                BlasterVariables.instance.SetBlaster2Variables();
+                break;
+            case "BLASTER3 (UnityEngine.GameObject)":
+                BlasterVariables.instance.SetBlaster3Variables();
+                break;
+            case "BLASTER4 (UnityEngine.GameObject)":
+                BlasterVariables.instance.SetBlaster4Variables();
+                break;
+            case "BLASTER5 (UnityEngine.GameObject)":
+                BlasterVariables.instance.SetBlaster5Variables();
+                break;
+            case "BLASTER6 (UnityEngine.GameObject)":
+                BlasterVariables.instance.SetBlaster6Variables();
+                break;
+            case "BLASTER7 (UnityEngine.GameObject)":
+                BlasterVariables.instance.SetBlaster7Variables();
+                break;
+            default:
+                break;
+
+        }
+        if (selectedBlaster.ToString() == "BLASTER1 (UnityEngine.GameObject)")
+        {
+            Debug.Log(lives);
+        }
     }
     void Update()
     {

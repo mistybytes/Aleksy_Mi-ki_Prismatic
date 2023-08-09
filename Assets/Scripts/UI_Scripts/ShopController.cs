@@ -23,31 +23,31 @@ public class ShopController : MonoBehaviour
             switch (GameManager.instance.classicalBlasterTimesUp)
                 {
                     case 1:
-                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,10);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(4.2f,3.5f,1,20);
                         break;
                     
                     case 2:
-                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,10);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(4.4f,3f,2,30);
                         break;
                     
                     case 3:
-                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,10);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,40);
                         break;
                     
                     case 4:
-                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,10);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,50);
                         break;
                     
                     case 5:
-                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,10);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,60);
                         break;
                     
                     case 6:
-                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,10);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,70);
                         break;
                     
                     case 7:
-                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,10);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(0.2f,0.5f,1,80);
                         break;
                     
                     default:

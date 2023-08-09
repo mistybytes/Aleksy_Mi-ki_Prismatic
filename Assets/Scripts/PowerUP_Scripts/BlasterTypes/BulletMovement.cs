@@ -6,20 +6,20 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
-    private float speed = 5f;
+    private float speed = 6f;
     
     private PlayerMovement pm;
     private Vector3 circlePosition;
-    private float delay = 20f;
+
     void Start()
     {
-        Destroy(gameObject, delay);
+        Destroy(gameObject, 20);
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
 
         if (playerObject != null)
         {
             pm = playerObject.GetComponent<PlayerMovement>();
-            float currentAngle = pm.getCurrentAngle();
+            var currentAngle = pm.getCurrentAngle();
 
             circlePosition = new Vector3(Mathf.Sin(currentAngle), 0, Mathf.Cos(currentAngle)) * 40;
         }

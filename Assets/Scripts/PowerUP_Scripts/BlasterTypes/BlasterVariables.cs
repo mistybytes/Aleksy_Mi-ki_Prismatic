@@ -144,10 +144,10 @@ public class BlasterVariables : MonoBehaviour
     }
     public void UpgradeBlaster1Variables(float s, float ss, int l, int dmg)
     {
-        blaster1PlayerSpeed += s;
-        blaster1ShotSpeed -= ss;
-        blaster1PlayerLives += l;
-        blaster1Damage += dmg;
+        blaster1PlayerSpeed = s;
+        blaster1ShotSpeed = ss;
+        blaster1PlayerLives = l;
+        blaster1Damage = dmg;
         
         PlayerPrefs.SetFloat("blaster1PlayerSpeed", blaster1PlayerSpeed);
         PlayerPrefs.SetFloat("blaster1ShotSpeed",blaster1ShotSpeed);
@@ -159,10 +159,10 @@ public class BlasterVariables : MonoBehaviour
 
     public void UpgradeBlaster2Variables(float s, float ss, int l, int dmg)
     {
-        blaster2PlayerSpeed += s;
-        blaster2ShotSpeed -= ss;
-        blaster2PlayerLives += l;
-        blaster2Damage += dmg;
+        blaster2PlayerSpeed = s;
+        blaster2ShotSpeed = ss;
+        blaster2PlayerLives = l;
+        blaster2Damage = dmg;
         
         PlayerPrefs.SetFloat("blaster1PlayerSpeed", blaster1PlayerSpeed);
         PlayerPrefs.SetFloat("blaster1ShotSpeed",blaster1ShotSpeed);
@@ -171,10 +171,10 @@ public class BlasterVariables : MonoBehaviour
     }
     public void UpgradeBlaster3Variables(float s, float ss, int l, int dmg)
     {
-        blaster3PlayerSpeed += s;
-        blaster3ShotSpeed -= ss;
-        blaster3PlayerLives += l;
-        blaster3Damage += dmg;
+        blaster3PlayerSpeed = s;
+        blaster3ShotSpeed = ss;
+        blaster3PlayerLives = l;
+        blaster3Damage = dmg;
         
         PlayerPrefs.SetFloat("blaster1PlayerSpeed", blaster1PlayerSpeed);
         PlayerPrefs.SetFloat("blaster1ShotSpeed",blaster1ShotSpeed);
@@ -183,10 +183,10 @@ public class BlasterVariables : MonoBehaviour
     }
     public void UpgradeBlaster4Variables(float s, float ss, int l, int dmg)
     {
-        blaster4PlayerSpeed += s;
-        blaster4ShotSpeed -= ss;
-        blaster4PlayerLives += l;
-        blaster4Damage += dmg;
+        blaster4PlayerSpeed = s;
+        blaster4ShotSpeed = ss;
+        blaster4PlayerLives = l;
+        blaster4Damage = dmg;
         
         PlayerPrefs.SetFloat("blaster1PlayerSpeed", blaster1PlayerSpeed);
         PlayerPrefs.SetFloat("blaster1ShotSpeed",blaster1ShotSpeed);
@@ -195,10 +195,10 @@ public class BlasterVariables : MonoBehaviour
     }
     public void UpgradeBlaster5Variables(float s, float ss, int l, int dmg)
     {
-        blaster5PlayerSpeed += s;
-        blaster5ShotSpeed -= ss;
-        blaster5PlayerLives += l;
-        blaster5Damage += dmg;
+        blaster5PlayerSpeed = s;
+        blaster5ShotSpeed = ss;
+        blaster5PlayerLives = l;
+        blaster5Damage = dmg;
         
         PlayerPrefs.SetFloat("blaster1PlayerSpeed", blaster1PlayerSpeed);
         PlayerPrefs.SetFloat("blaster1ShotSpeed",blaster1ShotSpeed);
@@ -207,10 +207,10 @@ public class BlasterVariables : MonoBehaviour
     }
     public void UpgradeBlaster6Variables(float s, float ss, int l, int dmg)
     {
-        blaster6PlayerSpeed += s;
-        blaster6ShotSpeed -= ss;
-        blaster6PlayerLives += l;
-        blaster6Damage += dmg;
+        blaster6PlayerSpeed = s;
+        blaster6ShotSpeed = ss;
+        blaster6PlayerLives = l;
+        blaster6Damage = dmg;
         
         PlayerPrefs.SetFloat("blaster1PlayerSpeed", blaster1PlayerSpeed);
         PlayerPrefs.SetFloat("blaster1ShotSpeed",blaster1ShotSpeed);
@@ -219,10 +219,10 @@ public class BlasterVariables : MonoBehaviour
     }
     public void UpgradeBlaster7Variables(float s, float ss, int l, int dmg)
     {
-        blaster7PlayerSpeed += s;
-        blaster7ShotSpeed -= ss;
-        blaster7PlayerLives += l;
-        blaster7Damage += dmg;
+        blaster7PlayerSpeed = s;
+        blaster7ShotSpeed = ss;
+        blaster7PlayerLives = l;
+        blaster7Damage = dmg;
         
         PlayerPrefs.SetFloat("blaster1PlayerSpeed", blaster1PlayerSpeed);
         PlayerPrefs.SetFloat("blaster1ShotSpeed",blaster1ShotSpeed);
