@@ -14,8 +14,8 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         skin = GameManager.instance.playerSkin;
-        
-        playerSpeed = GameManager.instance.getSpeed();
+
+        playerSpeed = GameManager.instance.speed;
         
         StartCoroutine(MyTimer.CountUpTo1Minute());
     }

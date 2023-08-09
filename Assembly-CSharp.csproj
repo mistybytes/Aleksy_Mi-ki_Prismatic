@@ -175,7 +175,6 @@
      <Folder Include="Assets\Scripts\UI_Scripts\Daily rewards" />
      <Folder Include="Assets\Prefabs\TextPrefs" />
      <Folder Include="Assets\Sprites\Assets" />
-     <Folder Include="Assets\Scripts\Integration" />
      <Folder Include="Assets\Prefabs\CoinPrefabs" />
      <Folder Include="Assets\Adaptive Performance\Provider" />
      <Folder Include="Assets\Scripts\UI_Scripts\TextScripts\BlasterPrices" />

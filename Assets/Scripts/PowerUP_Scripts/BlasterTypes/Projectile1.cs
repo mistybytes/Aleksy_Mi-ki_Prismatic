@@ -24,6 +24,8 @@ public class Projectile1 : MonoBehaviour
                 {
                     Destroy(gameObject);
                     Destroy(collision.gameObject);
+                    GameManager.instance.EnemyKilled();
+
                 }
                 else
                 {

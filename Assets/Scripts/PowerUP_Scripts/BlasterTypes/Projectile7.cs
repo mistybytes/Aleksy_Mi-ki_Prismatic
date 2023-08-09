@@ -12,7 +12,9 @@ public class Projectile7 : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         if (!collision.gameObject.CompareTag("Player"))
+        {
             Destroy(collision.gameObject);
+        }
     }
     
 }

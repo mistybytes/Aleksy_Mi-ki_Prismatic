@@ -20,6 +20,8 @@ public class Projectile3 : MonoBehaviour
                 {
                     Destroy(gameObject);
                     Destroy(collision.gameObject);
+                    GameManager.instance.EnemyKilled();
+
                 }
                 else
                 {

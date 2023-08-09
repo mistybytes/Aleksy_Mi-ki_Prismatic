@@ -11,7 +11,7 @@ public class CoinTextScript : MonoBehaviour
     private void Start()
     {
         textComponent = GetComponent<Text>();
-        textComponent.text = "Coins collected: " + GameManager.instance.getCollectedCoins();
+        textComponent.text = "Coins collected: " + GameManager.instance.collectedCoins;
 
     }
 

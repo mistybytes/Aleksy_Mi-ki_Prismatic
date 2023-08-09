@@ -16,7 +16,7 @@ public class PowerUp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.instance.AddLives();
+            GameManager.instance.lives++;
             //TODO add this to other power ups
             Destroy(gameObject);
         }

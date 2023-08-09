@@ -17,7 +17,7 @@ public class CoinScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.instance.coinPickedUp();
+            GameManager.instance.collectedCoins += 6;
             Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("Cube"))

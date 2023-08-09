@@ -18,9 +18,9 @@ public class GameManager : MonoBehaviour
     
     
     private int coins;
-    private int collectedCoins;
+    public int collectedCoins;
     private int specialCurrency;
-    private int enemy_health;
+    public int enemyHealth;
     
     public int lives = 1;
     public float shotSpeed = 4f;
@@ -160,43 +160,15 @@ public class GameManager : MonoBehaviour
         currentLevel = PlayerPrefs.GetInt("currentlyUnlocked", 40);
 
     }
-    
-    //speed variables
-    public void setShotSpeed(float s)
-    {
-        
-        shotSpeed = s;
-    }
-    public void setSpeed(float s)
-    {
-        
-        speed = s;
-    }
 
-    public float getShotSpeed()
-    {
-        Debug.Log(shotSpeed);
-        return shotSpeed;
-    }
-    public float getSpeed()
-    {
-        Debug.Log(speed);
-        return speed;
-    }
-    //blaster methods
     public void setBlasterType(GameObject blaster)
     {
         selectedBlaster = blaster;
     }
-
+    
     public void EnemyKilled()
     {
         collectedCoins += 3;
-    }
-    //methods for coins
-    public void coinPickedUp()
-    {
-        collectedCoins += 6;
     }
     public int getCollectedCoins()
     {
@@ -211,39 +183,9 @@ public class GameManager : MonoBehaviour
         coins = i;
     }
     
-    public int getLives()
-    {
-        return lives;
-    }
-    public void AddLives()
-    {
-        lives++;
-    }
-    
-    public void SubLives()
-    {
-        lives--;
-    }
-
-    public void setLives(int l)
-    {
-        lives = l;
-    }
-    //player bullet methods
-    public float getEnemyShotSpeed()
-    {
-        return shotSpeed;
-    }
-    
-    //enemy script
-    public int getEnemyHealth()
-    {
-        return enemy_health;
-    }
-
     public void setEnemyHealth(int health)
     {
-        enemy_health = health;
+        enemyHealth = health;
     }
     public void levelEnded()
     {
@@ -254,14 +196,24 @@ public class GameManager : MonoBehaviour
     {
         currentLevel = l;
     }
-    
+
+    public void LevelStart()
+    {
+        //TODO add the setting up of the blaster variables here according to the selected blaster
+    }
     void Update()
     {
-        if (lives <= 0)
+        switch (lives)
         {
-            lives = 1;
-            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
-            SceneManager.LoadScene("GameOver");
+            case 0:
+                lives = 1;
+                SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+                SceneManager.LoadScene("GameOver");
+                break;
+            default:
+                break;
+            
         }
+    
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class enemyBullet : MonoBehaviour
 {
-    private float speed = 3f;
+    private float speed = 2f;
     private Vector3 target = Vector3.zero;
 
     void Update()
@@ -34,7 +34,7 @@ public class enemyBullet : MonoBehaviour
         else if (other.gameObject.CompareTag("Cube"))
         {
             Destroy(gameObject);
-            GameManager.instance.SubLives();
+            GameManager.instance.lives -= 1;
         }
     }
 }

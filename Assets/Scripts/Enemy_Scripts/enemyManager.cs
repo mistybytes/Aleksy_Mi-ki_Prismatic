@@ -13,15 +13,11 @@ public class enemyManager : MonoBehaviour
     private void Start()
     {
         Destroy(gameObject,45);
-        speed = GameManager.instance.getSpeed();
-        enemyHealth = GameManager.instance.getEnemyHealth();
+        speed = GameManager.instance.gameSpeed;
+        enemyHealth = GameManager.instance.enemyHealth;
+        
     }
-
-    public void OnDestroy()
-    {
-        GameManager.instance.EnemyKilled();
-    }
-
+    
     public float getSpeed()
     {
         return speed;
@@ -43,7 +39,7 @@ public class enemyManager : MonoBehaviour
                 break;
             case "Cube":
                 Destroy(gameObject);
-                GameManager.instance.SubLives();
+                GameManager.instance.lives -= 1;
                 break;
             default:
                 break;

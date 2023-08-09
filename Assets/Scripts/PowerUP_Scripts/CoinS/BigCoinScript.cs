@@ -18,7 +18,7 @@ public class BigCoinScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.instance.coinPickedUp();
+            GameManager.instance.collectedCoins += 9;
             Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("Cube"))

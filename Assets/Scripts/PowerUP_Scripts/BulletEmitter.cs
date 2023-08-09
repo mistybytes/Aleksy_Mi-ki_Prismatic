@@ -18,8 +18,8 @@ public class BulletEmitter : MonoBehaviour
         {
             
             case "Player":
-                bulletPrefab = GameManager.instance.selectedBlaster; 
-                fireInterval = GameManager.instance.getShotSpeed();
+                bulletPrefab = GameManager.instance.selectedBlaster;
+                fireInterval = GameManager.instance.shotSpeed;
                 break;
             
             case "Enemy2":

@@ -60,35 +60,35 @@ public class BlasterVariables : MonoBehaviour
         blaster1PlayerLives = PlayerPrefs.GetInt("blaster1PlayerLives", 1);
         blaster1PlayerSpeed = PlayerPrefs.GetFloat("blaster1PlayerSpeed", 4);
         
-        blaster2Damage = PlayerPrefs.GetInt("blaster1Damage", 10);
-        blaster2ShotSpeed = PlayerPrefs.GetFloat("blaster1ShotSpeed", 4);
-        blaster2PlayerLives = PlayerPrefs.GetInt("blaster1PlayerLives", 1);
-        blaster2PlayerSpeed = PlayerPrefs.GetFloat("blaster1PlayerSpeed", 4);
+        blaster2Damage = PlayerPrefs.GetInt("blaster2Damage", 10);
+        blaster2ShotSpeed = PlayerPrefs.GetFloat("blaster2ShotSpeed", 4);
+        blaster2PlayerLives = PlayerPrefs.GetInt("blaster2PlayerLives", 1);
+        blaster2PlayerSpeed = PlayerPrefs.GetFloat("blaster2PlayerSpeed", 4);
         
-        blaster3Damage = PlayerPrefs.GetInt("blaster1Damage", 10);
-        blaster3ShotSpeed = PlayerPrefs.GetFloat("blaster1ShotSpeed", 4);
-        blaster3PlayerLives = PlayerPrefs.GetInt("blaster1PlayerLives", 1);
-        blaster3PlayerSpeed = PlayerPrefs.GetFloat("blaster1PlayerSpeed", 4);
+        blaster3Damage = PlayerPrefs.GetInt("blaster3Damage", 10);
+        blaster3ShotSpeed = PlayerPrefs.GetFloat("blaster3ShotSpeed", 4);
+        blaster3PlayerLives = PlayerPrefs.GetInt("blaster3PlayerLives", 1);
+        blaster3PlayerSpeed = PlayerPrefs.GetFloat("blaster3PlayerSpeed", 4);
         
-        blaster4Damage = PlayerPrefs.GetInt("blaster1Damage", 10);
-        blaster4ShotSpeed = PlayerPrefs.GetFloat("blaster1ShotSpeed", 4);
-        blaster4PlayerLives = PlayerPrefs.GetInt("blaster1PlayerLives", 1);
-        blaster4PlayerSpeed = PlayerPrefs.GetFloat("blaster1PlayerSpeed", 4);
+        blaster4Damage = PlayerPrefs.GetInt("blaster4Damage", 10);
+        blaster4ShotSpeed = PlayerPrefs.GetFloat("blaster4ShotSpeed", 4);
+        blaster4PlayerLives = PlayerPrefs.GetInt("blaster4PlayerLives", 1);
+        blaster4PlayerSpeed = PlayerPrefs.GetFloat("blaster4PlayerSpeed", 4);
         
-        blaster5Damage = PlayerPrefs.GetInt("blaster1Damage", 10);
-        blaster5ShotSpeed = PlayerPrefs.GetFloat("blaster1ShotSpeed", 4);
-        blaster5PlayerLives = PlayerPrefs.GetInt("blaster1PlayerLives", 1);
-        blaster5PlayerSpeed = PlayerPrefs.GetFloat("blaster1PlayerSpeed", 4);
+        blaster5Damage = PlayerPrefs.GetInt("blaster5Damage", 10);
+        blaster5ShotSpeed = PlayerPrefs.GetFloat("blaster5ShotSpeed", 4);
+        blaster5PlayerLives = PlayerPrefs.GetInt("blaster5PlayerLives", 1);
+        blaster5PlayerSpeed = PlayerPrefs.GetFloat("blaster5PlayerSpeed", 4);
         
-        blaster6Damage = PlayerPrefs.GetInt("blaster1Damage", 10);
-        blaster6ShotSpeed = PlayerPrefs.GetFloat("blaster1ShotSpeed", 4);
-        blaster6PlayerLives = PlayerPrefs.GetInt("blaster1PlayerLives", 1);
-        blaster6PlayerSpeed = PlayerPrefs.GetFloat("blaster1PlayerSpeed", 4);
+        blaster6Damage = PlayerPrefs.GetInt("blaster6Damage", 10);
+        blaster6ShotSpeed = PlayerPrefs.GetFloat("blaster6ShotSpeed", 4);
+        blaster6PlayerLives = PlayerPrefs.GetInt("blaster6PlayerLives", 1);
+        blaster6PlayerSpeed = PlayerPrefs.GetFloat("blaster6PlayerSpeed", 4);
         
-        blaster7Damage = PlayerPrefs.GetInt("blaster1Damage", 10);
-        blaster7ShotSpeed = PlayerPrefs.GetFloat("blaster1ShotSpeed", 4);
-        blaster7PlayerLives = PlayerPrefs.GetInt("blaster1PlayerLives", 1);
-        blaster7PlayerSpeed = PlayerPrefs.GetFloat("blaster1PlayerSpeed", 4);
+        blaster7Damage = PlayerPrefs.GetInt("blaster7Damage", 10);
+        blaster7ShotSpeed = PlayerPrefs.GetFloat("blaster7ShotSpeed", 4);
+        blaster7PlayerLives = PlayerPrefs.GetInt("blaster7PlayerLives", 1);
+        blaster7PlayerSpeed = PlayerPrefs.GetFloat("blaster7PlayerSpeed", 4);
         
     }
 
