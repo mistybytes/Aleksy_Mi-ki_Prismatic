@@ -58,7 +58,7 @@ public class BlasterVariables : MonoBehaviour
         blaster1Damage = PlayerPrefs.GetInt("blaster1Damage", 10);
         blaster1ShotSpeed = PlayerPrefs.GetFloat("blaster1ShotSpeed", 4);
         blaster1PlayerLives = PlayerPrefs.GetInt("blaster1PlayerLives", 1);
-        blaster1PlayerSpeed = PlayerPrefs.GetFloat("blaster1PlayerSpeed", 4);
+        blaster1PlayerSpeed = PlayerPrefs.GetFloat("blaster1PlayerSpeed", 2);
         
         blaster2Damage = PlayerPrefs.GetInt("blaster2Damage", 10);
         blaster2ShotSpeed = PlayerPrefs.GetFloat("blaster2ShotSpeed", 4);

@@ -42,6 +42,8 @@ public class Projectile1 : MonoBehaviour
                 else
                 {
                     collision.gameObject.GetComponent<BossManager>().subHealth(_bulletDamage);
+                    collision.gameObject.GetComponent<BossMovement>().BossHit();
+                    
                     Destroy(gameObject);
                 }
                 break;

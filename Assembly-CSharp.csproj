@@ -130,6 +130,7 @@
      <Folder Include="Assets\Scripts\UI_Scripts\TextScripts\BlasterUnlocks" />
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\Scenes\Type1Levels" />
+     <Folder Include="Assets\Sprites\Assets\source" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <Folder Include="Assets\Scripts\Controllers" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
@@ -173,6 +174,7 @@
      <Folder Include="Assets\Prefabs\Graphics" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\Scripts\UI_Scripts\Daily rewards" />
+     <Folder Include="Assets\Sprites\Assets\textures" />
      <Folder Include="Assets\Prefabs\TextPrefs" />
      <Folder Include="Assets\Sprites\Assets" />
      <Folder Include="Assets\Prefabs\CoinPrefabs" />

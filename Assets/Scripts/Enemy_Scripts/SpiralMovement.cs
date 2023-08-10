@@ -16,9 +16,7 @@ public class SpiralMovement : MonoBehaviour
     
     void LateUpdate()
     {
-        if (!freeze)
-        {
-            Vector3 directionToTarget = (target - transform.position).normalized;
+        Vector3 directionToTarget = (target - transform.position).normalized;
 
             float downwardMovement = Mathf.Max((transform.position.y - minHeight) * Time.deltaTime, 0);
             transform.position = new Vector3(transform.position.x, transform.position.y - downwardMovement,
@@ -33,7 +31,7 @@ public class SpiralMovement : MonoBehaviour
             Vector3 newPosition = new Vector3(newX, transform.position.y, newZ);
             
             transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
-        }
+        
     }
   
     

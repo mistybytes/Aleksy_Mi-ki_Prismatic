@@ -20,10 +20,7 @@ public class EnemyMovement : MonoBehaviour
     
     void Update()
     {
-        if(freeze == false)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        }
+        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
         
     }
 

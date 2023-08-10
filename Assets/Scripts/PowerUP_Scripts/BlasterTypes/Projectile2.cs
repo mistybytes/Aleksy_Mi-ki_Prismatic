@@ -7,7 +7,7 @@ public class Projectile2 : MonoBehaviour
 {
     public float fireDamagePerSecond = 10f;
     public float fireDuration = 3f;
-    private int bulletDamage = 5;
+    private int _bulletDamage = 5;
     private int delay = 10;
     private void Start()
     {
@@ -21,7 +21,7 @@ public class Projectile2 : MonoBehaviour
         switch (tag)
         {
             case "Enemy":
-                if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)
+                if (collision.gameObject.GetComponent<enemyManager>().getHealth() - _bulletDamage <= 0)
                 { 
                     Destroy(gameObject);
                     Destroy(collision.gameObject);
@@ -31,13 +31,26 @@ public class Projectile2 : MonoBehaviour
                 else 
                 { 
                     Destroy(gameObject); 
-                    collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage); 
+                    collision.gameObject.GetComponent<enemyManager>().subHealth(_bulletDamage); 
                     StartCoroutine(ApplyFireDamage(collision.gameObject.GetComponent<enemyManager>().getHealth()));
                 }
                 break;
             case "Boss":
+                if (collision.gameObject.GetComponent<BossManager>().getHealth() - _bulletDamage <= 0)
+                {
+                    Destroy(gameObject);
+                    Destroy(collision.gameObject);
+                }
+                else
+                {
+                    collision.gameObject.GetComponent<BossManager>().subHealth(_bulletDamage);
+                    collision.gameObject.GetComponent<BossMovement>().BossHit();
+                    
+                    Destroy(gameObject);
+                }
+
                 break;
-            
+
         }
     
     }

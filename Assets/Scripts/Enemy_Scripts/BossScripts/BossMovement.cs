@@ -16,6 +16,10 @@ public class BossMovement : MonoBehaviour
 
         transform.position = new Vector3(x, 0, y);
     }
-    
+
+    public void BossHit()
+    {
+        speed += 0.1f;
+    }
     
 }

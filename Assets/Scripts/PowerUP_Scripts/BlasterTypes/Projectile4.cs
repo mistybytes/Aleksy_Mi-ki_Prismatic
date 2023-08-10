@@ -13,6 +13,10 @@ public class Projectile4: MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
+        var objectTag = collision.gameObject.tag;
+        
+        //TODO add a switch case here
+        
         if (collision.CompareTag("Enemy"))
         {
             if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)

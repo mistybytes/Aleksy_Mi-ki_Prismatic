@@ -14,6 +14,7 @@ public class Projectile3 : MonoBehaviour
     {
         tag = collision.gameObject.tag;
         switch (tag)
+        
         {
             case "Enemy":
                 if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)
@@ -27,7 +28,7 @@ public class Projectile3 : MonoBehaviour
                 {
                     collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
                     Destroy(gameObject);
-                    collision.gameObject.GetComponent<EnemyMovement>().freeze = true;
+                    //TODO make this instanciate an enemy that simply is not moving
                 }
                 break;
             
@@ -54,10 +55,10 @@ public class Projectile3 : MonoBehaviour
                 else
                 {
                     collision.gameObject.GetComponent<BossManager>().subHealth(bulletDamage);
+                    collision.gameObject.GetComponent<BossMovement>().BossHit();
+
                     Destroy(gameObject);
                 }
-                break;
-            default:
                 break;
         }
    

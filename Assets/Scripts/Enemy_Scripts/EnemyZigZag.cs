@@ -44,6 +44,10 @@ public class EnemyZigZag : MonoBehaviour
 
     void SetNextTargetPosition()
     {
+        
+        //TODO make this much better, he can move in a zig zag
+        //TODO increase enemy spawn rate also
+        
         if (movingRight)
         {
             targetPosition = initialPosition + new Vector3(zigzagWidth, 0f, zigzagWidth);
@@ -53,11 +57,8 @@ public class EnemyZigZag : MonoBehaviour
             targetPosition = initialPosition - new Vector3(zigzagWidth, 0f, zigzagWidth);
         }
 
-        movingRight = !movingRight;
-
-
-        if (freeze == false)
-        {
+       
+        
             Vector3 direction = target - transform.position;
 
             float distanceToTarget = Vector3.Distance(transform.position, target);
@@ -67,6 +68,6 @@ public class EnemyZigZag : MonoBehaviour
                 direction.Normalize();
                 transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
             }
-        }
+        
     }
 }
