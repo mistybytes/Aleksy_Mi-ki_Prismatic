@@ -16,27 +16,40 @@ public class Projectile4: MonoBehaviour
         var objectTag = collision.gameObject.tag;
         
         //TODO add a switch case here
-        
+        switch (objectTag)
+        {
+            case "Enemy":
+                if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)
+                {
+                    Destroy(gameObject);
+                    Destroy(collision.gameObject);
+                    GameManager.instance.EnemyKilled();
+
+                }
+                else
+                {
+                    float randomFloat = Random.value;
+                
+                    if (randomFloat < transformChance)
+                    {
+                        Instantiate(newObjectPrefab, collision.transform.position, Quaternion.identity);
+                        Destroy(collision.gameObject);
+                    }
+                    Destroy(gameObject);
+                }
+                break;
+            
+            case "Boss":
+                collision.gameObject.GetComponent<BossManager>().BossHit();
+                collision.gameObject.GetComponent<BossMovement>().BossHit();
+                
+                Destroy(gameObject);          
+
+                break;
+        }
         if (collision.CompareTag("Enemy"))
         {
-            if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)
-            {
-                Destroy(gameObject);
-                Destroy(collision.gameObject);
-                GameManager.instance.EnemyKilled();
-
-            }
-            else
-            {
-                float randomFloat = Random.value;
-                
-                if (randomFloat < transformChance)
-                {
-                    Instantiate(newObjectPrefab, collision.transform.position, Quaternion.identity);
-                    Destroy(collision.gameObject);
-                }
-                Destroy(gameObject);
-            }
+          
         }
     }
     

@@ -1,24 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossManager : MonoBehaviour
 {
-    private int bossHealth;
-    // Start is called before the first frame update
-    private void Start()
+    private int bossTimesHit = 0;
+    private Vector3 position;
+    public GameObject coinSpawner;
+    public void BossHit()
     {
-        bossHealth = 100;
+        bossTimesHit++;
+        if (bossTimesHit == 7)
+        { 
+            Destroy(gameObject);
+            
+        }
     }
     
- 
-    public int getHealth()
-    {
-        return bossHealth;
-    }
-    public void subHealth(int damage)
-    {
-        bossHealth -= damage;
-    }
  
 }

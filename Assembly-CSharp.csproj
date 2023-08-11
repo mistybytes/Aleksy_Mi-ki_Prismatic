@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\MMCoinsScript.cs" />
+     <Compile Include="Assets\Scripts\Enemy_Scripts\LightScript.cs" />
      <Compile Include="Assets\Scripts\UI_Scripts\LevelCompletionManager.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\CoinS\BigCoinScript.cs" />
      <Compile Include="Assets\Scripts\Controllers\GameOverCon.cs" />
@@ -112,7 +113,6 @@
      <Compile Include="Assets\Scripts\Enemy_Scripts\enemyBullet.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\Projectile5.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\CameraMovement.cs" />
-     <Compile Include="Assets\Scripts\Enemy_Scripts\LightScript.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

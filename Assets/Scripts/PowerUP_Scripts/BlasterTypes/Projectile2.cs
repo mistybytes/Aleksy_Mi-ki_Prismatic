@@ -36,19 +36,11 @@ public class Projectile2 : MonoBehaviour
                 }
                 break;
             case "Boss":
-                if (collision.gameObject.GetComponent<BossManager>().getHealth() - _bulletDamage <= 0)
-                {
-                    Destroy(gameObject);
-                    Destroy(collision.gameObject);
-                }
-                else
-                {
-                    collision.gameObject.GetComponent<BossManager>().subHealth(_bulletDamage);
-                    collision.gameObject.GetComponent<BossMovement>().BossHit();
-                    
-                    Destroy(gameObject);
-                }
-
+                collision.gameObject.GetComponent<BossManager>().BossHit();
+                collision.gameObject.GetComponent<BossMovement>().BossHit();
+                
+                Destroy(gameObject);
+                
                 break;
 
         }

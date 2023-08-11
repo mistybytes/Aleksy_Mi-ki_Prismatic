@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile3 : MonoBehaviour
 { 
-    private int bulletDamage = 5;
+    private int _bulletDamage;
     public int delay = 10;
     private void Start()
     {
@@ -13,10 +13,11 @@ public class Projectile3 : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         tag = collision.gameObject.tag;
+        
         switch (tag)
         {
             case "Enemy":
-                if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)
+                if (collision.gameObject.GetComponent<enemyManager>().getHealth() - _bulletDamage <= 0)
                 {
                     Destroy(gameObject);
                     Destroy(collision.gameObject);
@@ -25,38 +26,18 @@ public class Projectile3 : MonoBehaviour
                 }
                 else
                 {
-                    collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
+                    collision.gameObject.GetComponent<enemyManager>().subHealth(_bulletDamage);
                     Destroy(gameObject);
                     //TODO make this instanciate an enemy that simply is not moving
                 }
                 break;
-            
-            case "Enemy2":
-                if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)
-                {
-                    Destroy(gameObject);
-                    Destroy(collision.gameObject);
-                }
-                else
-                {
-                    collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
-                    Destroy(gameObject);
-                }
-                break;
-            
-            case "Boss":
-                if (collision.gameObject.GetComponent<BossManager>().getHealth() - bulletDamage <= 0)
-                {
-                    Destroy(gameObject);
-                    Destroy(collision.gameObject);
-                }
-                else
-                {
-                    collision.gameObject.GetComponent<BossManager>().subHealth(bulletDamage);
-                    collision.gameObject.GetComponent<BossMovement>().BossHit();
 
-                    Destroy(gameObject);
-                }
+            case "Boss":
+                collision.gameObject.GetComponent<BossManager>().BossHit();
+                collision.gameObject.GetComponent<BossMovement>().BossHit();
+                
+                Destroy(gameObject);          
+            
                 break;
         }
    
