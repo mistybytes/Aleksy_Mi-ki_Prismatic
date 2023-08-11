@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
         skin = GameManager.instance.playerSkin;
 
         playerSpeed = GameManager.instance.speed;
-        Debug.Log(playerSpeed);
         StartCoroutine(MyTimer.CountUpTo1Minute());
     }
     void Update()

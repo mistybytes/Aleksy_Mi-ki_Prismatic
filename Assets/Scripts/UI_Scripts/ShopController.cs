@@ -184,8 +184,6 @@ public class ShopController : MonoBehaviour
         {
             GameManager.instance.setBlasterType(GameManager.instance.blasterList[3]);
             BlasterVariables.instance.SetBlaster4Variables();
-
-
         }
     }
 
@@ -194,7 +192,7 @@ public class ShopController : MonoBehaviour
         if (GameManager.instance.transformationBlaster == null && GameManager.instance.getCoins() >= GameManager.instance.transformationBlasterCost)
         {
             GameManager.instance.transformationBlaster = GameManager.instance.blasterList[3];
-            GameManager.instance.getCoins() -= GameManager.instance.plasmaBlasterCost;
+            GameManager.instance.getCoins() -= GameManager.instance.transformationBlasterCost;
         }
         else if (GameManager.instance.getCoins() >= GameManager.instance.transformationBlasterCost && GameManager.instance.transformationBlasterTimesUp < 7)
         {

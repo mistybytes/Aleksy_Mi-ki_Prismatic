@@ -9,8 +9,6 @@ public class EnemyMovement : MonoBehaviour
 {
     
     private Vector3 target = Vector3.zero;
-
-    public bool freeze;
     private float speed;
 
     private void Start()
@@ -21,7 +19,6 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        
     }
 
 

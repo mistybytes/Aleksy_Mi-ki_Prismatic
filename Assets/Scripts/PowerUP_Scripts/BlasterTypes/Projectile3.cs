@@ -14,7 +14,6 @@ public class Projectile3 : MonoBehaviour
     {
         tag = collision.gameObject.tag;
         switch (tag)
-        
         {
             case "Enemy":
                 if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)
@@ -42,7 +41,6 @@ public class Projectile3 : MonoBehaviour
                 {
                     collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
                     Destroy(gameObject);
-                    collision.gameObject.GetComponent<EnemyMovement>().freeze = true;
                 }
                 break;
             

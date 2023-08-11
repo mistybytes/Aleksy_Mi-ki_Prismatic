@@ -381,6 +381,7 @@
 "Assets/Scripts/Enemy_Scripts/enemyManager.cs"
 "Assets/Scripts/Enemy_Scripts/EnemyMovement.cs"
 "Assets/Scripts/Enemy_Scripts/EnemyZigZag.cs"
+"Assets/Scripts/Enemy_Scripts/LightScript.cs"
 "Assets/Scripts/Enemy_Scripts/RandomStart.cs"
 "Assets/Scripts/Enemy_Scripts/SpawnerScript.cs"
 "Assets/Scripts/Enemy_Scripts/SpiralMovement.cs"

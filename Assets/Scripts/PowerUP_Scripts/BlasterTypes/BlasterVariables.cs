@@ -127,6 +127,8 @@ public class BlasterVariables : MonoBehaviour
         GameManager.instance.shotSpeed = blaster5ShotSpeed;
         GameManager.instance.lives = blaster5PlayerLives;
         GameManager.instance.bulletDamage = blaster5Damage;
+        
+        Debug.Log(blaster5PlayerSpeed);
     }
     public void SetBlaster6Variables()
     {

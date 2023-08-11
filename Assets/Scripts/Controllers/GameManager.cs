@@ -214,6 +214,7 @@ public class GameManager : MonoBehaviour
                 BlasterVariables.instance.SetBlaster4Variables();
                 break;
             case "BLASTER5 (UnityEngine.GameObject)":
+                Debug.Log("i am called");
                 BlasterVariables.instance.SetBlaster5Variables();
                 break;
             case "BLASTER6 (UnityEngine.GameObject)":
