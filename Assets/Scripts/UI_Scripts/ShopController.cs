@@ -23,7 +23,7 @@ public class ShopController : MonoBehaviour
             switch (GameManager.instance.classicalBlasterTimesUp)
                 {
                     case 1:
-                        BlasterVariables.instance.UpgradeBlaster1Variables(2f,3.5f,1,20);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(2f,3f,1,20);
                         break;
                     
                     case 2:
@@ -31,19 +31,19 @@ public class ShopController : MonoBehaviour
                         break;
                     
                     case 3:
-                        BlasterVariables.instance.UpgradeBlaster1Variables(3f,3f,2,40);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(3f,2.5f,2,40);
                         break;
                     
                     case 4:
-                        BlasterVariables.instance.UpgradeBlaster1Variables(3.5f,2.6f,2,50);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(3.5f,2.5f,2,50);
                         break;
                     
                     case 5:
-                        BlasterVariables.instance.UpgradeBlaster1Variables(4f,2.5f,3,60);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(4f,2.2f,3,60);
                         break;
                     
                     case 6:
-                        BlasterVariables.instance.UpgradeBlaster1Variables(4.5f,2.3f,3,70);
+                        BlasterVariables.instance.UpgradeBlaster1Variables(4.5f,2.2f,3,70);
                         break;
                     
                     case 7:
@@ -89,23 +89,23 @@ public class ShopController : MonoBehaviour
             switch (GameManager.instance.plasmaBlasterTimesUp) 
             {
                 case 1:
-                    BlasterVariables.instance.UpgradeBlaster2Variables(3f,3.5f,1,90);
+                    BlasterVariables.instance.UpgradeBlaster2Variables(3f,3f,1,90);
                     break;
                     
                 case 2:
-                    BlasterVariables.instance.UpgradeBlaster2Variables(3.5f,3.5f,1,100);
+                    BlasterVariables.instance.UpgradeBlaster2Variables(3.5f,3f,1,100);
                     break;
                     
                 case 3:
-                    BlasterVariables.instance.UpgradeBlaster2Variables(4f,3.5f,2,110);
+                    BlasterVariables.instance.UpgradeBlaster2Variables(4f,3f,2,110);
                     break;
                     
                 case 4:
-                    BlasterVariables.instance.UpgradeBlaster2Variables(4f,3f,2,120);
+                    BlasterVariables.instance.UpgradeBlaster2Variables(4f,2.5f,2,120);
                     break;
                     
                 case 5:
-                    BlasterVariables.instance.UpgradeBlaster2Variables(4.5f,3f,2,130);
+                    BlasterVariables.instance.UpgradeBlaster2Variables(4.5f,2.5f,2,130);
                     break;
                     
                 case 6:
@@ -155,7 +155,7 @@ public class ShopController : MonoBehaviour
                     break;
                     
                 case 3:
-                    BlasterVariables.instance.UpgradeBlaster3Variables(3f,2.2f,2,180);
+                    BlasterVariables.instance.UpgradeBlaster3Variables(3f,2.5f,2,180);
                     break;
                     
                 case 4:
@@ -171,7 +171,7 @@ public class ShopController : MonoBehaviour
                     break;
                     
                 case 7:
-                    BlasterVariables.instance.UpgradeBlaster3Variables(4.5f,2f,3,220);
+                    BlasterVariables.instance.UpgradeBlaster3Variables(4.5f,1.5f,3,220);
                     break;
                 
             }
@@ -288,7 +288,7 @@ public class ShopController : MonoBehaviour
                     break;
                     
                 case 7:
-                    BlasterVariables.instance.UpgradeBlaster5Variables(5.5f,0.7f,1,200);
+                    BlasterVariables.instance.UpgradeBlaster5Variables(5.5f,1f,1,200);
                     break;
                 
             }
@@ -326,31 +326,31 @@ public class ShopController : MonoBehaviour
             switch (GameManager.instance.forceBlasterTimesUp) 
             {
                 case 1:
-                    BlasterVariables.instance.UpgradeBlaster6Variables(3f,5f,1,370);
+                    BlasterVariables.instance.UpgradeBlaster6Variables(3f,7f,1,370);
                     break;
                     
                 case 2:
-                    BlasterVariables.instance.UpgradeBlaster6Variables(3f,5f,2,380);
+                    BlasterVariables.instance.UpgradeBlaster6Variables(3f,7f,2,380);
                     break;
                     
                 case 3:
-                    BlasterVariables.instance.UpgradeBlaster6Variables(3f,5f,3,390);
+                    BlasterVariables.instance.UpgradeBlaster6Variables(3f,7f,3,390);
                     break;
                     
                 case 4:
-                    BlasterVariables.instance.UpgradeBlaster6Variables(3f,4.5f,4,400);
+                    BlasterVariables.instance.UpgradeBlaster6Variables(3f,6f,4,400);
                     break;
                     
                 case 5:
-                    BlasterVariables.instance.UpgradeBlaster6Variables(3f,4.5f,5,410);
+                    BlasterVariables.instance.UpgradeBlaster6Variables(3f,6f,5,410);
                     break;
                     
                 case 6:
-                    BlasterVariables.instance.UpgradeBlaster6Variables(3.5f,4f,5,420);
+                    BlasterVariables.instance.UpgradeBlaster6Variables(3.5f,5f,5,420);
                     break;
                     
                 case 7:
-                    BlasterVariables.instance.UpgradeBlaster6Variables(4f,3f,5,430);
+                    BlasterVariables.instance.UpgradeBlaster6Variables(4f,5f,5,430);
                     break;
                 
             }

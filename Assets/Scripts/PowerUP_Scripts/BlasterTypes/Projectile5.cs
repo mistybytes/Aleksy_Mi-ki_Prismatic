@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Projectile5 : MonoBehaviour
 {
-    //TODO while selecting this blaster set the emition rate higher and the bullet damage lower
-    private int bulletDamage = 5;
-    private int delay = 10;
+    private int _bulletDamage;
+
     private void Start()
     {
-        Destroy(gameObject, delay);
+        _bulletDamage = GameManager.instance.bulletDamage;
+        Destroy(gameObject, 10);
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -17,7 +17,7 @@ public class Projectile5 : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Enemy") ) 
         {
-            if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)
+            if (collision.gameObject.GetComponent<enemyManager>().getHealth() - _bulletDamage <= 0)
             {
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
@@ -27,7 +27,7 @@ public class Projectile5 : MonoBehaviour
             else
             {
                 Destroy(gameObject);
-                collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
+                collision.gameObject.GetComponent<enemyManager>().subHealth(_bulletDamage);
             }
         }  
         

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2221273304313274880}
   - component: {fileID: 3883968908007533661}
   - component: {fileID: 8351275451659382038}
+  - component: {fileID: 954249640405002115}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -129,7 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c05e89d186aef4bb19d4bef5dc2854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  freeze: 0
 --- !u!114 &3883968908007533661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +156,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9791ec85105919742a5e4db270bc05d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!123 &954249640405002115
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288011000458620683}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 0.9716981, g: 0, b: 0.8004887, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0

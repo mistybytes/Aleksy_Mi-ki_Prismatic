@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5968973857807479261}
   - component: {fileID: 8713096810804741910}
   - component: {fileID: 241169654826846799}
-  - component: {fileID: 4789220066390001212}
   - component: {fileID: -4211679860555925434}
+  - component: {fileID: 3435011511627986975}
   m_Layer: 0
   m_Name: BLASTER5
   m_TagString: Untagged
@@ -95,7 +95,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3419333910443358370}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -116,18 +116,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4789220066390001212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3419333910443358370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5534f4ce56d4064a84d0d55238b7f9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-4211679860555925434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,5 +126,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 278246bde7e620744ad3ac758d50c470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3435011511627986975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3419333910443358370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5534f4ce56d4064a84d0d55238b7f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

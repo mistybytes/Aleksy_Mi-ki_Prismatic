@@ -2,16 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Projectile2 : MonoBehaviour
 {
-    public float fireDamagePerSecond = 10f;
-    public float fireDuration = 3f;
-    private int _bulletDamage = 5;
-    private int delay = 10;
+    private int _bulletDamage;
+
     private void Start()
     {
-        Destroy(gameObject, delay);
+        _bulletDamage = GameManager.instance.bulletDamage;
+        Destroy(gameObject, 10);
     }
     
     private void OnTriggerEnter(Collider collision)
@@ -26,15 +26,20 @@ public class Projectile2 : MonoBehaviour
                     Destroy(gameObject);
                     Destroy(collision.gameObject);
                     GameManager.instance.EnemyKilled();
-
                 }
-                else 
-                { 
-                    Destroy(gameObject); 
-                    collision.gameObject.GetComponent<enemyManager>().subHealth(_bulletDamage); 
-                    StartCoroutine(ApplyFireDamage(collision.gameObject.GetComponent<enemyManager>().getHealth()));
+                else
+                {
+                    
+                    Destroy(gameObject);
+                    
+                    var otherRb = collision.gameObject.GetComponent<Rigidbody>();
+                    var pushDirection = collision.transform.position - transform.position;
+                    pushDirection.y = 0;
+                    otherRb.AddForce(pushDirection * 7, ForceMode.Force);
+                    
                 }
                 break;
+            
             case "Boss":
                 collision.gameObject.GetComponent<BossManager>().BossHit();
                 collision.gameObject.GetComponent<BossMovement>().BossHit();
@@ -46,16 +51,5 @@ public class Projectile2 : MonoBehaviour
         }
     
     }
-    
-    private IEnumerator ApplyFireDamage(float targetHealth)
-    {
-        float fireTimer = 0;
-        while (fireTimer < fireDuration)
-        {
-            targetHealth -= fireDamagePerSecond * Time.deltaTime;
-            fireTimer += Time.deltaTime;
-            yield return null;
-        }
-    }
-    
+
 }

@@ -2,23 +2,21 @@ using UnityEngine;
 
 public class Projectile6 : MonoBehaviour
 {
-    public bool isUnlocked = false;
     
-    private int bulletDamage = 5;
-    private float delay = 10;
+    private int _bulletDamage;
 
-    private int timesUpgraded = 0;
-    //TODO MAKE THIS PROJECTILE BE STATIONARY
+
     private void Start()
     {
-        bulletDamage = PlayerPrefs.GetInt("bulletDamage", defaultValue: 10);
+        Destroy(gameObject,20);
+        _bulletDamage = GameManager.instance.bulletDamage;
     }
     private void OnTriggerEnter(Collider collision)
     {
         
         if (collision.gameObject.CompareTag("Enemy")) 
         {
-            if (collision.gameObject.GetComponent<enemyManager>().getHealth() - bulletDamage <= 0)
+            if (collision.gameObject.GetComponent<enemyManager>().getHealth() - _bulletDamage <= 0)
             {
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
@@ -27,7 +25,7 @@ public class Projectile6 : MonoBehaviour
             }
             else
             {
-                collision.gameObject.GetComponent<enemyManager>().subHealth(bulletDamage);
+                collision.gameObject.GetComponent<enemyManager>().subHealth(_bulletDamage);
                 Destroy(gameObject);
             }
         }

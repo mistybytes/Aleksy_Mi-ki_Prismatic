@@ -7,19 +7,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    
     public static GameManager instance;
-
-    public ShopController sc;
     
     public Material playerSkin;
     
     public int currentLevel;
-    
-    
-    
-    private int coins;
+
+    private int _coins;
     public int collectedCoins;
-    private int specialCurrency;
+    private int _specialCurrency;
     public int enemyHealth;
     
     public int lives = 1;
@@ -59,6 +56,14 @@ public class GameManager : MonoBehaviour
     public int forceBlasterCost;
     public int voidBlasterCost;
     
+    public string blaster1Name = "P O L A R I Z E R";
+    public string blaster2Name = "T H E  N I G H T";
+    public string blaster3Name = "D R E A M E R";
+    public string blaster4Name = "R E S H A P E R";
+    public string blaster5Name = "P A R A N O I D";
+    public string blaster6Name = "V O Y A G E R";
+    public string blaster7Name = "E Q U A L I Z E R";
+
     public GameObject selectedBlaster;
 
     public void Save()
@@ -86,7 +91,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetString("forceBlaster",forceBlaster.ToString());
         PlayerPrefs.SetString("voidBlaster",voidBlaster.ToString());
         
-        PlayerPrefs.SetInt("coins",coins);
+        PlayerPrefs.SetInt("coins",_coins);
         PlayerPrefs.SetInt("currentlyUnlocked", LevelCompletionManager.instance.currentlyUnlocked);
         
     }
@@ -102,7 +107,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         
-        coins = PlayerPrefs.GetInt("coins");
+        _coins = PlayerPrefs.GetInt("coins");
         collectedCoins = 0;
     }
 
@@ -170,17 +175,13 @@ public class GameManager : MonoBehaviour
     {
         collectedCoins += 3;
     }
-    public int getCollectedCoins()
-    {
-        return collectedCoins;
-    }
     public ref int getCoins()
     {
-        return ref coins;
+        return ref _coins;
     }
     public void setCoins(int i)
     {
-        coins = i;
+        _coins = i;
     }
     
     public void setEnemyHealth(int health)
@@ -189,7 +190,7 @@ public class GameManager : MonoBehaviour
     }
     public void levelEnded()
     {
-        coins += collectedCoins;
+        _coins += collectedCoins;
         collectedCoins = 0;
     }
     public void setCurrentLevel(int l)
@@ -227,10 +228,7 @@ public class GameManager : MonoBehaviour
                 break;
 
         }
-        if (selectedBlaster.ToString() == "BLASTER1 (UnityEngine.GameObject)")
-        {
-            Debug.Log(lives);
-        }
+      
     }
     void Update()
     {
@@ -241,9 +239,6 @@ public class GameManager : MonoBehaviour
                 SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
                 SceneManager.LoadScene("GameOver");
                 break;
-            default:
-                break;
-            
         }
     
     }

@@ -5,14 +5,10 @@ using UnityEngine;
 public class Projectile1 : MonoBehaviour
 {
     private int _bulletDamage;
-    private int delay = 20;
-    
-    //TODO ADD LOADING THE UPGRADES AND ALSO THE UPGRADES THEMSELVES
-    
     void Start()
     {
         _bulletDamage = GameManager.instance.bulletDamage;
-        Destroy(gameObject, delay);
+        Destroy(gameObject, 10);
     }
     private void OnTriggerEnter(Collider collision)
     {
@@ -36,6 +32,7 @@ public class Projectile1 : MonoBehaviour
                 }
                 break;
             
+                
             case "Boss":
                 collision.gameObject.GetComponent<BossManager>().BossHit();
                 collision.gameObject.GetComponent<BossMovement>().BossHit();

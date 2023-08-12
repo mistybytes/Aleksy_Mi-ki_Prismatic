@@ -12,8 +12,7 @@ public class BulletMovement : MonoBehaviour
     private Vector3 circlePosition;
 
     void Start()
-    {
-        Destroy(gameObject, 20);
+    { 
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
 
         if (playerObject != null)

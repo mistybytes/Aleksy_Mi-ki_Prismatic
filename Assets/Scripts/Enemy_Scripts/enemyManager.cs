@@ -7,21 +7,23 @@ public class enemyManager : MonoBehaviour
 {
     private int enemyHealth;
 
-    private bool isFrozen = false;
     private float speed;
-    
+
+    public void OnDestroy()
+    {
+        
+        Debug.Log("i am destroyed");
+    }
+
     private void Start()
     {
-        Destroy(gameObject,45);
+        Destroy(gameObject,25);
+        
         speed = GameManager.instance.gameSpeed;
         enemyHealth = GameManager.instance.enemyHealth;
         
     }
     
-    public float getSpeed()
-    {
-        return speed;
-    }
     public int getHealth()
     {
         return enemyHealth;

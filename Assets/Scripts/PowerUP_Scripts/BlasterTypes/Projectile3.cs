@@ -5,10 +5,12 @@ using UnityEngine;
 public class Projectile3 : MonoBehaviour
 { 
     private int _bulletDamage;
-    public int delay = 10;
+    public GameObject frozenEnemy;
+
     private void Start()
     {
-        Destroy(gameObject, delay);
+        _bulletDamage = GameManager.instance.bulletDamage;
+        Destroy(gameObject, 10);
     }
     private void OnTriggerEnter(Collider collision)
     {
@@ -22,16 +24,22 @@ public class Projectile3 : MonoBehaviour
                     Destroy(gameObject);
                     Destroy(collision.gameObject);
                     GameManager.instance.EnemyKilled();
-
                 }
                 else
                 {
-                    collision.gameObject.GetComponent<enemyManager>().subHealth(_bulletDamage);
                     Destroy(gameObject);
-                    //TODO make this instanciate an enemy that simply is not moving
+                    Destroy(collision.gameObject);
+                    
+                    Instantiate(frozenEnemy, collision.transform.position, Quaternion.identity);
                 }
                 break;
-
+            
+            case "FrozenEnemy":
+                Destroy(gameObject);
+                Destroy(collision.gameObject);
+                GameManager.instance.EnemyKilled();
+                break;
+            
             case "Boss":
                 collision.gameObject.GetComponent<BossManager>().BossHit();
                 collision.gameObject.GetComponent<BossMovement>().BossHit();

@@ -113,6 +113,8 @@
      <Compile Include="Assets\Scripts\Enemy_Scripts\enemyBullet.cs" />
      <Compile Include="Assets\Scripts\PowerUP_Scripts\BlasterTypes\Projectile5.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy_Scripts\FrozenEnemy.cs" />
+     <Compile Include="Assets\Scripts\UI_Scripts\TextScripts\BlasterUnlocks\CurrentlySelected.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

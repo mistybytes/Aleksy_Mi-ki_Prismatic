@@ -95,7 +95,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5405921696116420407}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -112,7 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf639ecf95473374cab5bc236316eaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 10
+  frozenEnemy: {fileID: 7590265814495616367, guid: 445145f11cba696429fc11aebc9ba1cf,
+    type: 3}
 --- !u!114 &6364746125687119511
 MonoBehaviour:
   m_ObjectHideFlags: 0
