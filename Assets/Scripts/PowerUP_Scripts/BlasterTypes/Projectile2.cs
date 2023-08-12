@@ -47,7 +47,9 @@ public class Projectile2 : MonoBehaviour
                 Destroy(gameObject);
                 
                 break;
-
+            
+            default:
+                break;
         }
     
     }

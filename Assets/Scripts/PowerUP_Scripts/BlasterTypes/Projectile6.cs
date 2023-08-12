@@ -8,27 +8,44 @@ public class Projectile6 : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject,20);
+        var playerObject = GameObject.FindGameObjectWithTag("Player");
+        
+        var pm = playerObject.GetComponent<PlayerMovement>();
+        var currentAngle = pm.getCurrentAngle();
+        var circlePosition = new Vector3(Mathf.Sin(currentAngle), 0, Mathf.Cos(currentAngle)) * 5;
+
+        transform.position = circlePosition;
+
         _bulletDamage = GameManager.instance.bulletDamage;
     }
     private void OnTriggerEnter(Collider collision)
     {
         
-        if (collision.gameObject.CompareTag("Enemy")) 
+        var objectTag = collision.gameObject.tag;
+
+        switch (objectTag)
         {
-            if (collision.gameObject.GetComponent<enemyManager>().getHealth() - _bulletDamage <= 0)
-            {
+            case "Enemy":
+                if (collision.gameObject.GetComponent<enemyManager>().getHealth() - _bulletDamage <= 0)
+                {
+                    Destroy(gameObject);
+                    Destroy(collision.gameObject);
+                    GameManager.instance.EnemyKilled();
+                }
+                else
+                {
+                    collision.gameObject.GetComponent<enemyManager>().subHealth(_bulletDamage);
+                    Destroy(gameObject);
+                }
+                break;
+            case "EnemyBullet":
+                
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
-                GameManager.instance.EnemyKilled();
-
-            }
-            else
-            {
-                collision.gameObject.GetComponent<enemyManager>().subHealth(_bulletDamage);
-                Destroy(gameObject);
-            }
+                
+                break;
         }
+     
         
     }
 }

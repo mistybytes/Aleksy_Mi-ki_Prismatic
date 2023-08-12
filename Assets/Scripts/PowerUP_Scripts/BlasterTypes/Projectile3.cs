@@ -44,8 +44,9 @@ public class Projectile3 : MonoBehaviour
                 collision.gameObject.GetComponent<BossManager>().BossHit();
                 collision.gameObject.GetComponent<BossMovement>().BossHit();
                 
-                Destroy(gameObject);          
-            
+                Destroy(gameObject);
+                break;
+            default:
                 break;
         }
    

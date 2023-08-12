@@ -7,7 +7,6 @@ public class BossManager : MonoBehaviour
 {
     private int bossTimesHit = 0;
     private Vector3 position;
-    public GameObject coinSpawner;
     public void BossHit()
     {
         bossTimesHit++;

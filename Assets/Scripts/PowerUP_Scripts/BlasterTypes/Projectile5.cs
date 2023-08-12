@@ -9,27 +9,53 @@ public class Projectile5 : MonoBehaviour
     private void Start()
     {
         _bulletDamage = GameManager.instance.bulletDamage;
-        Destroy(gameObject, 10);
+        
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        
+        var pm = playerObject.GetComponent<PlayerMovement>();
+        var currentAngle = pm.getCurrentAngle();
+        var circlePosition = new Vector3(Mathf.Sin(currentAngle), 0, Mathf.Cos(currentAngle)) * 5;
+
+        transform.position = circlePosition;
+        
+        Destroy(gameObject, 20);
     }
 
     private void OnTriggerEnter(Collider collision)
     {
-        
-        if (collision.gameObject.CompareTag("Enemy") ) 
-        {
-            if (collision.gameObject.GetComponent<enemyManager>().getHealth() - _bulletDamage <= 0)
-            {
-                Destroy(gameObject);
-                Destroy(collision.gameObject);
-                GameManager.instance.EnemyKilled();
+        var objectTag = collision.gameObject.tag;
 
-            }
-            else
-            {
+        switch (objectTag)
+        {
+            case "Enemy":
+                if (collision.gameObject.GetComponent<enemyManager>().getHealth() - _bulletDamage <= 0)
+                {
+                    Destroy(gameObject);
+                    Destroy(collision.gameObject);
+                    GameManager.instance.EnemyKilled();
+         }
+                else
+                {
+                    Destroy(gameObject);
+                    collision.gameObject.GetComponent<enemyManager>().subHealth(_bulletDamage);
+                }
+                break;
+            
+            case "Boss":
+                collision.gameObject.GetComponent<BossManager>().BossHit();
+                collision.gameObject.GetComponent<BossMovement>().BossHit();
+                
                 Destroy(gameObject);
-                collision.gameObject.GetComponent<enemyManager>().subHealth(_bulletDamage);
-            }
-        }  
+                
+                break;
+                case "EnemyBullet":
+                    Destroy(gameObject);
+                    Destroy(collision.gameObject);
+                break;
+       
+            
+        }
+      
         
     }
 

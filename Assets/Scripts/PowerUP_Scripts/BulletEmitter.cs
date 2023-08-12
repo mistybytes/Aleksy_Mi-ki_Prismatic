@@ -27,22 +27,18 @@ public class BulletEmitter : MonoBehaviour
                 break;
             default:
                 
-                fireInterval = 8f;
+                fireInterval = 5f;
                 break;
         }
+        
+        StartCoroutine(Spawn());
     }
-
-    void Update()
+    IEnumerator Spawn()
     {
-        if (Time.time - lastFireTime > fireInterval)
+        while (true)
         {
-            lastFireTime = Time.time;
-            FireBullet();
+            Instantiate(bulletPrefab, transform.position , transform.rotation);
+            yield return new WaitForSeconds(3);
         }
-    }
-
-    void FireBullet()
-    {
-        GameObject g = Instantiate(bulletPrefab, transform.position , transform.rotation);
     }
 }
